@@ -1,0 +1,2581 @@
+Shutting down "Wire Demo Client Clone"
+Shutting down "Wire Demo Server Clone"
+Deleting "Wire Demo Client Clone"
+Deleting "Wire Demo Server Clone"
+Creating clone for «"Wire Demo Client"»
+Creating clone for «"Wire Demo Server"»
+Starting "Wire Demo Client Clone"
+Starting "Wire Demo Server Clone"
+Running virtual machines:
+"Wire Demo Client Clone"
+"Wire Demo Server Clone"
+{ network: '192.168.1.',
+  ssh:
+   { options: '-o "StrictHostKeyChecking=no" -o "BatchMode=yes"' },
+  'wire-server': '192.168.1.119',
+  'wire-client': '192.168.1.121' }
+wire@wire-client:~$ sudo date --set="Sat Jun 12 2021 19:20:08 GMT+0200 (Central
+European Summer Time)"
+[sudo] password for wire:
+Sat Jun 12 17:20:08 UTC 2021
+wire@wire-server:~$ sudo date --set="Sat Jun 12 2021 19:20:17 GMT+0200 (Central
+European Summer Time)"
+[sudo] password for wire:
+Sat Jun 12 17:20:17 UTC 2021
+wire@wire-client:~$ cd
+wire@wire-client:~$ cat /etc/hostname
+wire-client
+wire@wire-client:~$ pwd
+/home/wire
+wire@wire-client:~$ sudo rm -rf /home/wire/wire*
+[sudo] password for wire:
+wire@wire-client:~$ ls -l /home/wire/
+total 0
+wire@wire-client:~$ date
+Sat Jun 12 17:20:54 UTC 2021
+wire@wire-client:~$ uptime
+ 17:21:00 up 24 min,  0 users,  load average: 0.68, 0.24, 0.11
+wire@wire-client:~$ sudo apt update
+Hit:1 http://fr.archive.ubuntu.com/ubuntu bionic InRelease
+Get:2 http://fr.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:3 http://fr.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:4 http://fr.archive.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Get:5 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [20
+99 kB]
+Get:6 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main Translation-en [41
+7 kB]
+Get:7 http://fr.archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packag
+es [370 kB]
+Get:8 http://fr.archive.ubuntu.com/ubuntu bionic-updates/restricted Translation-
+en [50.1 kB]
+Get:9 http://fr.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages
+ [1736 kB]
+Get:10 http://fr.archive.ubuntu.com/ubuntu bionic-updates/universe Translation-e
+n [370 kB]
+Get:11 http://fr.archive.ubuntu.com/ubuntu bionic-security/main amd64 Packages [
+1753 kB]
+Get:12 http://fr.archive.ubuntu.com/ubuntu bionic-security/universe amd64 Packag
+es [1128 kB]
+Get:13 http://fr.archive.ubuntu.com/ubuntu bionic-security/universe Translation-
+en [255 kB]
+Fetched 8431 kB in 4s (2325 kB/s)
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+64 packages can be upgraded. Run 'apt list --upgradable' to see them.
+wire@wire-client:~$ sudo dpkg --configure -a
+Setting up initramfs-tools (0.130ubuntu3.9) ...
+update-initramfs: deferring update (trigger activated)
+Processing triggers for initramfs-tools (0.130ubuntu3.9) ...
+update-initramfs: Generating /boot/initrd.img-4.15.0-144-generic
+wire@wire-server:~$ date
+Sat Jun 12 17:22:41 UTC 2021
+wire@wire-server:~$ uptime
+ 17:22:46 up 26 min,  0 users,  load average: 0.02, 0.04, 0.07
+wire@wire-server:~$ sudo apt update
+[sudo] password for wire:
+Hit:1 http://fr.archive.ubuntu.com/ubuntu bionic InRelease
+Get:2 http://fr.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:3 http://fr.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:4 http://fr.archive.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Get:5 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [20
+99 kB]
+Get:6 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main Translation-en [41
+7 kB]
+Get:7 http://fr.archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packag
+es [370 kB]
+Get:8 http://fr.archive.ubuntu.com/ubuntu bionic-updates/restricted Translation-
+en [50.1 kB]
+Get:9 http://fr.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages
+ [1736 kB]
+Get:10 http://fr.archive.ubuntu.com/ubuntu bionic-updates/universe Translation-e
+n [370 kB]
+Get:11 http://fr.archive.ubuntu.com/ubuntu bionic-security/main amd64 Packages [
+1753 kB]
+Get:12 http://fr.archive.ubuntu.com/ubuntu bionic-security/universe amd64 Packag
+es [1128 kB]
+Get:13 http://fr.archive.ubuntu.com/ubuntu bionic-security/universe Translation-
+en [255 kB]
+Fetched 8431 kB in 3s (2854 kB/s)
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+64 packages can be upgraded. Run 'apt list --upgradable' to see them.
+wire@wire-server:~$ sudo dpkg --configure -a
+Setting up initramfs-tools (0.130ubuntu3.9) ...
+update-initramfs: deferring update (trigger activated)
+Processing triggers for initramfs-tools (0.130ubuntu3.9) ...
+update-initramfs: Generating /boot/initrd.img-4.15.0-144-generic
+wire@wire-client:~$ git clone --branch master https://github.com/wireapp/wire-se
+rver-deploy.git
+Cloning into 'wire-server-deploy'...
+remote: Enumerating objects: 18419, done.
+remote: Counting objects: 100% (252/252), done.
+remote: Compressing objects: 100% (149/149), done.
+remote: Total 18419 (delta 129), reused 201 (delta 100), pack-reused 18167
+Receiving objects: 100% (18419/18419), 2.17 MiB | 10.60 MiB/s, done.
+Resolving deltas: 100% (13785/13785), done.
+wire@wire-client:~$ ls -l
+total 4
+drwxrwxr-x 12 wire wire 4096 Jun 12 17:24 wire-server-deploy
+wire@wire-client:~$ cd wire-server-deploy
+wire@wire-client:~/wire-server-deploy$ pwd
+/home/wire/wire-server-deploy
+wire@wire-client:~/wire-server-deploy$ ls -l
+total 108
+-rw-rw-r--  1 wire wire 15860 Jun 12 17:24 CHANGELOG.md
+-rw-rw-r--  1 wire wire  1531 Jun 12 17:24 CONTRIBUTING.md
+-rw-rw-r--  1 wire wire   252 Jun 12 17:24 Dockerfile
+-rw-rw-r--  1 wire wire 34520 Jun 12 17:24 LICENSE
+-rw-rw-r--  1 wire wire  5893 Jun 12 17:24 Makefile
+-rw-rw-r--  1 wire wire  2251 Jun 12 17:24 README.md
+drwxrwxr-x  9 wire wire  4096 Jun 12 17:24 ansible
+drwxrwxr-x  3 wire wire  4096 Jun 12 17:24 bin
+-rw-rw-r--  1 wire wire  2338 Jun 12 17:24 default.nix
+drwxrwxr-x  5 wire wire  4096 Jun 12 17:24 examples
+drwxrwxr-x  2 wire wire  4096 Jun 12 17:24 helm
+drwxrwxr-x  4 wire wire  4096 Jun 12 17:24 nix
+drwxrwxr-x  2 wire wire  4096 Jun 12 17:24 offline
+drwxrwxr-x  5 wire wire  4096 Jun 12 17:24 terraform
+drwxrwxr-x 15 wire wire  4096 Jun 12 17:24 values
+wire@wire-client:~/wire-server-deploy$ git submodule update --init --recursive
+Submodule 'ansible/roles-external/ANXS.apt' (https://github.com/ANXS/apt.git) re
+gistered for path 'ansible/roles-external/ANXS.apt'
+Submodule 'ansible/roles-external/admin_users' (https://github.com/cchurch/ansib
+le-role-admin-users.git) registered for path 'ansible/roles-external/admin_users
+'
+Submodule 'ansible/roles-external/andrewrothstein.unarchive-deps' (https://githu
+b.com/andrewrothstein/ansible-unarchive-deps) registered for path 'ansible/roles
+-external/andrewrothstein.unarchive-deps'
+Submodule 'ansible/roles-external/ansible-cassandra' (https://github.com/wireapp
+/ansible-cassandra.git) registered for path 'ansible/roles-external/ansible-cass
+andra'
+Submodule 'ansible/roles-external/ansible-minio' (https://github.com/wireapp/ans
+ible-minio.git) registered for path 'ansible/roles-external/ansible-minio'
+Submodule 'ansible/roles-external/ansible-ntp-verify' (https://github.com/wireap
+p/ansible-ntp-verify.git) registered for path 'ansible/roles-external/ansible-nt
+p-verify'
+Submodule 'ansible/roles-external/ansible-restund' (https://github.com/wireapp/a
+nsible-restund.git) registered for path 'ansible/roles-external/ansible-restund'
+Submodule 'ansible/roles-external/ansible-role-java' (https://github.com/geerlin
+gguy/ansible-role-java.git) registered for path 'ansible/roles-external/ansible-
+role-java'
+Submodule 'ansible/roles-external/ansible-role-ntp' (https://github.com/geerling
+guy/ansible-role-ntp.git) registered for path 'ansible/roles-external/ansible-ro
+le-ntp'
+Submodule 'ansible/roles-external/ansible-tinc' (https://github.com/wireapp/ansi
+ble-tinc.git) registered for path 'ansible/roles-external/ansible-tinc'
+Submodule 'ansible/roles-external/cloudalchemy.node-exporter' (https://github.co
+m/cloudalchemy/ansible-node-exporter) registered for path 'ansible/roles-externa
+l/cloudalchemy.node-exporter'
+Submodule 'ansible/roles-external/elasticsearch' (https://github.com/elastic/ans
+ible-elasticsearch.git) registered for path 'ansible/roles-external/elasticsearc
+h'
+Submodule 'ansible/roles-external/hostname' (https://github.com/ANXS/hostname.gi
+t) registered for path 'ansible/roles-external/hostname'
+Submodule 'ansible/roles-external/kubespray' (https://github.com/kubernetes-sigs
+/kubespray.git) registered for path 'ansible/roles-external/kubespray'
+Submodule 'ansible/roles-external/logrotate' (https://github.com/nickhammond/ans
+ible-logrotate.git) registered for path 'ansible/roles-external/logrotate'
+Submodule 'ansible/roles-external/sft' (https://github.com/wireapp/ansible-sft.g
+it) registered for path 'ansible/roles-external/sft'
+Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ANXS.apt'...
+Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/admin_users'.
+..
+Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/andrewrothste
+in.unarchive-deps'...
+Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ansible-cassa
+ndra'...
+Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ansible-minio
+'...
+Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ansible-ntp-v
+erify'...
+Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ansible-restu
+nd'...
+Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ansible-role-
+java'...
+Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ansible-role-
+ntp'...
+Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ansible-tinc'
+...
+Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/cloudalchemy.
+node-exporter'...
+Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/elasticsearch
+'...
+Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/hostname'...
+Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/kubespray'...
+Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/logrotate'...
+Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/sft'...
+Submodule path 'ansible/roles-external/ANXS.apt': checked out 'f602ba7e88abfbb3a
+f6679a8ca47207dc3e9d9c4'
+Submodule path 'ansible/roles-external/admin_users': checked out 'd5bcef7e925ee1
+acf4e42359f0a95ed788eea58f'
+Submodule path 'ansible/roles-external/andrewrothstein.unarchive-deps': checked
+out '4485543262cfe04170d1ec02c8ccb95c44a7a222'
+Submodule path 'ansible/roles-external/ansible-cassandra': checked out '8a0f029f
+533856e8270d7fd74d75c099a677b2e3'
+Submodule path 'ansible/roles-external/ansible-minio': checked out '22ab28f75c00
+7a0c48dc47db574773773ef19d22'
+Submodule path 'ansible/roles-external/ansible-ntp-verify': checked out '4c3d0c6
+7d32d2d74444f4db45b2a4d2efdc7d590'
+Submodule path 'ansible/roles-external/ansible-restund': checked out '9807313a7c
+72ffa40e74f69d239404fd87db65ab'
+Submodule path 'ansible/roles-external/ansible-role-java': checked out '13b42705
+5702d9e91558cad7dcccab7db91e5663'
+Submodule path 'ansible/roles-external/ansible-role-ntp': checked out 'af1ec6238
+5c899a3e3f24407d8417adcdc9eea60'
+Submodule path 'ansible/roles-external/ansible-tinc': checked out '42951a951f638
+1e387174178bf3bff228b6a5dc5'
+Submodule path 'ansible/roles-external/cloudalchemy.node-exporter': checked out
+'8dc13ae077e3da1a71c268b114cd4fb8103ced80'
+Submodule path 'ansible/roles-external/elasticsearch': checked out '389a3ff45f8f
+51de95313ca0354cedcdc92b16f4'
+Submodule path 'ansible/roles-external/hostname': checked out 'da6f329b2984e84d2
+248d4251e0c679c53dfbb30'
+Submodule path 'ansible/roles-external/kubespray': checked out 'c7658c0256bfeb50
+913ac73f638a760680e4dd6d'
+Submodule path 'ansible/roles-external/logrotate': checked out '91d570f68c44261d
+2051a99a2b3c7d736306bf0d'
+Submodule path 'ansible/roles-external/sft': checked out '126fde847dfc9deffeef8b
+a133c541c16628a63a'
+wire@wire-client:~/wire-server-deploy$ sudo apt install docker.io
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  bridge-utils containerd pigz runc ubuntu-fan
+Suggested packages:
+  ifupdown aufs-tools cgroupfs-mount | cgroup-lite debootstrap docker-doc
+  rinse zfs-fuse | zfsutils
+The following NEW packages will be installed:
+  bridge-utils containerd docker.io pigz runc ubuntu-fan
+0 upgraded, 6 newly installed, 0 to remove and 64 not upgraded.
+Need to get 72.1 MB of archives.
+After this operation, 351 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://fr.archive.ubuntu.com/ubuntu bionic/universe amd64 pigz amd64 2.4-1
+ [57.4 kB]
+Get:2 http://fr.archive.ubuntu.com/ubuntu bionic/main amd64 bridge-utils amd64 1
+.5-15ubuntu1 [30.1 kB]
+Get:3 http://fr.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 runc amd
+64 1.0.0~rc93-0ubuntu1~18.04.2 [4021 kB]
+Get:4 http://fr.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 containe
+rd amd64 1.4.4-0ubuntu1~18.04.2 [31.0 MB]
+Get:5 http://fr.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 docker.i
+o amd64 20.10.2-0ubuntu1~18.04.2 [36.9 MB]
+Get:6 http://fr.archive.ubuntu.com/ubuntu bionic/main amd64 ubuntu-fan all 0.12.
+10 [34.7 kB]
+Fetched 72.1 MB in 6s (11.7 MB/s)
+Preconfiguring packages ...
+Selecting previously unselected package pigz.
+(Reading database ... 67143 files and directories currently installed.)
+Preparing to unpack .../0-pigz_2.4-1_amd64.deb ...
+Unpacking pigz (2.4-1) ...
+Selecting previously unselected package bridge-utils.
+Preparing to unpack .../1-bridge-utils_1.5-15ubuntu1_amd64.deb ...
+Unpacking bridge-utils (1.5-15ubuntu1) ...
+Selecting previously unselected package runc.
+Preparing to unpack .../2-runc_1.0.0~rc93-0ubuntu1~18.04.2_amd64.deb ...
+Unpacking runc (1.0.0~rc93-0ubuntu1~18.04.2) ...
+Selecting previously unselected package containerd.
+Preparing to unpack .../3-containerd_1.4.4-0ubuntu1~18.04.2_amd64.deb ...
+Unpacking containerd (1.4.4-0ubuntu1~18.04.2) ...
+Selecting previously unselected package docker.io.
+Preparing to unpack .../4-docker.io_20.10.2-0ubuntu1~18.04.2_amd64.deb ...
+Unpacking docker.io (20.10.2-0ubuntu1~18.04.2) ...
+Selecting previously unselected package ubuntu-fan.
+Preparing to unpack .../5-ubuntu-fan_0.12.10_all.deb ...
+Unpacking ubuntu-fan (0.12.10) ...
+Setting up runc (1.0.0~rc93-0ubuntu1~18.04.2) ...
+Setting up containerd (1.4.4-0ubuntu1~18.04.2) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service →
+ /lib/systemd/system/containerd.service.
+Setting up bridge-utils (1.5-15ubuntu1) ...
+Setting up ubuntu-fan (0.12.10) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/ubuntu-fan.service →
+ /lib/systemd/system/ubuntu-fan.service.
+Setting up pigz (2.4-1) ...
+Setting up docker.io (20.10.2-0ubuntu1~18.04.2) ...
+Adding group `docker' (GID 113) ...
+Done.
+Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /li
+b/systemd/system/docker.service.
+Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/sy
+stemd/system/docker.socket.
+Processing triggers for systemd (237-3ubuntu10.42) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Processing triggers for ureadahead (0.100.0-21) ...
+wire@wire-client:~/wire-server-deploy$ docker -v
+Docker version 20.10.2, build 20.10.2-0ubuntu1~18.04.2
+wire@wire-client:~/wire-server-deploy$ WSD_CONTAINER=quay.io/wire/wire-server-de
+ploy:cdc1c84c1a10a4f5f1b77b51ee5655d0da7f9518
+wire@wire-client:~/wire-server-deploy$ sudo docker run -it --network=host -v ${S
+SH_AUTH_SOCK:-nonexistent}:/ssh-agent -v $HOME/.ssh:/root/.ssh -v $PWD:/wire-ser
+ver-deploy -e SSH_AUTH_SOCK=/ssh-agent $WSD_CONTAINER bash
+Unable to find image 'quay.io/wire/wire-server-deploy:cdc1c84c1a10a4f5f1b77b51ee
+5655d0da7f9518' locally
+cdc1c84c1a10a4f5f1b77b51ee5655d0da7f9518: Pulling from wire/wire-server-deploy
+083086456ea5: Pull complete
+ae57e4902e57: Pull complete
+Digest: sha256:a18a5fae78d5ffb25e95e43ed899d840f5032890b76bdc4fb89a5669c1a60549
+Status: Downloaded newer image for quay.io/wire/wire-server-deploy:cdc1c84c1a10a
+4f5f1b77b51ee5655d0da7f9518
+bash-4.4# ansible --version
+ansible 2.9.12
+  config file = /wire-server-deploy/ansible/ansible.cfg
+  configured module search path = ['/root/.ansible/plugins/modules', '/usr/share
+/ansible/plugins/modules']
+  ansible python module location = /nix/store/407c5v2x920kri79w0sb9gb1g82q28mg-p
+ython3.8-ansible-2.9.12/lib/python3.8/site-packages/ansible
+  executable location = /nix/store/407c5v2x920kri79w0sb9gb1g82q28mg-python3.8-an
+sible-2.9.12/bin/ansible
+  python version = 3.8.8 (default, Feb 19 2021, 11:04:50) [GCC 10.2.0]
+bash-4.4# cd ansible
+bash-4.4# pwd
+/wire-server-deploy/ansible
+bash-4.4# cp inventory/demo/hosts.example.ini inventory/demo/hosts.ini
+bash-4.4# ls -l inventory/demo/hosts.ini
+-rw-r--r-- 1 root root 1066 Jun 12 17:30 inventory/demo/hosts.ini
+bash-4.4# sed -i 's/X.X.X.X/192.168.1.119/g' inventory/demo/hosts.ini
+bash-4.4# cat inventory/demo/hosts.ini | grep ansible_host
+# * 'ansible_host' is the IP to ssh into
+kubenode01    ansible_host=192.168.1.119 etcd_member_name=etcd1
+bash-4.4# ssh-keygen -f /root/.ssh/id_rsa -t rsa -P ''
+Generating public/private rsa key pair.
+Your identification has been saved in /root/.ssh/id_rsa
+Your public key has been saved in /root/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:56n0/2TXdV5kUCjT0NxYOdsYsiVrD+2u5/1a7yCJXvw root@wire-client
+The key's randomart image is:
++---[RSA 3072]----+
+|            .=.*+|
+|            = O+.|
+|             X o*|
+|            = o+.|
+|        S .. +  +|
+|         o + .o.=|
+|        . + =.+ =|
+|       . + . =o=.|
+|        . o.o=Eo*|
++----[SHA256]-----+
+bash-4.4# ssh-copy-id wire@192.168.1.119
+/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/root/.ssh/id_rsa.pub
+"
+The authenticity of host '192.168.1.119 (192.168.1.119)' can't be established.
+ECDSA key fingerprint is SHA256:oyCUJlnVB//as26D7Zmc0DF+2mmKRAUnx7nsquyVVeE.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out
+any that are already installed
+expr: warning: '^ERROR: ': using '^' as the first character
+of a basic regular expression is not portable; it is ignored
+/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted n
+ow it is to install the new keys
+wire@192.168.1.119's password:
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'wire@192.168.1.119'"
+and check to make sure that only the key(s) you wanted were added.
+
+wire@wire-server:~$ cat /etc/hostname
+wire-server
+wire@wire-server:~$ sudo tail -n 2 /etc/sudoers
+
+#includedir /etc/sudoers.d
+wire@wire-server:~$ echo 'wire ALL=(ALL) NOPASSWD:ALL' | sudo tee -a /etc/sudoer
+s
+wire ALL=(ALL) NOPASSWD:ALL
+wire@wire-server:~$ sudo tail -n 2 /etc/sudoers
+#includedir /etc/sudoers.d
+wire ALL=(ALL) NOPASSWD:ALL
+bash-4.4# cat inventory/demo/hosts.ini | grep ansible_user
+# ansible_user = ...
+bash-4.4# sed -i 's/# ansible_user = .../ansible_user = wire/g' inventory/demo/h
+osts.ini
+bash-4.4# cat inventory/demo/hosts.ini | grep ansible_user
+ansible_user = wire
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/persistent_volumes/gcp-pd-csi : Kubernetes Persistent Volu
+mes | Add GCP PD CSI Storage Class] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/persistent_volumes/gcp-pd-csi/tasks/main.yml:10
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/snapshots/snapshot-controller : Snapshot Controller | Gene
+rate Manifests] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/snapshots/snapshot-controller/tasks/main.yml:2
+skipping: [kubenode01] => (item={'name': 'rbac-snapshot-controller', 'file': 'rb
+ac-snapshot-controller.yml'})  => {"ansible_loop_var": "item", "changed": false,
+ "item": {"file": "rbac-snapshot-controller.yml", "name": "rbac-snapshot-control
+ler"}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'name': 'snapshot-controller', 'file': 'snapsho
+t-controller.yml'})  => {"ansible_loop_var": "item", "changed": false, "item": {
+"file": "snapshot-controller.yml", "name": "snapshot-controller"}, "skip_reason"
+: "Conditional result was False"}
+
+TASK [kubernetes-apps/snapshots/snapshot-controller : Snapshot Controller | Appl
+y Manifests] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/snapshots/snapshot-controller/tasks/main.yml:13
+skipping: [kubenode01] => (item=rbac-snapshot-controller.yml)  => {"ansible_loop
+_var": "item", "changed": false, "item": {"ansible_loop_var": "item", "changed":
+ false, "item": {"file": "rbac-snapshot-controller.yml", "name": "rbac-snapshot-
+controller"}, "skip_reason": "Conditional result was False", "skipped": true}, "
+skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item=snapshot-controller.yml)  => {"ansible_loop_var"
+: "item", "changed": false, "item": {"ansible_loop_var": "item", "changed": fals
+e, "item": {"file": "snapshot-controller.yml", "name": "snapshot-controller"}, "
+skip_reason": "Conditional result was False", "skipped": true}, "skip_reason": "
+Conditional result was False"}
+
+TASK [kubernetes-apps/snapshots/cinder-csi : Kubernetes Snapshots | Copy Cinder
+CSI Snapshot Class template] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/snapshots/cinder-csi/tasks/main.yml:2
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/snapshots/cinder-csi : Kubernetes Snapshots | Add Cinder C
+SI Snapshot Class] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/snapshots/cinder-csi/tasks/main.yml:10
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/container_runtimes/kata_containers : Kata Containers | Cre
+ate addon dir] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/container_runtimes/kata_containers/tasks/main.yaml:3
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/container_runtimes/kata_containers : Kata Containers | Tem
+plates list] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/container_runtimes/kata_containers/tasks/main.yaml:11
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/container_runtimes/kata_containers : Kata Containers | Cre
+ate manifests] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/container_runtimes/kata_containers/tasks/main.yaml:16
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/container_runtimes/kata_containers : Kata Containers | App
+ly manifests] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/container_runtimes/kata_containers/tasks/main.yaml:25
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/container_runtimes/crun : crun | Copy runtime class manife
+st] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/container_runtimes/crun/tasks/main.yaml:3
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/container_runtimes/crun : crun | Apply manifests] ********
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/container_runtimes/crun/tasks/main.yaml:11
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/container_engine_accelerator/nvidia_gpu : Container Engine
+ Acceleration Nvidia GPU| gather os specific variables] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/container_engine_accelerator/nvidia_gpu/tasks/main.yml:3
+skipping: [kubenode01] => (item=/wire-server-deploy/ansible/roles-external/kubes
+pray/roles/kubernetes-apps/container_engine_accelerator/nvidia_gpu/vars/ubuntu-1
+8.yml)  => {"ansible_loop_var": "item", "changed": false, "item": "/wire-server-
+deploy/ansible/roles-external/kubespray/roles/kubernetes-apps/container_engine_a
+ccelerator/nvidia_gpu/vars/ubuntu-18.yml", "skip_reason": "Conditional result wa
+s False"}
+
+TASK [kubernetes-apps/container_engine_accelerator/nvidia_gpu : Container Engine
+ Acceleration Nvidia GPU | Set fact of download url Tesla] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/container_engine_accelerator/nvidia_gpu/tasks/main.yml:14
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/container_engine_accelerator/nvidia_gpu : Container Engine
+ Acceleration Nvidia GPU | Set fact of download url GTX] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/container_engine_accelerator/nvidia_gpu/tasks/main.yml:19
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/container_engine_accelerator/nvidia_gpu : Container Engine
+ Acceleration Nvidia GPU | Create addon dir] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/container_engine_accelerator/nvidia_gpu/tasks/main.yml:24
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/container_engine_accelerator/nvidia_gpu : Container Engine
+ Acceleration Nvidia GPU | Create manifests for nvidia accelerators] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/container_engine_accelerator/nvidia_gpu/tasks/main.yml:32
+skipping: [kubenode01] => (item={'name': 'nvidia-driver-install-daemonset', 'fil
+e': 'nvidia-driver-install-daemonset.yml', 'type': 'daemonset'})  => {"ansible_l
+oop_var": "item", "changed": false, "item": {"file": "nvidia-driver-install-daem
+onset.yml", "name": "nvidia-driver-install-daemonset", "type": "daemonset"}, "sk
+ip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'name': 'k8s-device-plugin-nvidia-daemonset', '
+file': 'k8s-device-plugin-nvidia-daemonset.yml', 'type': 'daemonset'})  => {"ans
+ible_loop_var": "item", "changed": false, "item": {"file": "k8s-device-plugin-nv
+idia-daemonset.yml", "name": "k8s-device-plugin-nvidia-daemonset", "type": "daem
+onset"}, "skip_reason": "Conditional result was False"}
+
+TASK [kubernetes-apps/container_engine_accelerator/nvidia_gpu : Container Engine
+ Acceleration Nvidia GPU | Apply manifests for nvidia accelerators] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/container_engine_accelerator/nvidia_gpu/tasks/main.yml:43
+skipping: [kubenode01] => (item={'changed': False, 'skipped': True, 'skip_reason
+': 'Conditional result was False', 'item': {'name': 'nvidia-driver-install-daemo
+nset', 'file': 'nvidia-driver-install-daemonset.yml', 'type': 'daemonset'}, 'ans
+ible_loop_var': 'item'})  => {"ansible_loop_var": "item", "changed": false, "ite
+m": {"ansible_loop_var": "item", "changed": false, "item": {"file": "nvidia-driv
+er-install-daemonset.yml", "name": "nvidia-driver-install-daemonset", "type": "d
+aemonset"}, "skip_reason": "Conditional result was False", "skipped": true}, "sk
+ip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'changed': False, 'skipped': True, 'skip_reason
+': 'Conditional result was False', 'item': {'name': 'k8s-device-plugin-nvidia-da
+emonset', 'file': 'k8s-device-plugin-nvidia-daemonset.yml', 'type': 'daemonset'}
+, 'ansible_loop_var': 'item'})  => {"ansible_loop_var": "item", "changed": false
+, "item": {"ansible_loop_var": "item", "changed": false, "item": {"file": "k8s-d
+evice-plugin-nvidia-daemonset.yml", "name": "k8s-device-plugin-nvidia-daemonset"
+, "type": "daemonset"}, "skip_reason": "Conditional result was False", "skipped"
+: true}, "skip_reason": "Conditional result was False"}
+
+TASK [kubernetes-apps/cloud_controller/oci : OCI Cloud Controller | Credentials
+Check | oci_private_key] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/cloud_controller/oci/tasks/credentials-check.yml:3
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/cloud_controller/oci : OCI Cloud Controller | Credentials
+Check | oci_region_id] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/cloud_controller/oci/tasks/credentials-check.yml:10
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/cloud_controller/oci : OCI Cloud Controller | Credentials
+Check | oci_tenancy_id] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/cloud_controller/oci/tasks/credentials-check.yml:17
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/cloud_controller/oci : OCI Cloud Controller | Credentials
+Check | oci_user_id] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/cloud_controller/oci/tasks/credentials-check.yml:24
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/cloud_controller/oci : OCI Cloud Controller | Credentials
+Check | oci_user_fingerprint] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/cloud_controller/oci/tasks/credentials-check.yml:31
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/cloud_controller/oci : OCI Cloud Controller | Credentials
+Check | oci_compartment_id] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/cloud_controller/oci/tasks/credentials-check.yml:38
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/cloud_controller/oci : OCI Cloud Controller | Credentials
+Check | oci_vnc_id] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/cloud_controller/oci/tasks/credentials-check.yml:44
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/cloud_controller/oci : OCI Cloud Controller | Credentials
+Check | oci_subnet1_id] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/cloud_controller/oci/tasks/credentials-check.yml:50
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/cloud_controller/oci : OCI Cloud Controller | Credentials
+Check | oci_subnet2_id] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/cloud_controller/oci/tasks/credentials-check.yml:56
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/cloud_controller/oci : OCI Cloud Controller | Credentials
+Check | oci_security_list_management] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/cloud_controller/oci/tasks/credentials-check.yml:63
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/cloud_controller/oci : OCI Cloud Controller | Generate Clo
+ud Provider Configuration] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/cloud_controller/oci/tasks/main.yml:6
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/cloud_controller/oci : OCI Cloud Controller | Slurp Config
+uration] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/cloud_controller/oci/tasks/main.yml:13
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/cloud_controller/oci : OCI Cloud Controller | Encode Confi
+guration] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/cloud_controller/oci/tasks/main.yml:18
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/cloud_controller/oci : OCI Cloud Controller | Generate Man
+ifests] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/cloud_controller/oci/tasks/main.yml:24
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/cloud_controller/oci : OCI Cloud Controller | Apply Manife
+sts] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/cloud_controller/oci/tasks/main.yml:31
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/metallb : Kubernetes Apps | Check cluster settings for Met
+alLB] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/metallb/tasks/main.yml:2
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/metallb : Kubernetes Apps | Check cluster settings for Met
+alLB] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/metallb/tasks/main.yml:8
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/metallb : Kubernetes Apps | Check BGP peers for MetalLB] *
+**
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/metallb/tasks/main.yml:14
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/metallb : Kubernetes Apps | Check AppArmor status] *******
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/metallb/tasks/main.yml:20
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/metallb : Kubernetes Apps | Set apparmor_enabled] ********
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/metallb/tasks/main.yml:28
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/metallb : Kubernetes Apps | Lay Down MetalLB] ************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/metallb/tasks/main.yml:35
+skipping: [kubenode01] => (item=metallb.yml)  => {"ansible_loop_var": "item", "c
+hanged": false, "item": "metallb.yml", "skip_reason": "Conditional result was Fa
+lse"}
+skipping: [kubenode01] => (item=metallb-config.yml)  => {"ansible_loop_var": "it
+em", "changed": false, "item": "metallb-config.yml", "skip_reason": "Conditional
+ result was False"}
+
+TASK [kubernetes-apps/metallb : Kubernetes Apps | Install and configure MetalLB]
+ ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/metallb/tasks/main.yml:43
+skipping: [kubenode01] => (item={'changed': False, 'skipped': True, 'skip_reason
+': 'Conditional result was False', 'item': 'metallb.yml', 'ansible_loop_var': 'i
+tem'})  => {"ansible_loop_var": "item", "changed": false, "item": {"ansible_loop
+_var": "item", "changed": false, "item": "metallb.yml", "skip_reason": "Conditio
+nal result was False", "skipped": true}, "skip_reason": "Conditional result was
+False"}
+skipping: [kubenode01] => (item={'changed': False, 'skipped': True, 'skip_reason
+': 'Conditional result was False', 'item': 'metallb-config.yml', 'ansible_loop_v
+ar': 'item'})  => {"ansible_loop_var": "item", "changed": false, "item": {"ansib
+le_loop_var": "item", "changed": false, "item": "metallb-config.yml", "skip_reas
+on": "Conditional result was False", "skipped": true}, "skip_reason": "Condition
+al result was False"}
+
+TASK [kubernetes-apps/metallb : Kubernetes Apps | Check existing secret of Metal
+LB] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/metallb/tasks/main.yml:54
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/metallb : Kubernetes Apps | Create random bytes for MetalL
+B] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/metallb/tasks/main.yml:62
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes-apps/metallb : Kubernetes Apps | Install secret of MetalLB if n
+ot existing] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+-apps/metallb/tasks/main.yml:69
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+META: ran handlers
+META: ran handlers
+
+PLAY [k8s-cluster] *************************************************************
+META: ran handlers
+
+TASK [prep_download | Set a few facts] *****************************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/download/t
+asks/prep_download.yml:2
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [prep_download | Set image info command for containerd and crio] **********
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/download/t
+asks/prep_download.yml:8
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [prep_download | Set image info command for containerd and crio on localhos
+t] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/download/t
+asks/prep_download.yml:14
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [prep_download | On localhost, check if passwordless root is possible] ****
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/download/t
+asks/prep_download.yml:20
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [prep_download | On localhost, check if user has access to docker without u
+sing sudo] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/download/t
+asks/prep_download.yml:35
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [prep_download | Parse the outputs of the previous commands] **************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/download/t
+asks/prep_download.yml:50
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [prep_download | Check that local user is in group or can become root] ****
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/download/t
+asks/prep_download.yml:60
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [prep_download | Register docker images info] *****************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/download/t
+asks/prep_download.yml:71
+skipping: [kubenode01] => {"censored": "the output has been hidden due to the fa
+ct that 'no_log: true' was specified for this result", "changed": false}
+
+TASK [prep_download | Create staging directory on remote node] *****************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/download/t
+asks/prep_download.yml:80
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [prep_download | Create local cache for files and images on control node] *
+**
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/download/t
+asks/prep_download.yml:90
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [container-engine/crictl : install crictĺ] ********************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/container-
+engine/crictl/tasks/main.yml:2
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [download | Get kubeadm binary and list of required images] ***************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/download/t
+asks/main.yml:17
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [download | Download files / images] **************************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/download/t
+asks/main.yml:26
+skipping: [kubenode01] => (item={'key': 'netcheck_server', 'value': {'enabled':
+False, 'container': True, 'repo': 'quay.io/l23network/k8s-netchecker-server', 't
+ag': 'v1.0', 'sha256': '', 'groups': ['k8s-cluster']}})  => {"ansible_loop_var":
+ "item", "changed": false, "item": {"key": "netcheck_server", "value": {"contain
+er": true, "enabled": false, "groups": ["k8s-cluster"], "repo": "quay.io/l23netw
+ork/k8s-netchecker-server", "sha256": "", "tag": "v1.0"}}, "skip_reason": "Condi
+tional result was False"}
+skipping: [kubenode01] => (item={'key': 'netcheck_agent', 'value': {'enabled': F
+alse, 'container': True, 'repo': 'quay.io/l23network/k8s-netchecker-agent', 'tag
+': 'v1.0', 'sha256': '', 'groups': ['k8s-cluster']}})  => {"ansible_loop_var": "
+item", "changed": false, "item": {"key": "netcheck_agent", "value": {"container"
+: true, "enabled": false, "groups": ["k8s-cluster"], "repo": "quay.io/l23network
+/k8s-netchecker-agent", "sha256": "", "tag": "v1.0"}}, "skip_reason": "Condition
+al result was False"}
+skipping: [kubenode01] => (item={'key': 'etcd', 'value': {'container': True, 'fi
+le': False, 'enabled': True, 'version': 'v3.4.13', 'dest': '/tmp/releases/etcd-v
+3.4.13-linux-amd64.tar.gz', 'repo': 'quay.io/coreos/etcd', 'tag': 'v3.4.13', 'sh
+a256': '', 'url': 'https://github.com/coreos/etcd/releases/download/v3.4.13/etcd
+-v3.4.13-linux-amd64.tar.gz', 'unarchive': False, 'owner': 'root', 'mode': '0755
+', 'groups': ['etcd']}})  => {"ansible_loop_var": "item", "changed": false, "ite
+m": {"key": "etcd", "value": {"container": true, "dest": "/tmp/releases/etcd-v3.
+4.13-linux-amd64.tar.gz", "enabled": true, "file": false, "groups": ["etcd"], "m
+ode": "0755", "owner": "root", "repo": "quay.io/coreos/etcd", "sha256": "", "tag
+": "v3.4.13", "unarchive": false, "url": "https://github.com/coreos/etcd/release
+s/download/v3.4.13/etcd-v3.4.13-linux-amd64.tar.gz", "version": "v3.4.13"}}, "sk
+ip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'cni', 'value': {'enabled': True, 'file'
+: True, 'version': 'v0.9.0', 'dest': '/tmp/releases/cni-plugins-linux-amd64-v0.9
+.0.tgz', 'sha256': '58a58d389895ba9f9bbd3ef330f186c0bb7484136d0bfb9b50152eed55d9
+ec24', 'url': 'https://github.com/containernetworking/plugins/releases/download/
+v0.9.0/cni-plugins-linux-amd64-v0.9.0.tgz', 'unarchive': False, 'owner': 'root',
+ 'mode': '0755', 'groups': ['k8s-cluster']}})  => {"ansible_loop_var": "item", "
+changed": false, "item": {"key": "cni", "value": {"dest": "/tmp/releases/cni-plu
+gins-linux-amd64-v0.9.0.tgz", "enabled": true, "file": true, "groups": ["k8s-clu
+ster"], "mode": "0755", "owner": "root", "sha256": "58a58d389895ba9f9bbd3ef330f1
+86c0bb7484136d0bfb9b50152eed55d9ec24", "unarchive": false, "url": "https://githu
+b.com/containernetworking/plugins/releases/download/v0.9.0/cni-plugins-linux-amd
+64-v0.9.0.tgz", "version": "v0.9.0"}}, "skip_reason": "Conditional result was Fa
+lse"}
+skipping: [kubenode01] => (item={'key': 'kubeadm', 'value': {'enabled': True, 'f
+ile': True, 'version': 'v1.19.7', 'dest': '/tmp/releases/kubeadm-v1.19.7-amd64',
+ 'sha256': 'c63ef1842533cd7888c7452cab9f320dcf45fc1c173e9d40abb712d45992db24', '
+url': 'https://storage.googleapis.com/kubernetes-release/release/v1.19.7/bin/lin
+ux/amd64/kubeadm', 'unarchive': False, 'owner': 'root', 'mode': '0755', 'groups'
+: ['k8s-cluster']}})  => {"ansible_loop_var": "item", "changed": false, "item":
+{"key": "kubeadm", "value": {"dest": "/tmp/releases/kubeadm-v1.19.7-amd64", "ena
+bled": true, "file": true, "groups": ["k8s-cluster"], "mode": "0755", "owner": "
+root", "sha256": "c63ef1842533cd7888c7452cab9f320dcf45fc1c173e9d40abb712d45992db
+24", "unarchive": false, "url": "https://storage.googleapis.com/kubernetes-relea
+se/release/v1.19.7/bin/linux/amd64/kubeadm", "version": "v1.19.7"}}, "skip_reaso
+n": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'kubelet', 'value': {'enabled': True, 'f
+ile': True, 'version': 'v1.19.7', 'dest': '/tmp/releases/kubelet-v1.19.7-amd64',
+ 'sha256': 'd8b296825f6dd7a17287b73cd6604d32210abbba86c88fb68c1b1c5016906c54', '
+url': 'https://storage.googleapis.com/kubernetes-release/release/v1.19.7/bin/lin
+ux/amd64/kubelet', 'unarchive': False, 'owner': 'root', 'mode': '0755', 'groups'
+: ['k8s-cluster']}})  => {"ansible_loop_var": "item", "changed": false, "item":
+{"key": "kubelet", "value": {"dest": "/tmp/releases/kubelet-v1.19.7-amd64", "ena
+bled": true, "file": true, "groups": ["k8s-cluster"], "mode": "0755", "owner": "
+root", "sha256": "d8b296825f6dd7a17287b73cd6604d32210abbba86c88fb68c1b1c5016906c
+54", "unarchive": false, "url": "https://storage.googleapis.com/kubernetes-relea
+se/release/v1.19.7/bin/linux/amd64/kubelet", "version": "v1.19.7"}}, "skip_reaso
+n": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'kubectl', 'value': {'enabled': True, 'f
+ile': True, 'version': 'v1.19.7', 'dest': '/tmp/releases/kubectl-v1.19.7-amd64',
+ 'sha256': 'd46eb3bbe2575e5b6bedbc6d3519424b4f2f57929d7da1ef7e11c09068f37297', '
+url': 'https://storage.googleapis.com/kubernetes-release/release/v1.19.7/bin/lin
+ux/amd64/kubectl', 'unarchive': False, 'owner': 'root', 'mode': '0755', 'groups'
+: ['kube-master']}})  => {"ansible_loop_var": "item", "changed": false, "item":
+{"key": "kubectl", "value": {"dest": "/tmp/releases/kubectl-v1.19.7-amd64", "ena
+bled": true, "file": true, "groups": ["kube-master"], "mode": "0755", "owner": "
+root", "sha256": "d46eb3bbe2575e5b6bedbc6d3519424b4f2f57929d7da1ef7e11c09068f372
+97", "unarchive": false, "url": "https://storage.googleapis.com/kubernetes-relea
+se/release/v1.19.7/bin/linux/amd64/kubectl", "version": "v1.19.7"}}, "skip_reaso
+n": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'crictl', 'value': {'file': True, 'enabl
+ed': False, 'version': 'v1.19.0', 'dest': '/tmp/releases/crictl-v1.19.0-linux-am
+d64.tar.gz', 'sha256': '87d8ef70b61f2fe3d8b4a48f6f712fd798c6e293ed3723c1e4bbb505
+2098f0ae', 'url': 'https://github.com/kubernetes-sigs/cri-tools/releases/downloa
+d/v1.19.0/crictl-v1.19.0-linux-amd64.tar.gz', 'unarchive': True, 'owner': 'root'
+, 'mode': '0755', 'groups': ['k8s-cluster']}})  => {"ansible_loop_var": "item",
+"changed": false, "item": {"key": "crictl", "value": {"dest": "/tmp/releases/cri
+ctl-v1.19.0-linux-amd64.tar.gz", "enabled": false, "file": true, "groups": ["k8s
+-cluster"], "mode": "0755", "owner": "root", "sha256": "87d8ef70b61f2fe3d8b4a48f
+6f712fd798c6e293ed3723c1e4bbb5052098f0ae", "unarchive": true, "url": "https://gi
+thub.com/kubernetes-sigs/cri-tools/releases/download/v1.19.0/crictl-v1.19.0-linu
+x-amd64.tar.gz", "version": "v1.19.0"}}, "skip_reason": "Conditional result was
+False"}
+skipping: [kubenode01] => (item={'key': 'cilium', 'value': {'enabled': False, 'c
+ontainer': True, 'repo': 'quay.io/cilium/cilium', 'tag': 'v1.8.6', 'sha256': '',
+ 'groups': ['k8s-cluster']}})  => {"ansible_loop_var": "item", "changed": false,
+ "item": {"key": "cilium", "value": {"container": true, "enabled": false, "group
+s": ["k8s-cluster"], "repo": "quay.io/cilium/cilium", "sha256": "", "tag": "v1.8
+.6"}}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'cilium_init', 'value': {'enabled': Fals
+e, 'container': True, 'repo': 'quay.io/cilium/cilium-init', 'tag': '2019-04-05',
+ 'sha256': '', 'groups': ['k8s-cluster']}})  => {"ansible_loop_var": "item", "ch
+anged": false, "item": {"key": "cilium_init", "value": {"container": true, "enab
+led": false, "groups": ["k8s-cluster"], "repo": "quay.io/cilium/cilium-init", "s
+ha256": "", "tag": "2019-04-05"}}, "skip_reason": "Conditional result was False"
+}
+skipping: [kubenode01] => (item={'key': 'cilium_operator', 'value': {'enabled':
+False, 'container': True, 'repo': 'quay.io/cilium/operator', 'tag': 'v1.8.6', 's
+ha256': '', 'groups': ['k8s-cluster']}})  => {"ansible_loop_var": "item", "chang
+ed": false, "item": {"key": "cilium_operator", "value": {"container": true, "ena
+bled": false, "groups": ["k8s-cluster"], "repo": "quay.io/cilium/operator", "sha
+256": "", "tag": "v1.8.6"}}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'multus', 'value': {'enabled': False, 'c
+ontainer': True, 'repo': 'docker.io/nfvpe/multus', 'tag': 'v3.6', 'sha256': '',
+'groups': ['k8s-cluster']}})  => {"ansible_loop_var": "item", "changed": false,
+"item": {"key": "multus", "value": {"container": true, "enabled": false, "groups
+": ["k8s-cluster"], "repo": "docker.io/nfvpe/multus", "sha256": "", "tag": "v3.6
+"}}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'flannel', 'value': {'enabled': True, 'c
+ontainer': True, 'repo': 'quay.io/coreos/flannel', 'tag': 'v0.13.0', 'sha256': '
+', 'groups': ['k8s-cluster']}})  => {"ansible_loop_var": "item", "changed": fals
+e, "item": {"key": "flannel", "value": {"container": true, "enabled": true, "gro
+ups": ["k8s-cluster"], "repo": "quay.io/coreos/flannel", "sha256": "", "tag": "v
+0.13.0"}}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'calicoctl', 'value': {'enabled': False,
+ 'file': True, 'version': 'v3.16.6', 'dest': '/tmp/releases/calicoctl', 'sha256'
+: '9b82230446d4749a1043dddd8d466d275a460e570a412e6ced003368ab9c72d8', 'url': 'ht
+tps://github.com/projectcalico/calicoctl/releases/download/v3.16.6/calicoctl-lin
+ux-amd64', 'unarchive': False, 'owner': 'root', 'mode': '0755', 'groups': ['k8s-
+cluster']}})  => {"ansible_loop_var": "item", "changed": false, "item": {"key":
+"calicoctl", "value": {"dest": "/tmp/releases/calicoctl", "enabled": false, "fil
+e": true, "groups": ["k8s-cluster"], "mode": "0755", "owner": "root", "sha256":
+"9b82230446d4749a1043dddd8d466d275a460e570a412e6ced003368ab9c72d8", "unarchive":
+ false, "url": "https://github.com/projectcalico/calicoctl/releases/download/v3.
+16.6/calicoctl-linux-amd64", "version": "v3.16.6"}}, "skip_reason": "Conditional
+ result was False"}
+skipping: [kubenode01] => (item={'key': 'calico_node', 'value': {'enabled': Fals
+e, 'container': True, 'repo': 'quay.io/calico/node', 'tag': 'v3.16.6', 'sha256':
+ '', 'groups': ['k8s-cluster']}})  => {"ansible_loop_var": "item", "changed": fa
+lse, "item": {"key": "calico_node", "value": {"container": true, "enabled": fals
+e, "groups": ["k8s-cluster"], "repo": "quay.io/calico/node", "sha256": "", "tag"
+: "v3.16.6"}}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'calico_cni', 'value': {'enabled': False
+, 'container': True, 'repo': 'quay.io/calico/cni', 'tag': 'v3.16.6', 'sha256': '
+', 'groups': ['k8s-cluster']}})  => {"ansible_loop_var": "item", "changed": fals
+e, "item": {"key": "calico_cni", "value": {"container": true, "enabled": false,
+"groups": ["k8s-cluster"], "repo": "quay.io/calico/cni", "sha256": "", "tag": "v
+3.16.6"}}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'calico_policy', 'value': {'enabled': Fa
+lse, 'container': True, 'repo': 'quay.io/calico/kube-controllers', 'tag': 'v3.16
+.6', 'sha256': '', 'groups': ['k8s-cluster']}})  => {"ansible_loop_var": "item",
+ "changed": false, "item": {"key": "calico_policy", "value": {"container": true,
+ "enabled": false, "groups": ["k8s-cluster"], "repo": "quay.io/calico/kube-contr
+ollers", "sha256": "", "tag": "v3.16.6"}}, "skip_reason": "Conditional result wa
+s False"}
+skipping: [kubenode01] => (item={'key': 'calico_typha', 'value': {'enabled': Fal
+se, 'container': True, 'repo': 'quay.io/calico/typha', 'tag': 'v3.16.6', 'sha256
+': '', 'groups': ['k8s-cluster']}})  => {"ansible_loop_var": "item", "changed":
+false, "item": {"key": "calico_typha", "value": {"container": true, "enabled": f
+alse, "groups": ["k8s-cluster"], "repo": "quay.io/calico/typha", "sha256": "", "
+tag": "v3.16.6"}}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'weave_kube', 'value': {'enabled': False
+, 'container': True, 'repo': 'docker.io/weaveworks/weave-kube', 'tag': '2.7.0',
+'sha256': '', 'groups': ['k8s-cluster']}})  => {"ansible_loop_var": "item", "cha
+nged": false, "item": {"key": "weave_kube", "value": {"container": true, "enable
+d": false, "groups": ["k8s-cluster"], "repo": "docker.io/weaveworks/weave-kube",
+ "sha256": "", "tag": "2.7.0"}}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'weave_npc', 'value': {'enabled': False,
+ 'container': True, 'repo': 'docker.io/weaveworks/weave-npc', 'tag': '2.7.0', 's
+ha256': '', 'groups': ['k8s-cluster']}})  => {"ansible_loop_var": "item", "chang
+ed": false, "item": {"key": "weave_npc", "value": {"container": true, "enabled":
+ false, "groups": ["k8s-cluster"], "repo": "docker.io/weaveworks/weave-npc", "sh
+a256": "", "tag": "2.7.0"}}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'ovn4nfv', 'value': {'enabled': False, '
+container': True, 'repo': 'docker.io/integratedcloudnative/ovn4nfv-k8s-plugin',
+'tag': 'v1.1.0', 'sha256': '', 'groups': ['k8s-cluster']}})  => {"ansible_loop_v
+ar": "item", "changed": false, "item": {"key": "ovn4nfv", "value": {"container":
+ true, "enabled": false, "groups": ["k8s-cluster"], "repo": "docker.io/integrate
+dcloudnative/ovn4nfv-k8s-plugin", "sha256": "", "tag": "v1.1.0"}}, "skip_reason"
+: "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'kube_ovn', 'value': {'enabled': False,
+'container': True, 'repo': 'docker.io/kubeovn/kube-ovn', 'tag': 'v1.5.2', 'sha25
+6': '', 'groups': ['k8s-cluster']}})  => {"ansible_loop_var": "item", "changed":
+ false, "item": {"key": "kube_ovn", "value": {"container": true, "enabled": fals
+e, "groups": ["k8s-cluster"], "repo": "docker.io/kubeovn/kube-ovn", "sha256": ""
+, "tag": "v1.5.2"}}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'kube_router', 'value': {'enabled': Fals
+e, 'container': True, 'repo': 'docker.io/cloudnativelabs/kube-router', 'tag': 'v
+1.1.1', 'sha256': '', 'groups': ['k8s-cluster']}})  => {"ansible_loop_var": "ite
+m", "changed": false, "item": {"key": "kube_router", "value": {"container": true
+, "enabled": false, "groups": ["k8s-cluster"], "repo": "docker.io/cloudnativelab
+s/kube-router", "sha256": "", "tag": "v1.1.1"}}, "skip_reason": "Conditional res
+ult was False"}
+skipping: [kubenode01] => (item={'key': 'pod_infra', 'value': {'enabled': True,
+'container': True, 'repo': 'k8s.gcr.io/pause', 'tag': '3.3', 'sha256': '', 'grou
+ps': ['k8s-cluster']}})  => {"ansible_loop_var": "item", "changed": false, "item
+": {"key": "pod_infra", "value": {"container": true, "enabled": true, "groups":
+["k8s-cluster"], "repo": "k8s.gcr.io/pause", "sha256": "", "tag": "3.3"}}, "skip
+_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'install_socat', 'value': {'enabled': Fa
+lse, 'container': True, 'repo': 'docker.io/xueshanf/install-socat', 'tag': 'late
+st', 'sha256': '', 'groups': ['k8s-cluster']}})  => {"ansible_loop_var": "item",
+ "changed": false, "item": {"key": "install_socat", "value": {"container": true,
+ "enabled": false, "groups": ["k8s-cluster"], "repo": "docker.io/xueshanf/instal
+l-socat", "sha256": "", "tag": "latest"}}, "skip_reason": "Conditional result wa
+s False"}
+skipping: [kubenode01] => (item={'key': 'nginx', 'value': {'enabled': True, 'con
+tainer': True, 'repo': 'docker.io/library/nginx', 'tag': 1.19, 'sha256': '', 'gr
+oups': ['kube-node']}})  => {"ansible_loop_var": "item", "changed": false, "item
+": {"key": "nginx", "value": {"container": true, "enabled": true, "groups": ["ku
+be-node"], "repo": "docker.io/library/nginx", "sha256": "", "tag": 1.19}}, "skip
+_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'haproxy', 'value': {'enabled': False, '
+container': True, 'repo': 'docker.io/library/haproxy', 'tag': 2.3, 'sha256': '',
+ 'groups': ['kube-node']}})  => {"ansible_loop_var": "item", "changed": false, "
+item": {"key": "haproxy", "value": {"container": true, "enabled": false, "groups
+": ["kube-node"], "repo": "docker.io/library/haproxy", "sha256": "", "tag": 2.3}
+}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'coredns', 'value': {'enabled': True, 'c
+ontainer': True, 'repo': 'k8s.gcr.io/coredns', 'tag': '1.7.0', 'sha256': '', 'gr
+oups': ['kube-master']}})  => {"ansible_loop_var": "item", "changed": false, "it
+em": {"key": "coredns", "value": {"container": true, "enabled": true, "groups":
+["kube-master"], "repo": "k8s.gcr.io/coredns", "sha256": "", "tag": "1.7.0"}}, "
+skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'nodelocaldns', 'value': {'enabled': Tru
+e, 'container': True, 'repo': 'k8s.gcr.io/dns/k8s-dns-node-cache', 'tag': '1.16.
+0', 'sha256': '', 'groups': ['k8s-cluster']}})  => {"ansible_loop_var": "item",
+"changed": false, "item": {"key": "nodelocaldns", "value": {"container": true, "
+enabled": true, "groups": ["k8s-cluster"], "repo": "k8s.gcr.io/dns/k8s-dns-node-
+cache", "sha256": "", "tag": "1.16.0"}}, "skip_reason": "Conditional result was
+False"}
+skipping: [kubenode01] => (item={'key': 'dnsautoscaler', 'value': {'enabled': Tr
+ue, 'container': True, 'repo': 'k8s.gcr.io/cpa/cluster-proportional-autoscaler-a
+md64', 'tag': '1.8.3', 'sha256': '', 'groups': ['kube-master']}})  => {"ansible_
+loop_var": "item", "changed": false, "item": {"key": "dnsautoscaler", "value": {
+"container": true, "enabled": true, "groups": ["kube-master"], "repo": "k8s.gcr.
+io/cpa/cluster-proportional-autoscaler-amd64", "sha256": "", "tag": "1.8.3"}}, "
+skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'testbox', 'value': {'enabled': False, '
+container': True, 'repo': 'k8s.gcr.io/busybox', 'tag': 'latest', 'sha256': ''}})
+  => {"ansible_loop_var": "item", "changed": false, "item": {"key": "testbox", "
+value": {"container": true, "enabled": false, "repo": "k8s.gcr.io/busybox", "sha
+256": "", "tag": "latest"}}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'helm', 'value': {'enabled': False, 'fil
+e': True, 'version': 'v3.5.2', 'dest': '/tmp/releases/helm-v3.5.2/helm-v3.5.2-li
+nux-amd64.tar.gz', 'sha256': '01b317c506f8b6ad60b11b1dc3f093276bb703281cb1ae0113
+2752253ec706a2', 'url': 'https://get.helm.sh/helm-v3.5.2-linux-amd64.tar.gz', 'u
+narchive': True, 'owner': 'root', 'mode': '0755', 'groups': ['kube-master']}})
+=> {"ansible_loop_var": "item", "changed": false, "item": {"key": "helm", "value
+": {"dest": "/tmp/releases/helm-v3.5.2/helm-v3.5.2-linux-amd64.tar.gz", "enabled
+": false, "file": true, "groups": ["kube-master"], "mode": "0755", "owner": "roo
+t", "sha256": "01b317c506f8b6ad60b11b1dc3f093276bb703281cb1ae01132752253ec706a2"
+, "unarchive": true, "url": "https://get.helm.sh/helm-v3.5.2-linux-amd64.tar.gz"
+, "version": "v3.5.2"}}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'registry', 'value': {'enabled': False,
+'container': True, 'repo': 'docker.io/library/registry', 'tag': '2.7.1', 'sha256
+': '', 'groups': ['kube-node']}})  => {"ansible_loop_var": "item", "changed": fa
+lse, "item": {"key": "registry", "value": {"container": true, "enabled": false,
+"groups": ["kube-node"], "repo": "docker.io/library/registry", "sha256": "", "ta
+g": "2.7.1"}}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'registry_proxy', 'value': {'enabled': F
+alse, 'container': True, 'repo': 'k8s.gcr.io/kube-registry-proxy', 'tag': '0.4',
+ 'sha256': '', 'groups': ['kube-node']}})  => {"ansible_loop_var": "item", "chan
+ged": false, "item": {"key": "registry_proxy", "value": {"container": true, "ena
+bled": false, "groups": ["kube-node"], "repo": "k8s.gcr.io/kube-registry-proxy",
+ "sha256": "", "tag": "0.4"}}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'metrics_server', 'value': {'enabled': F
+alse, 'container': True, 'repo': 'k8s.gcr.io/metrics-server/metrics-server', 'ta
+g': 'v0.3.7', 'sha256': '', 'groups': ['kube-master']}})  => {"ansible_loop_var"
+: "item", "changed": false, "item": {"key": "metrics_server", "value": {"contain
+er": true, "enabled": false, "groups": ["kube-master"], "repo": "k8s.gcr.io/metr
+ics-server/metrics-server", "sha256": "", "tag": "v0.3.7"}}, "skip_reason": "Con
+ditional result was False"}
+skipping: [kubenode01] => (item={'key': 'addon_resizer', 'value': {'enabled': Fa
+lse, 'container': True, 'repo': 'k8s.gcr.io/addon-resizer', 'tag': '1.8.11', 'sh
+a256': '', 'groups': ['kube-master']}})  => {"ansible_loop_var": "item", "change
+d": false, "item": {"key": "addon_resizer", "value": {"container": true, "enable
+d": false, "groups": ["kube-master"], "repo": "k8s.gcr.io/addon-resizer", "sha25
+6": "", "tag": "1.8.11"}}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'local_volume_provisioner', 'value': {'e
+nabled': False, 'container': True, 'repo': 'quay.io/external_storage/local-volum
+e-provisioner', 'tag': 'v2.3.4', 'sha256': '', 'groups': ['kube-node']}})  => {"
+ansible_loop_var": "item", "changed": false, "item": {"key": "local_volume_provi
+sioner", "value": {"container": true, "enabled": false, "groups": ["kube-node"],
+ "repo": "quay.io/external_storage/local-volume-provisioner", "sha256": "", "tag
+": "v2.3.4"}}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'cephfs_provisioner', 'value': {'enabled
+': False, 'container': True, 'repo': 'quay.io/external_storage/cephfs-provisione
+r', 'tag': 'v2.1.0-k8s1.11', 'sha256': '', 'groups': ['kube-node']}})  => {"ansi
+ble_loop_var": "item", "changed": false, "item": {"key": "cephfs_provisioner", "
+value": {"container": true, "enabled": false, "groups": ["kube-node"], "repo": "
+quay.io/external_storage/cephfs-provisioner", "sha256": "", "tag": "v2.1.0-k8s1.
+11"}}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'rbd_provisioner', 'value': {'enabled':
+False, 'container': True, 'repo': 'quay.io/external_storage/rbd-provisioner', 't
+ag': 'v2.1.1-k8s1.11', 'sha256': '', 'groups': ['kube-node']}})  => {"ansible_lo
+op_var": "item", "changed": false, "item": {"key": "rbd_provisioner", "value": {
+"container": true, "enabled": false, "groups": ["kube-node"], "repo": "quay.io/e
+xternal_storage/rbd-provisioner", "sha256": "", "tag": "v2.1.1-k8s1.11"}}, "skip
+_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'local_path_provisioner', 'value': {'ena
+bled': False, 'container': True, 'repo': 'docker.io/rancher/local-path-provision
+er', 'tag': 'v0.0.19', 'sha256': '', 'groups': ['kube-node']}})  => {"ansible_lo
+op_var": "item", "changed": false, "item": {"key": "local_path_provisioner", "va
+lue": {"container": true, "enabled": false, "groups": ["kube-node"], "repo": "do
+cker.io/rancher/local-path-provisioner", "sha256": "", "tag": "v0.0.19"}}, "skip
+_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'ingress_nginx_controller', 'value': {'e
+nabled': False, 'container': True, 'repo': 'k8s.gcr.io/ingress-nginx/controller'
+, 'tag': 'v0.41.2', 'sha256': '', 'groups': ['kube-node']}})  => {"ansible_loop_
+var": "item", "changed": false, "item": {"key": "ingress_nginx_controller", "val
+ue": {"container": true, "enabled": false, "groups": ["kube-node"], "repo": "k8s
+.gcr.io/ingress-nginx/controller", "sha256": "", "tag": "v0.41.2"}}, "skip_reaso
+n": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'ingress_ambassador_controller', 'value'
+: {'enabled': False, 'container': True, 'repo': 'quay.io/datawire/ambassador-ope
+rator', 'tag': 'v1.2.9', 'sha256': '', 'groups': ['kube-node']}})  => {"ansible_
+loop_var": "item", "changed": false, "item": {"key": "ingress_ambassador_control
+ler", "value": {"container": true, "enabled": false, "groups": ["kube-node"], "r
+epo": "quay.io/datawire/ambassador-operator", "sha256": "", "tag": "v1.2.9"}}, "
+skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'ingress_alb_controller', 'value': {'ena
+bled': False, 'container': True, 'repo': 'docker.io/amazon/aws-alb-ingress-contr
+oller', 'tag': 'v1.1.9', 'sha256': '', 'groups': ['kube-node']}})  => {"ansible_
+loop_var": "item", "changed": false, "item": {"key": "ingress_alb_controller", "
+value": {"container": true, "enabled": false, "groups": ["kube-node"], "repo": "
+docker.io/amazon/aws-alb-ingress-controller", "sha256": "", "tag": "v1.1.9"}}, "
+skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'cert_manager_controller', 'value': {'en
+abled': False, 'container': True, 'repo': 'quay.io/jetstack/cert-manager-control
+ler', 'tag': 'v1.0.4', 'sha256': '', 'groups': ['kube-node']}})  => {"ansible_lo
+op_var": "item", "changed": false, "item": {"key": "cert_manager_controller", "v
+alue": {"container": true, "enabled": false, "groups": ["kube-node"], "repo": "q
+uay.io/jetstack/cert-manager-controller", "sha256": "", "tag": "v1.0.4"}}, "skip
+_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'cert_manager_cainjector', 'value': {'en
+abled': False, 'container': True, 'repo': 'quay.io/jetstack/cert-manager-cainjec
+tor', 'tag': 'v1.0.4', 'sha256': '', 'groups': ['kube-node']}})  => {"ansible_lo
+op_var": "item", "changed": false, "item": {"key": "cert_manager_cainjector", "v
+alue": {"container": true, "enabled": false, "groups": ["kube-node"], "repo": "q
+uay.io/jetstack/cert-manager-cainjector", "sha256": "", "tag": "v1.0.4"}}, "skip
+_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'cert_manager_webhook', 'value': {'enabl
+ed': False, 'container': True, 'repo': 'quay.io/jetstack/cert-manager-webhook',
+'tag': 'v1.0.4', 'sha256': '', 'groups': ['kube-node']}})  => {"ansible_loop_var
+": "item", "changed": false, "item": {"key": "cert_manager_webhook", "value": {"
+container": true, "enabled": false, "groups": ["kube-node"], "repo": "quay.io/je
+tstack/cert-manager-webhook", "sha256": "", "tag": "v1.0.4"}}, "skip_reason": "C
+onditional result was False"}
+skipping: [kubenode01] => (item={'key': 'csi_attacher', 'value': {'enabled': Fal
+se, 'container': True, 'repo': 'quay.io/k8scsi/csi-attacher', 'tag': 'v2.2.0', '
+sha256': '', 'groups': ['kube-node']}})  => {"ansible_loop_var": "item", "change
+d": false, "item": {"key": "csi_attacher", "value": {"container": true, "enabled
+": false, "groups": ["kube-node"], "repo": "quay.io/k8scsi/csi-attacher", "sha25
+6": "", "tag": "v2.2.0"}}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'csi_provisioner', 'value': {'enabled':
+False, 'container': True, 'repo': 'quay.io/k8scsi/csi-provisioner', 'tag': 'v1.6
+.0', 'sha256': '', 'groups': ['kube-node']}})  => {"ansible_loop_var": "item", "
+changed": false, "item": {"key": "csi_provisioner", "value": {"container": true,
+ "enabled": false, "groups": ["kube-node"], "repo": "quay.io/k8scsi/csi-provisio
+ner", "sha256": "", "tag": "v1.6.0"}}, "skip_reason": "Conditional result was Fa
+lse"}
+skipping: [kubenode01] => (item={'key': 'csi_snapshotter', 'value': {'enabled':
+False, 'container': True, 'repo': 'quay.io/k8scsi/csi-snapshotter', 'tag': 'v2.1
+.1', 'sha256': '', 'groups': ['kube-node']}})  => {"ansible_loop_var": "item", "
+changed": false, "item": {"key": "csi_snapshotter", "value": {"container": true,
+ "enabled": false, "groups": ["kube-node"], "repo": "quay.io/k8scsi/csi-snapshot
+ter", "sha256": "", "tag": "v2.1.1"}}, "skip_reason": "Conditional result was Fa
+lse"}
+skipping: [kubenode01] => (item={'key': 'snapshot_controller', 'value': {'enable
+d': False, 'container': True, 'repo': 'quay.io/k8scsi/snapshot-controller', 'tag
+': 'v2.0.1', 'sha256': '', 'groups': ['kube-node']}})  => {"ansible_loop_var": "
+item", "changed": false, "item": {"key": "snapshot_controller", "value": {"conta
+iner": true, "enabled": false, "groups": ["kube-node"], "repo": "quay.io/k8scsi/
+snapshot-controller", "sha256": "", "tag": "v2.0.1"}}, "skip_reason": "Condition
+al result was False"}
+skipping: [kubenode01] => (item={'key': 'csi_resizer', 'value': {'enabled': Fals
+e, 'container': True, 'repo': 'quay.io/k8scsi/csi-resizer', 'tag': 'v0.5.0', 'sh
+a256': '', 'groups': ['kube-node']}})  => {"ansible_loop_var": "item", "changed"
+: false, "item": {"key": "csi_resizer", "value": {"container": true, "enabled":
+false, "groups": ["kube-node"], "repo": "quay.io/k8scsi/csi-resizer", "sha256":
+"", "tag": "v0.5.0"}}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'csi_node_driver_registrar', 'value': {'
+enabled': False, 'container': True, 'repo': 'quay.io/k8scsi/csi-node-driver-regi
+strar', 'tag': 'v1.3.0', 'sha256': '', 'groups': ['kube-node']}})  => {"ansible_
+loop_var": "item", "changed": false, "item": {"key": "csi_node_driver_registrar"
+, "value": {"container": true, "enabled": false, "groups": ["kube-node"], "repo"
+: "quay.io/k8scsi/csi-node-driver-registrar", "sha256": "", "tag": "v1.3.0"}}, "
+skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'cinder_csi_plugin', 'value': {'enabled'
+: False, 'container': True, 'repo': 'docker.io/k8scloudprovider/cinder-csi-plugi
+n', 'tag': 'v1.18.0', 'sha256': '', 'groups': ['kube-node']}})  => {"ansible_loo
+p_var": "item", "changed": false, "item": {"key": "cinder_csi_plugin", "value":
+{"container": true, "enabled": false, "groups": ["kube-node"], "repo": "docker.i
+o/k8scloudprovider/cinder-csi-plugin", "sha256": "", "tag": "v1.18.0"}}, "skip_r
+eason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'aws_ebs_csi_plugin', 'value': {'enabled
+': False, 'container': True, 'repo': 'docker.io/amazon/aws-ebs-csi-driver', 'tag
+': 'v0.5.0', 'sha256': '', 'groups': ['kube-node']}})  => {"ansible_loop_var": "
+item", "changed": false, "item": {"key": "aws_ebs_csi_plugin", "value": {"contai
+ner": true, "enabled": false, "groups": ["kube-node"], "repo": "docker.io/amazon
+/aws-ebs-csi-driver", "sha256": "", "tag": "v0.5.0"}}, "skip_reason": "Condition
+al result was False"}
+skipping: [kubenode01] => (item={'key': 'dashboard', 'value': {'enabled': False,
+ 'container': True, 'repo': 'docker.io/kubernetesui/dashboard-amd64', 'tag': 'v2
+.1.0', 'sha256': '', 'groups': ['kube-master']}})  => {"ansible_loop_var": "item
+", "changed": false, "item": {"key": "dashboard", "value": {"container": true, "
+enabled": false, "groups": ["kube-master"], "repo": "docker.io/kubernetesui/dash
+board-amd64", "sha256": "", "tag": "v2.1.0"}}, "skip_reason": "Conditional resul
+t was False"}
+skipping: [kubenode01] => (item={'key': 'dashboard_metrics_scrapper', 'value': {
+'enabled': False, 'container': True, 'repo': 'docker.io/kubernetesui/metrics-scr
+aper', 'tag': 'v1.0.6', 'sha256': '', 'groups': ['kube-master']}})  => {"ansible
+_loop_var": "item", "changed": false, "item": {"key": "dashboard_metrics_scrappe
+r", "value": {"container": true, "enabled": false, "groups": ["kube-master"], "r
+epo": "docker.io/kubernetesui/metrics-scraper", "sha256": "", "tag": "v1.0.6"}},
+ "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'kubeadm_kube-apiserver', 'value': {'ena
+bled': True, 'container': True, 'repo': 'k8s.gcr.io/kube-apiserver', 'tag': 'v1.
+19.7', 'groups': 'k8s-cluster'}})  => {"ansible_loop_var": "item", "changed": fa
+lse, "item": {"key": "kubeadm_kube-apiserver", "value": {"container": true, "ena
+bled": true, "groups": "k8s-cluster", "repo": "k8s.gcr.io/kube-apiserver", "tag"
+: "v1.19.7"}}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'kubeadm_kube-controller-manager', 'valu
+e': {'enabled': True, 'container': True, 'repo': 'k8s.gcr.io/kube-controller-man
+ager', 'tag': 'v1.19.7', 'groups': 'k8s-cluster'}})  => {"ansible_loop_var": "it
+em", "changed": false, "item": {"key": "kubeadm_kube-controller-manager", "value
+": {"container": true, "enabled": true, "groups": "k8s-cluster", "repo": "k8s.gc
+r.io/kube-controller-manager", "tag": "v1.19.7"}}, "skip_reason": "Conditional r
+esult was False"}
+skipping: [kubenode01] => (item={'key': 'kubeadm_kube-scheduler', 'value': {'ena
+bled': True, 'container': True, 'repo': 'k8s.gcr.io/kube-scheduler', 'tag': 'v1.
+19.7', 'groups': 'k8s-cluster'}})  => {"ansible_loop_var": "item", "changed": fa
+lse, "item": {"key": "kubeadm_kube-scheduler", "value": {"container": true, "ena
+bled": true, "groups": "k8s-cluster", "repo": "k8s.gcr.io/kube-scheduler", "tag"
+: "v1.19.7"}}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': 'kubeadm_kube-proxy', 'value': {'enabled
+': True, 'container': True, 'repo': 'k8s.gcr.io/kube-proxy', 'tag': 'v1.19.7', '
+groups': 'k8s-cluster'}})  => {"ansible_loop_var": "item", "changed": false, "it
+em": {"key": "kubeadm_kube-proxy", "value": {"container": true, "enabled": true,
+ "groups": "k8s-cluster", "repo": "k8s.gcr.io/kube-proxy", "tag": "v1.19.7"}}, "
+skip_reason": "Conditional result was False"}
+
+TASK [kubespray-defaults : Configure defaults] *********************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubespray-
+defaults/tasks/main.yaml:2
+ok: [kubenode01] => {
+    "msg": "Check roles/kubespray-defaults/defaults/main.yml"
+}
+
+TASK [kubespray-defaults : Gather ansible_default_ipv4 from all hosts] *********
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubespray-
+defaults/tasks/fallback_ips.yml:6
+skipping: [kubenode01] => (item=kubenode01)  => {"ansible_loop_var": "delegate_h
+ost_to_gather_facts", "changed": false, "delegate_host_to_gather_facts": "kubeno
+de01", "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item=kubenode01)  => {"ansible_loop_var": "delegate_h
+ost_to_gather_facts", "changed": false, "delegate_host_to_gather_facts": "kubeno
+de01", "skip_reason": "Conditional result was False"}
+
+TASK [kubespray-defaults : create fallback_ips_base] ***************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubespray-
+defaults/tasks/fallback_ips.yml:15
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubespray-defaults : set fallback_ips] ***********************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubespray-
+defaults/tasks/fallback_ips.yml:29
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubespray-defaults : Set no_proxy to all assigned cluster IPs and hostname
+s] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubespray-
+defaults/tasks/no_proxy.yml:2
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubespray-defaults : Populates no_proxy to all hosts] ********************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubespray-
+defaults/tasks/no_proxy.yml:32
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [adduser : User | Create User Group] **************************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/adduser/ta
+sks/main.yml:2
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [adduser : User | Create User] ********************************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/adduser/ta
+sks/main.yml:7
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Remove swapfile from /etc/fstab] *****************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0010-swapoff.yml:2
+skipping: [kubenode01] => (item=swap)  => {"ansible_loop_var": "item", "changed"
+: false, "item": "swap", "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item=none)  => {"ansible_loop_var": "item", "changed"
+: false, "item": "none", "skip_reason": "Conditional result was False"}
+
+TASK [kubernetes/preinstall : check swap] **************************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0010-swapoff.yml:12
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Disable swap] ************************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0010-swapoff.yml:16
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if either kube-master or kube-node group is e
+mpty] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:2
+skipping: [kubenode01] => (item=kube-master)  => {"ansible_loop_var": "item", "c
+hanged": false, "item": "kube-master", "skip_reason": "Conditional result was Fa
+lse"}
+skipping: [kubenode01] => (item=kube-node)  => {"ansible_loop_var": "item", "cha
+nged": false, "item": "kube-node", "skip_reason": "Conditional result was False"
+}
+
+TASK [kubernetes/preinstall : Stop if etcd group is empty in external etcd mode]
+ ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:11
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if non systemd OS type] *********************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:20
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if unknown OS] ******************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:25
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if unknown network plugin] ******************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:31
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if incompatible network plugin and cloudprovi
+der] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:39
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if unsupported version of Kubernetes] *******
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:47
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if known booleans are set as strings (Use JSO
+N format on CLI: -e "{'key': true }")] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:54
+skipping: [kubenode01] => (item={'name': 'download_run_once', 'value': False})
+=> {"ansible_loop_var": "item", "changed": false, "item": {"name": "download_run
+_once", "value": false}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'name': 'deploy_netchecker', 'value': False})
+=> {"ansible_loop_var": "item", "changed": false, "item": {"name": "deploy_netch
+ecker", "value": false}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'name': 'download_always_pull', 'value': False}
+)  => {"ansible_loop_var": "item", "changed": false, "item": {"name": "download_
+always_pull", "value": false}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'name': 'helm_enabled', 'value': False})  => {"
+ansible_loop_var": "item", "changed": false, "item": {"name": "helm_enabled", "v
+alue": false}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'name': 'openstack_lbaas_enabled', 'value': Fal
+se})  => {"ansible_loop_var": "item", "changed": false, "item": {"name": "openst
+ack_lbaas_enabled", "value": false}, "skip_reason": "Conditional result was Fals
+e"}
+
+TASK [kubernetes/preinstall : Stop if even number of etcd hosts] ***************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:67
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if memory is too small for masters] *********
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:74
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if memory is too small for nodes] ***********
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:81
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Guarantee that enough network address space is ava
+ilable for all pods] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:93
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if ip var does not match local ips] *********
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:103
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if access_ip is not pingable] ***************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:111
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if RBAC is not enabled when dashboard is enab
+led] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:118
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if RBAC is not enabled when OCI cloud control
+ler is enabled] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:125
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if RBAC and anonymous-auth are not enabled wh
+en insecure port is disabled] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:132
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if kernel version is too low] ***************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:139
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if bad hostname] ****************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:146
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : check cloud_provider value] **********************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:152
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Ensure minimum calico version] *******************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:163
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Get current calico cluster version] **************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:171
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Check that current calico version is enough for up
+grade] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:184
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Check that cluster_id is set if calico_rr enabled]
+ ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:196
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Check that calico_rr nodes are in k8s-cluster grou
+p] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:207
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Check that kube_service_addresses is a network ran
+ge] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:216
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Check that kube_pods_subnet is a network range] **
+*
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:223
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Check that kube_pods_subnet does not collide with
+kube_service_addresses] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:230
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if unknown dns mode] ************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:237
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if unknown kube proxy mode] *****************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:244
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if vault is chose] **************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:251
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if unknown cert_management] *****************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:258
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if unknown resolvconf_mode] *****************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:264
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if etcd deployment type is not host or docker
+] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:271
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if etcd deployment type is not host when cont
+ainer_manager != docker] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:279
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if download_localhost is enabled but download
+_run_once is not] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:288
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if kata_containers_enabled is enabled when co
+ntainer_manager is docker] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:294
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stop if download_localhost is enabled for Flatcar
+Container Linux] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0020-verify-settings.yml:300
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Force binaries directory for Flatcar Container Lin
+ux by Kinvolk] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:2
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : check if booted with ostree] *********************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:9
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : set is_fedora_coreos] ****************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:14
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : set is_fedora_coreos] ****************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:23
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : check resolvconf] ********************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:27
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : check systemd-resolved] **************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:34
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : set dns facts] ***********************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:42
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : check if kubelet is configured] ******************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:59
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : check if early DNS configuration stage] **********
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:65
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : target resolv.conf files] ************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:70
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : target temporary resolvconf cloud init file (Flatc
+ar Container Linux by Kinvolk / Fedora CoreOS)] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:79
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : check if /etc/dhclient.conf exists] **************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:84
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : target dhclient conf file for /etc/dhclient.conf]
+***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:89
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : check if /etc/dhcp/dhclient.conf exists] *********
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:94
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : target dhclient conf file for /etc/dhcp/dhclient.c
+onf] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:99
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : target dhclient hook file for Red Hat family] ****
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:104
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : target dhclient hook file for Debian family] *****
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:109
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : generate search domains to resolvconf] ***********
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:114
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : pick coredns cluster IP or default resolver] *****
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:125
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : generate nameservers to resolvconf] **************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:140
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : gather os specific variables] ********************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:147
+skipping: [kubenode01] => (item=/wire-server-deploy/ansible/roles-external/kubes
+pray/roles/kubernetes/preinstall/vars/../vars/ubuntu.yml)  => {"ansible_loop_var
+": "item", "changed": false, "item": "/wire-server-deploy/ansible/roles-external
+/kubespray/roles/kubernetes/preinstall/vars/../vars/ubuntu.yml", "skip_reason":
+"Conditional result was False"}
+
+TASK [kubernetes/preinstall : set etcd vars if using kubeadm mode] *************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:161
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : check /usr readonly] *****************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:170
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : set alternate flexvolume path] *******************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0040-set_facts.yml:175
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Create kubernetes directories] *******************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0050-create_directories.yml:2
+skipping: [kubenode01] => (item=/etc/kubernetes)  => {"ansible_loop_var": "item"
+, "changed": false, "item": "/etc/kubernetes", "skip_reason": "Conditional resul
+t was False"}
+skipping: [kubenode01] => (item=/etc/kubernetes/ssl)  => {"ansible_loop_var": "i
+tem", "changed": false, "item": "/etc/kubernetes/ssl", "skip_reason": "Condition
+al result was False"}
+skipping: [kubenode01] => (item=/etc/kubernetes/manifests)  => {"ansible_loop_va
+r": "item", "changed": false, "item": "/etc/kubernetes/manifests", "skip_reason"
+: "Conditional result was False"}
+skipping: [kubenode01] => (item=/usr/local/bin/kubernetes-scripts)  => {"ansible
+_loop_var": "item", "changed": false, "item": "/usr/local/bin/kubernetes-scripts
+", "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item=/usr/libexec/kubernetes/kubelet-plugins/volume/e
+xec)  => {"ansible_loop_var": "item", "changed": false, "item": "/usr/libexec/ku
+bernetes/kubelet-plugins/volume/exec", "skip_reason": "Conditional result was Fa
+lse"}
+
+TASK [kubernetes/preinstall : Create other directories] ************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0050-create_directories.yml:26
+skipping: [kubenode01] => (item=/usr/local/bin)  => {"ansible_loop_var": "item",
+ "changed": false, "item": "/usr/local/bin", "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Check if kubernetes kubeadm compat cert dir exists
+] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0050-create_directories.yml:46
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Create kubernetes kubeadm compat cert dir (kuberne
+tes/kubeadm issue 1498)] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0050-create_directories.yml:54
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Create cni directories] **************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0050-create_directories.yml:64
+skipping: [kubenode01] => (item=/etc/cni/net.d)  => {"ansible_loop_var": "item",
+ "changed": false, "item": "/etc/cni/net.d", "skip_reason": "Conditional result
+was False"}
+skipping: [kubenode01] => (item=/opt/cni/bin)  => {"ansible_loop_var": "item", "
+changed": false, "item": "/opt/cni/bin", "skip_reason": "Conditional result was
+False"}
+skipping: [kubenode01] => (item=/var/lib/calico)  => {"ansible_loop_var": "item"
+, "changed": false, "item": "/var/lib/calico", "skip_reason": "Conditional resul
+t was False"}
+
+TASK [kubernetes/preinstall : Create local volume provisioner directories] *****
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0050-create_directories.yml:87
+skipping: [kubenode01] => (item=local-storage)  => {"ansible_loop_var": "item",
+"changed": false, "item": "local-storage", "skip_reason": "Conditional result wa
+s False"}
+
+TASK [kubernetes/preinstall : create temporary resolveconf cloud init file] ****
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0060-resolvconf.yml:2
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Add domain/search/nameservers/options to resolv.co
+nf] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0060-resolvconf.yml:6
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Remove search/domain/nameserver options before blo
+ck] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0060-resolvconf.yml:23
+skipping: [kubenode01] => (item=['/etc/resolv.conf', 'search '])  => {"ansible_l
+oop_var": "item", "changed": false, "item": ["/etc/resolv.conf", "search "], "sk
+ip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item=['/etc/resolv.conf', 'nameserver '])  => {"ansib
+le_loop_var": "item", "changed": false, "item": ["/etc/resolv.conf", "nameserver
+ "], "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item=['/etc/resolv.conf', 'domain '])  => {"ansible_l
+oop_var": "item", "changed": false, "item": ["/etc/resolv.conf", "domain "], "sk
+ip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item=['/etc/resolv.conf', 'options '])  => {"ansible_
+loop_var": "item", "changed": false, "item": ["/etc/resolv.conf", "options "], "
+skip_reason": "Conditional result was False"}
+
+TASK [kubernetes/preinstall : Remove search/domain/nameserver options after bloc
+k] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0060-resolvconf.yml:34
+skipping: [kubenode01] => (item=['/etc/resolv.conf', 'search '])  => {"ansible_l
+oop_var": "item", "changed": false, "item": ["/etc/resolv.conf", "search "], "sk
+ip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item=['/etc/resolv.conf', 'nameserver '])  => {"ansib
+le_loop_var": "item", "changed": false, "item": ["/etc/resolv.conf", "nameserver
+ "], "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item=['/etc/resolv.conf', 'domain '])  => {"ansible_l
+oop_var": "item", "changed": false, "item": ["/etc/resolv.conf", "domain "], "sk
+ip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item=['/etc/resolv.conf', 'options '])  => {"ansible_
+loop_var": "item", "changed": false, "item": ["/etc/resolv.conf", "options "], "
+skip_reason": "Conditional result was False"}
+
+TASK [kubernetes/preinstall : get temporary resolveconf cloud init file content]
+ ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0060-resolvconf.yml:47
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : persist resolvconf cloud init file] **************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0060-resolvconf.yml:52
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Write resolved.conf] *****************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0061-systemd-resolved.yml:2
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : NetworkManager | Add nameservers to NM configurati
+on] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0062-networkmanager.yml:2
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : NetworkManager | Add DNS search to NM configuratio
+n] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0062-networkmanager.yml:12
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : NetworkManager | Add DNS options to NM configurati
+on] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0062-networkmanager.yml:22
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Update package management cache (zypper) - SUSE] *
+**
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0070-system-packages.yml:2
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Update package management cache (APT)] ***********
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0070-system-packages.yml:12
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Remove legacy docker repo file] ******************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0070-system-packages.yml:20
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Install python3-dnf for latest RedHat versions] **
+*
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0070-system-packages.yml:28
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Install epel-release on RedHat/CentOS] ***********
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0070-system-packages.yml:42
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Update common_required_pkgs with ipvsadm when kube
+_proxy_mode is ipvs] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0070-system-packages.yml:53
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Install packages requirements] *******************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0070-system-packages.yml:58
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Install ipvsadm for ClearLinux] ******************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0070-system-packages.yml:70
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Confirm selinux deployed] ************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0080-system-configurations.yml:3
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Set selinux policy] ******************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0080-system-configurations.yml:11
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Disable IPv6 DNS lookup] *************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0080-system-configurations.yml:23
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Stat sysctl file configuration] ******************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0080-system-configurations.yml:36
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Change sysctl file path to link source if linked]
+***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0080-system-configurations.yml:43
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Make sure sysctl file path folder exists] ********
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0080-system-configurations.yml:52
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Enable ip forwarding] ****************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0080-system-configurations.yml:57
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Ensure kube-bench parameters are set] ************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0080-system-configurations.yml:65
+skipping: [kubenode01] => (item={'name': 'vm.overcommit_memory', 'value': 1})  =
+> {"ansible_loop_var": "item", "changed": false, "item": {"name": "vm.overcommit
+_memory", "value": 1}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'name': 'kernel.panic', 'value': 10})  => {"ans
+ible_loop_var": "item", "changed": false, "item": {"name": "kernel.panic", "valu
+e": 10}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'name': 'kernel.panic_on_oops', 'value': 1})  =
+> {"ansible_loop_var": "item", "changed": false, "item": {"name": "kernel.panic_
+on_oops", "value": 1}, "skip_reason": "Conditional result was False"}
+
+TASK [kubernetes/preinstall : Hosts | create list from inventory] **************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0090-etchosts.yml:2
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Hosts | populate inventory into hosts file] ******
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0090-etchosts.yml:16
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Hosts | populate kubernetes loadbalancer address i
+nto hosts file] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0090-etchosts.yml:27
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Hosts | Retrieve hosts file content] *************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0090-etchosts.yml:39
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Hosts | Extract existing entries for localhost fro
+m hosts file] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0090-etchosts.yml:44
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Hosts | Update target hosts file entries dict with
+ required entries] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0090-etchosts.yml:54
+skipping: [kubenode01] => (item={'key': '127.0.0.1', 'value': {'expected': ['loc
+alhost', 'localhost.localdomain']}})  => {"ansible_loop_var": "item", "changed":
+ false, "item": {"key": "127.0.0.1", "value": {"expected": ["localhost", "localh
+ost.localdomain"]}}, "skip_reason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': '::1', 'value': {'expected': ['localhost
+6', 'localhost6.localdomain'], 'unexpected': ['localhost', 'localhost.localdomai
+n']}})  => {"ansible_loop_var": "item", "changed": false, "item": {"key": "::1",
+ "value": {"expected": ["localhost6", "localhost6.localdomain"], "unexpected": [
+"localhost", "localhost.localdomain"]}}, "skip_reason": "Conditional result was
+False"}
+
+TASK [kubernetes/preinstall : Hosts | Update (if necessary) hosts file] ********
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0090-etchosts.yml:61
+skipping: [kubenode01] => (item={'key': '127.0.0.1', 'value': ['localhost', 'loc
+alhost.localdomain']})  => {"ansible_loop_var": "item", "changed": false, "item"
+: {"key": "127.0.0.1", "value": ["localhost", "localhost.localdomain"]}, "skip_r
+eason": "Conditional result was False"}
+skipping: [kubenode01] => (item={'key': '::1', 'value': ['ip6-localhost', 'ip6-l
+oopback', 'localhost6', 'localhost6.localdomain']})  => {"ansible_loop_var": "it
+em", "changed": false, "item": {"key": "::1", "value": ["ip6-localhost", "ip6-lo
+opback", "localhost6", "localhost6.localdomain"]}, "skip_reason": "Conditional r
+esult was False"}
+
+TASK [kubernetes/preinstall : Update facts] ************************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0090-etchosts.yml:72
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Configure dhclient to supersede search/domain/name
+servers] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0100-dhclient-hooks.yml:2
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Configure dhclient hooks for resolv.conf (non-RH)]
+ ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0100-dhclient-hooks.yml:17
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Configure dhclient hooks for resolv.conf (RH-only)
+] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0100-dhclient-hooks.yml:26
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Remove kubespray specific config from dhclient con
+fig] ***
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0110-dhclient-hooks-undo.yml:6
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : Remove kubespray specific dhclient hook] *********
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0110-dhclient-hooks-undo.yml:15
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+META: ran handlers
+
+TASK [kubernetes/preinstall : Check if we are running inside a Azure VM] *******
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/main.yml:92
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : install growpart] ********************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0120-growpart-azure-centos-7.yml:5
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : check if growpart needs to be run] ***************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0120-growpart-azure-centos-7.yml:10
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : check fs type] ***********************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0120-growpart-azure-centos-7.yml:18
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : run growpart] ************************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0120-growpart-azure-centos-7.yml:23
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+
+TASK [kubernetes/preinstall : run xfs_growfs] **********************************
+task path: /wire-server-deploy/ansible/roles-external/kubespray/roles/kubernetes
+/preinstall/tasks/0120-growpart-azure-centos-7.yml:29
+skipping: [kubenode01] => {"changed": false, "skip_reason": "Conditional result
+was False"}
+META: ran handlers
+META: ran handlers
+
+PLAY [k8s-cluster] *************************************************************
+META: ran handlers
+
+TASK [Annotate nodes] **********************************************************
+task path: /wire-server-deploy/ansible/kubernetes.yml:12
+META: ran handlers
+META: ran handlers
+
+PLAY [k8s-cluster] *************************************************************
+META: ran handlers
+
+TASK [nickhammond.logrotate | Install logrotate] *******************************
+task path: /wire-server-deploy/ansible/roles-external/logrotate/tasks/main.yml:2
+ok: [kubenode01] => {"cache_update_time": 1623519358, "cache_updated": false, "c
+hanged": false}
+
+TASK [nickhammond.logrotate | Setup logrotate.d scripts] ***********************
+task path: /wire-server-deploy/ansible/roles-external/logrotate/tasks/main.yml:8
+changed: [kubenode01] => (item={'name': 'podlogs', 'path': '/var/lib/docker/cont
+ainers/*/*.log', 'options': ['daily', 'missingok', 'rotate 2', 'maxage 1', 'copy
+truncate', 'nocreate', 'nocompress']}) => {"ansible_loop_var": "item", "changed"
+: true, "checksum": "cbb2a32ef27e84ded753a3d749c86e0aed963f33", "dest": "/etc/lo
+grotate.d/podlogs", "gid": 0, "group": "root", "item": {"name": "podlogs", "opti
+ons": ["daily", "missingok", "rotate 2", "maxage 1", "copytruncate", "nocreate",
+ "nocompress"], "path": "/var/lib/docker/containers/*/*.log"}, "md5sum": "f76ae2
+a3a8a211eb0c74ca3657422bfe", "mode": "0600", "owner": "root", "size": 143, "src"
+: "/home/wire/.ansible/tmp/ansible-tmp-1623520140.3933852-3860-5897103398863/sou
+rce", "state": "file", "uid": 0, "warnings": ["File '/etc/logrotate.d/podlogs' c
+reated with default permissions '600'. The previous default was '666'. Specify '
+mode' to avoid this warning."]}
+[WARNING]: File '/etc/logrotate.d/podlogs' created with default permissions
+'600'. The previous default was '666'. Specify 'mode' to avoid this warning.
+META: ran handlers
+META: ran handlers
+
+PLAY [Bringing kubeconfig in place] ********************************************
+META: ran handlers
+
+TASK [Checking if 'kubeconfig' file already exists] ****************************
+task path: /wire-server-deploy/ansible/kubernetes.yml:24
+ok: [kubenode01] => {"changed": false, "stat": {"exists": false}}
+
+TASK [Renaming kubeconfig file provided by Kubespray] **************************
+task path: /wire-server-deploy/ansible/kubernetes.yml:30
+[WARNING]: File '/wire-server-deploy/ansible/inventory/demo/../kubeconfig.dec'
+created with default permissions '600'. The previous default was '666'. Specify
+'mode' to avoid this warning.
+changed: [kubenode01] => {"changed": true, "checksum": "71306a4c5bd11b04f9cf1342
+611180c8ffdab8e2", "dest": "/wire-server-deploy/ansible/inventory/demo/../kubeco
+nfig.dec", "gid": 0, "group": "root", "md5sum": "9c53dfc87dd642300b7a9ddfca6558e
+c", "mode": "0600", "owner": "root", "size": 5637, "src": "/root/.ansible/tmp/an
+sible-tmp-1623520141.676198-3875-137730843353928/source", "state": "file", "uid"
+: 0}
+
+TASK [debug] *******************************************************************
+task path: /wire-server-deploy/ansible/kubernetes.yml:34
+ok: [kubenode01] => {
+    "msg": "TODO: Encrypt /wire-server-deploy/ansible/inventory/demo/../kubeconf
+ig.dec with sops"
+}
+META: ran handlers
+META: ran handlers
+
+PLAY [etcd] ********************************************************************
+META: ran handlers
+
+TASK [etcd-helpers : Add etcd helper scripts] **********************************
+task path: /wire-server-deploy/ansible/roles/etcd-helpers/tasks/main.yml:3
+changed: [kubenode01] => (item=etcd-health.sh) => {"ansible_loop_var": "item", "
+changed": true, "checksum": "9626e733cbc0c5ab3f512aba5031291a45c8ad43", "dest":
+"/usr/local/bin/etcd-health.sh", "gid": 0, "group": "root", "item": "etcd-health
+.sh", "md5sum": "c48c87b8343500cb9bd4af088e6420ee", "mode": "0755", "owner": "ro
+ot", "size": 236, "src": "/home/wire/.ansible/tmp/ansible-tmp-1623520142.2646966
+-3897-168999300325915/source", "state": "file", "uid": 0}
+changed: [kubenode01] => (item=etcdctl3.sh) => {"ansible_loop_var": "item", "cha
+nged": true, "checksum": "cd5c88dfe6cd230dfdd01cd673280a2b5a3b66d0", "dest": "/u
+sr/local/bin/etcdctl3.sh", "gid": 0, "group": "root", "item": "etcdctl3.sh", "md
+5sum": "20ee7b89f5c3a3d02a55ae1edba09d61", "mode": "0755", "owner": "root", "siz
+e": 249, "src": "/home/wire/.ansible/tmp/ansible-tmp-1623520142.9273794-3897-856
+00142046832/source", "state": "file", "uid": 0}
+META: ran handlers
+META: ran handlers
+
+PLAY RECAP *********************************************************************
+kubenode01                 : ok=533  changed=125  unreachable=0    failed=0    s
+kipped=1016 rescued=0    ignored=1
+localhost                  : ok=1    changed=0    unreachable=0    failed=0    s
+kipped=0    rescued=0    ignored=0
+
+bash-4.4# find . -name 'admin.conf'
+./inventory/demo/artifacts/admin.conf
+bash-4.4# mkdir -p ~/.kube/
+bash-4.4# cp ./inventory/demo/artifacts/admin.conf ~/.kube/config
+bash-4.4# KUBECONFIG=~/.kube/config
+bash-4.4# which kubectl
+/bin/kubectl
+bash-4.4# kubectl version
+Client Version: version.Info{Major:"1", Minor:"19", GitVersion:"v1.19.7", GitCom
+mit:"1dd5338295409edcfff11505e7bb246f0d325d15", GitTreeState:"clean", BuildDate:
+"2021-01-13T13:23:52Z", GoVersion:"go1.15.5", Compiler:"gc", Platform:"linux/amd
+64"}
+Server Version: version.Info{Major:"1", Minor:"19", GitVersion:"v1.19.7", GitCom
+mit:"1dd5338295409edcfff11505e7bb246f0d325d15", GitTreeState:"clean", BuildDate:
+"2021-01-13T13:15:20Z", GoVersion:"go1.15.5", Compiler:"gc", Platform:"linux/amd
+64"}
+bash-4.4# kubectl get pods -A
+NAMESPACE     NAME                                 READY   STATUS    RESTARTS
+AGE
+kube-system   coredns-7677f9bb54-4jrx7             0/1     Pending   0
+63s
+kube-system   coredns-7677f9bb54-9wm8h             1/1     Running   0
+97s
+kube-system   dns-autoscaler-5b7b5c9b6f-qw9xs      1/1     Running   0
+83s
+kube-system   kube-apiserver-kubenode01            1/1     Running   0
+4m
+kube-system   kube-controller-manager-kubenode01   1/1     Running   0
+4m
+kube-system   kube-flannel-pf9d5                   1/1     Running   0
+2m25s
+kube-system   kube-proxy-zzvbv                     1/1     Running   0
+2m25s
+kube-system   kube-scheduler-kubenode01            1/1     Running   0
+3m59s
+kube-system   nodelocaldns-rdpxp                   1/1     Running   0
+75s
+bash-4.4# helm version
+version.BuildInfo{Version:"v3.5.2", GitCommit:"", GitTreeState:"", GoVersion:"go
+1.16"}
+bash-4.4# helm init
+Error: unknown command "init" for "helm"
+
+Did you mean this?
+        lint
+
+Run 'helm --help' for usage.
+bash-4.4# helm list
+NAME    NAMESPACE       REVISION        UPDATED STATUS  CHART   APP VERSION
+bash-4.4# helm status
+Error: "helm status" requires 1 argument
+
+Usage:  helm status RELEASE_NAME [flags]
+bash-4.4# helm version
+version.BuildInfo{Version:"v3.5.2", GitCommit:"", GitTreeState:"", GoVersion:"go
+1.16"}
+bash-4.4# helm repo add wire https://s3-eu-west-1.amazonaws.com/public.wire.com/
+charts
+"wire" has been added to your repositories
+bash-4.4# kubectl get pods -A
+NAMESPACE     NAME                                 READY   STATUS    RESTARTS
+AGE
+kube-system   coredns-7677f9bb54-4jrx7             0/1     Pending   0
+108s
+kube-system   coredns-7677f9bb54-9wm8h             1/1     Running   0
+2m22s
+kube-system   dns-autoscaler-5b7b5c9b6f-qw9xs      1/1     Running   0
+2m8s
+kube-system   kube-apiserver-kubenode01            1/1     Running   0
+4m45s
+kube-system   kube-controller-manager-kubenode01   1/1     Running   0
+4m45s
+kube-system   kube-flannel-pf9d5                   1/1     Running   0
+3m10s
+kube-system   kube-proxy-zzvbv                     1/1     Running   0
+3m10s
+kube-system   kube-scheduler-kubenode01            1/1     Running   0
+4m44s
+kube-system   nodelocaldns-rdpxp                   1/1     Running   0
+2m
+bash-4.4# helm search wire/
+
+Search provides the ability to search for Helm charts in the various places
+they can be stored including the Artifact Hub and repositories you have added.
+Use search subcommands to search different locations for charts.
+
+Usage:
+  helm search [command]
+
+Available Commands:
+  hub         search for charts in the Artifact Hub or your own hub instance
+  repo        search repositories for a keyword in charts
+
+Flags:
+  -h, --help   help for search
+
+Global Flags:
+      --debug                       enable verbose output
+      --kube-apiserver string       the address and the port for the Kubernetes
+API server
+      --kube-as-group stringArray   group to impersonate for the operation, this
+ flag can be repeated to specify multiple groups.
+      --kube-as-user string         username to impersonate for the operation
+      --kube-ca-file string         the certificate authority file for the Kuber
+netes API server connection
+      --kube-context string         name of the kubeconfig context to use
+      --kube-token string           bearer token used for authentication
+      --kubeconfig string           path to the kubeconfig file
+  -n, --namespace string            namespace scope for this request
+      --registry-config string      path to the registry config file (default "/
+root/.config/helm/registry.json")
+      --repository-cache string     path to the file containing cached repositor
+y indexes (default "/root/.cache/helm/repository")
+      --repository-config string    path to the file containing repository names
+ and URLs (default "/root/.config/helm/repositories.yaml")
+
+Use "helm search [command] --help" for more information about a command.
+bash-4.4# helm search hub wire/
+No results found
+bash-4.4# helm search repo wire/
+NAME                            CHART VERSION   APP VERSION     DESCRIPTION
+
+wire/account-pages              0.130.0                         A Helm chart for
+ the Wire account pages in Kube...
+wire/aws-ingress                2.108.0                         A Helm chart for
+ ingresses (AWS specific) on Ku...
+wire/aws-storage                0.130.0                         AWS storage clas
+ses
+wire/backoffice                 2.108.0                         Backoffice tool
+
+wire/brig                       0.130.0                         Brig (part of Wi
+re Server) - User management
+wire/calling-test               2.108.0         1.0.14          Network testing
+tool for audio/video/signalling...
+wire/cannon                     0.130.0                         A Helm chart for
+ cannon in Kubernetes
+wire/cargohold                  0.130.0                         Cargohold (part
+of Wire Server) - Asset storage
+wire/cassandra-ephemeral        0.130.0                         Wrapper chart fo
+r incubator/cassandra with cust...
+wire/cassandra-external         2.108.0                         Refer to cassand
+ra IPs located outside kubernet...
+wire/cassandra-migrations       0.130.0                         cassandra databa
+se schema migration for gundeck...
+wire/databases-ephemeral        2.108.0                         A Helm chart in-
+memory, ephemeral databases for...
+wire/demo-smtp                  2.108.0         1.0             A demo helm char
+t to send emails. Not productio...
+wire/elasticsearch-curator      2.108.0                         Wrapper chart fo
+r stable/elasticsearch-curator
+wire/elasticsearch-ephemeral    2.108.0                         Dummy ephemeral
+elasticsearch
+wire/elasticsearch-external     2.108.0                         Refer to elastic
+search IPs located outside kube...
+wire/elasticsearch-index        0.130.0                         Elasticsearch in
+dex for brig
+wire/fake-aws                   2.108.0                         A Helm chart for
+ fake-aws services (replacing r...
+wire/fake-aws-dynamodb          0.130.0                         Dummy ephemeral
+DynamoDB service
+wire/fake-aws-s3                2.108.0                         Wrapper chart fo
+r stable/minio
+wire/fake-aws-ses               0.130.0                         Dummy ephemeral
+SES service (based on localstack)
+wire/fake-aws-sns               0.130.0                         Dummy ephemeral
+SNS service (based on localstack)
+wire/fake-aws-sqs               2.108.0                         Dummy ephemeral
+SQS service
+wire/fluent-bit                 2.108.0                         Wrapper chart fo
+r stable/fluent-bit
+wire/galley                     0.130.0                         Galley (part of
+Wire Server) - Conversations
+wire/gundeck                    0.130.0                         Gundeck (part of
+ Wire Server) - Push Notificati...
+wire/kibana                     2.108.0                         Wrapper chart fo
+r stable/kibana
+wire/legalhold                  0.130.0                         A Helm chart for
+ legalhold
+wire/metallb                    0.130.0                         A Helm chart for
+ metallb on Kubernetes
+wire/minio-external             2.108.0                         Refer to minio I
+Ps located outside kubernetes b...
+wire/nginx-ingress-controller   2.108.0                         A Helm chart for
+ an ingress controller (using n...
+wire/nginx-ingress-services     2.108.0                         A Helm chart for
+ ingresses and services on Kube...
+wire/nginx-lb-ingress           0.1.3                           A Helm chart for
+ ingresses (using nginx) on Kub...
+wire/nginz                      0.130.0                         A Helm chart for
+ nginz in Kubernetes
+wire/proxy                      0.130.0                         Proxy (part of W
+ire Server) - 3rd party proxy s...
+wire/reaper                     2.108.0         0.1.0           A helm charts to
+ restart cannons if redis-ephem...
+wire/redis-ephemeral            2.108.0                         Wrapper chart fo
+r stable/redis
+wire/sftd                       2.108.0         1.0.88          SFTD is a compon
+ent for engaging in conference ...
+wire/spar                       0.130.0                         Spar (part of Wi
+re Server) - SSO Service
+wire/team-settings              0.130.0                         A Helm chart for
+ the Wire team-settings in Kube...
+wire/webapp                     0.130.0                         A Helm chart for
+ the Wire webapp in Kubernetes
+wire/wire-server                2.108.0                         A Helm chart for
+ wire-server https://github.com...
+wire/wire-server-metrics        2.108.0         1.0             Adds monitoring
+for the kubernetes cluster and ...
+bash-4.4# helm upgrade --install databases-ephemeral wire/databases-ephemeral --
+wait
+Release "databases-ephemeral" does not exist. Installing it now.
+Error: Get "https://192.168.1.119:6443/api/v1/namespaces/default/services/cassan
+dra-ephemeral": http2: client connection lost
+bash-4.4# ping -w 5 192.168.1.119
+PING 192.168.1.119 (192.168.1.119): 56 data bytes
+64 bytes from 192.168.1.119: seq=0 ttl=64 time=0.416 ms
+64 bytes from 192.168.1.119: seq=1 ttl=64 time=0.566 ms
+64 bytes from 192.168.1.119: seq=2 ttl=64 time=0.630 ms
+64 bytes from 192.168.1.119: seq=3 ttl=64 time=0.519 ms
+64 bytes from 192.168.1.119: seq=4 ttl=64 time=0.561 ms
+
+--- 192.168.1.119 ping statistics ---
+6 packets transmitted, 5 packets received, 16% packet loss
+round-trip min/avg/max = 0.416/0.538/0.630 ms
+bash-4.4# ping -w 5 192.168.1.121
+PING 192.168.1.121 (192.168.1.121): 56 data bytes
+64 bytes from 192.168.1.121: seq=0 ttl=64 time=0.049 ms
+64 bytes from 192.168.1.121: seq=1 ttl=64 time=0.119 ms
+64 bytes from 192.168.1.121: seq=2 ttl=64 time=0.066 ms
+64 bytes from 192.168.1.121: seq=3 ttl=64 time=0.130 ms
+64 bytes from 192.168.1.121: seq=4 ttl=64 time=0.128 ms
+
+--- 192.168.1.121 ping statistics ---
+6 packets transmitted, 5 packets received, 16% packet loss
+round-trip min/avg/max = 0.049/0.098/0.130 ms
+bash-4.4# wget https://192.168.1.119:6443/version?timeout=32s
+Connecting to 192.168.1.119:6443 (192.168.1.119:6443)
+ssl_client: 192.168.1.119: certificate verification failed: unable to get local
+issuer certificate
+wget: error getting response: Connection reset by peer
+bash-4.4# wget https://192.168.1.119:6443/api/v1/namespaces/default/services/red
+is-ephemeral-headless
+Connecting to 192.168.1.119:6443 (192.168.1.119:6443)
+ssl_client: 192.168.1.119: certificate verification failed: unable to get local
+issuer certificate
+wget: error getting response: Connection reset by peer
+bash-4.4# wget --no-check-certificate https://192.168.1.119:6443/version?timeout
+=32s
+Connecting to 192.168.1.119:6443 (192.168.1.119:6443)
+saving to 'version?timeout=32s'
+version?timeout=32s  100% |********************************|   263  0:00:00 ETA
+'version?timeout=32s' saved
+bash-4.4# wget --no-check-certificate https://192.168.1.119:6443/api/v1/namespac
+es/default/services/redis-ephemeral-headless
+Connecting to 192.168.1.119:6443 (192.168.1.119:6443)
+wget: server returned error: HTTP/1.1 403 Forbidden
+bash-4.4# ssh -o "StrictHostKeyChecking=no" -o "BatchMode=yes" wire@192.168.1.11
+9 'wget --no-check-certificate https://192.168.1.119:6443/version?timeout=32s'
+--2021-06-12 17:57:38--  https://192.168.1.119:6443/version?timeout=32s
+Connecting to 192.168.1.119:6443... connected.
+WARNING: cannot verify 192.168.1.119's certificate, issued by ‘CN=kubernetes’:
+  Unable to locally verify the issuer's authority.
+HTTP request sent, awaiting response... 200 OK
+Length: 263 [application/json]
+Saving to: ‘version?timeout=32s’
+
+     0K                                                       100% 16.7M=0s
+
+2021-06-12 17:57:49 (16.7 MB/s) - ‘version?timeout=32s’ saved [263/263]
+
+bash-4.4# ssh -o "StrictHostKeyChecking=no" -o "BatchMode=yes" wire@192.168.1.11
+9 'wget --no-check-certificate https://localhost:6443/api/v1/namespaces/default/
+services/redis-ephemeral-headless'
+--2021-06-12 17:57:59--  https://localhost:6443/api/v1/namespaces/default/servic
+es/redis-ephemeral-headless
+Resolving localhost (localhost)... 127.0.0.1
+Connecting to localhost (localhost)|127.0.0.1|:6443... connected.
+WARNING: cannot verify localhost's certificate, issued by ‘CN=kubernetes’:
+  Unable to locally verify the issuer's authority.
+HTTP request sent, awaiting response... 403 Forbidden
+2021-06-12 17:58:00 ERROR 403: Forbidden.
+
+bash-4.4# kubectl get pods -A
+NAMESPACE     NAME                                       READY   STATUS    RESTA
+RTS   AGE
+default       cassandra-ephemeral-0                      0/1     Running   0
+      6m33s
+default       elasticsearch-ephemeral-86f4b8ff6f-2ghwc   1/1     Running   2
+      6m33s
+default       redis-ephemeral-master-0                   1/1     Running   0
+      6m33s
+kube-system   coredns-7677f9bb54-4jrx7                   0/1     Pending   0
+      9m10s
+kube-system   coredns-7677f9bb54-9wm8h                   1/1     Running   0
+      9m44s
+kube-system   dns-autoscaler-5b7b5c9b6f-qw9xs            1/1     Running   0
+      9m30s
+kube-system   kube-apiserver-kubenode01                  1/1     Running   0
+      12m
+kube-system   kube-controller-manager-kubenode01         1/1     Running   2
+      12m
+kube-system   kube-flannel-pf9d5                         1/1     Running   0
+      10m
+kube-system   kube-proxy-zzvbv                           1/1     Running   0
+      10m
+kube-system   kube-scheduler-kubenode01                  1/1     Running   2
+      12m
+kube-system   nodelocaldns-rdpxp                         1/1     Running   0
+      9m22s
+bash-4.4# helm upgrade --install fake-aws wire/fake-aws --wait
+Error: Kubernetes cluster unreachable: Get "https://192.168.1.119:6443/version?t
+imeout=32s": net/http: TLS handshake timeout
+bash-4.4# kubectl get pods -A
+Unable to connect to the server: net/http: TLS handshake timeout
+bash-4.4# helm upgrade --install smtp wire/demo-smtp --wait
+Error: Kubernetes cluster unreachable: Get "https://192.168.1.119:6443/version?t
+imeout=32s": net/http: TLS handshake timeout
+bash-4.4# kubectl get pods -A
+NAMESPACE     NAME                                       READY   STATUS    RESTA
+RTS   AGE
+default       cassandra-ephemeral-0                      0/1     Running   0
+      7m33s
+default       elasticsearch-ephemeral-86f4b8ff6f-2ghwc   1/1     Running   2
+      7m33s
+default       redis-ephemeral-master-0                   1/1     Running   0
+      7m33s
+kube-system   coredns-7677f9bb54-4jrx7                   0/1     Pending   0
+      10m
+kube-system   coredns-7677f9bb54-9wm8h                   1/1     Running   0
+      10m
+kube-system   dns-autoscaler-5b7b5c9b6f-qw9xs            1/1     Running   0
+      10m
+kube-system   kube-apiserver-kubenode01                  1/1     Running   0
+      13m
+kube-system   kube-controller-manager-kubenode01         1/1     Running   2
+      13m
+kube-system   kube-flannel-pf9d5                         1/1     Running   0
+      11m
+kube-system   kube-proxy-zzvbv                           1/1     Running   0
+      11m
+kube-system   kube-scheduler-kubenode01                  1/1     Running   2
+      13m
+kube-system   nodelocaldns-rdpxp                         1/1     Running   0
+      10m

@@ -1,0 +1,2557 @@
+[19:15:14] # Logging to: wire-install-2021-Jul-14-19-15-14.log in log/ and tmp/
+[19:15:14] # Shutting down virtual machine "Wire Demo Client Clone"
+[19:15:16] # Deleting virtual machine "Wire Demo Client Clone"
+[19:15:17] # Creating virtual machine "Wire Demo Client Clone" from snapshot
+[19:15:18] # Starting virtual machine "Wire Demo Client Clone"
+[19:15:27] # Initial install of tmux on 192.168.1.121
+[19:15:40] # Running command «sudo date --set="Wed Jul 14 2021 19:15:21 GMT+0200 (Central European Summer Time)"» on 192.168.1.121
+        wire@wire-client:~$ sudo date --set="Wed Jul 14 2021 19:15:21 GMT+0200 (Central
+        European Summer Time)"
+        [sudo] password for wire:
+        Wed Jul 14 17:15:21 UTC 2021
+[19:15:47] # Running command «sudo date --set="Wed Jul 14 2021 19:15:40 GMT+0200 (Central European Summer Time)"» on 95.216.208.159
+        wire@arthur-demo:~$ sudo date --set="Wed Jul 14 2021 19:15:40 GMT+0200 (Central
+        European Summer Time)"
+        [sudo] password for wire:
+        Wed Jul 14 19:15:40 CEST 2021
+[19:15:53] # Running command «cat /proc/cpuinfo | grep processor | wc -l» on 192.168.1.121
+        wire@wire-client:~$ cat /proc/cpuinfo | grep processor | wc -l
+        2
+[19:15:58] # Running command «free -m && uptime» on 192.168.1.121
+        wire@wire-client:~$ free -m && uptime
+                      total        used        free      shared  buff/cache   available
+        Mem:           2928         111        2622           0         194        2671
+        Swap:          3943           0        3943
+         17:15:40 up 2 min,  0 users,  load average: 0.92, 0.43, 0.16
+[19:16:03] # Running command «cat /proc/cpuinfo | grep processor | wc -l» on 95.216.208.159
+        wire@arthur-demo:~$ cat /proc/cpuinfo | grep processor | wc -l
+        8
+[19:16:08] # Running command «free -m && uptime» on 95.216.208.159
+        wire@arthur-demo:~$ free -m && uptime
+                      total        used        free      shared  buff/cache   available
+        Mem:          15661         117       14644           0         899       15273
+        Swap:             0           0           0
+         19:16:06 up 2 days,  8:53,  0 users,  load average: 0.08, 0.02, 0.01
+[19:16:14] # Running command «cd» on 192.168.1.121
+        wire@wire-client:~$ cd
+[19:16:20] # Running command «cat /etc/hostname» on 192.168.1.121
+        wire@wire-client:~$ cat /etc/hostname
+        wire-client
+[19:16:25] # Running command «pwd» on 192.168.1.121
+        wire@wire-client:~$ pwd
+        /home/wire
+[19:16:31] # Running command «date» on 192.168.1.121
+        wire@wire-client:~$ date
+        Wed Jul 14 17:16:28 UTC 2021
+[19:16:37] # Running command «uptime» on 192.168.1.121
+        wire@wire-client:~$ uptime
+         17:16:34 up 2 min,  0 users,  load average: 0.53, 0.39, 0.16
+[19:17:00] # Running command «sudo apt update» on 192.168.1.121
+        wire@wire-client:~$ sudo apt update
+        [sudo] password for wire:
+        Hit:1 http://fr.archive.ubuntu.com/ubuntu bionic InRelease
+        Get:2 http://fr.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+        Get:3 http://fr.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+        Get:4 http://fr.archive.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+        Get:5 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [21
+        31 kB]
+        Get:6 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main Translation-en [42
+        2 kB]
+        Get:7 http://fr.archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packag
+        es [389 kB]
+        Get:8 http://fr.archive.ubuntu.com/ubuntu bionic-updates/restricted Translation-
+        en [52.8 kB]
+        Get:9 http://fr.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages
+         [1739 kB]
+        Get:10 http://fr.archive.ubuntu.com/ubuntu bionic-updates/universe Translation-e
+        n [371 kB]
+        Get:11 http://fr.archive.ubuntu.com/ubuntu bionic-security/main amd64 Packages [
+        1784 kB]
+        Get:12 http://fr.archive.ubuntu.com/ubuntu bionic-security/main Translation-en [
+        329 kB]
+        Get:13 http://fr.archive.ubuntu.com/ubuntu bionic-security/restricted amd64 Pack
+        ages [365 kB]
+        Get:14 http://fr.archive.ubuntu.com/ubuntu bionic-security/restricted Translatio
+        n-en [48.9 kB]
+        Get:15 http://fr.archive.ubuntu.com/ubuntu bionic-security/universe amd64 Packag
+        es [1130 kB]
+        Get:16 http://fr.archive.ubuntu.com/ubuntu bionic-security/universe Translation-
+        en [256 kB]
+        Fetched 9270 kB in 3s (3005 kB/s)
+        Reading package lists... Done
+        Building dependency tree
+        Reading state information... Done
+        71 packages can be upgraded. Run 'apt list --upgradable' to see them.
+[19:18:18] # Running command «sudo dpkg --configure -a» on 192.168.1.121
+        wire@wire-client:~$ sudo dpkg --configure -a
+        Setting up initramfs-tools (0.130ubuntu3.9) ...
+        update-initramfs: deferring update (trigger activated)
+        Processing triggers for initramfs-tools (0.130ubuntu3.9) ...
+        update-initramfs: Generating /boot/initrd.img-4.15.0-144-generic
+[19:20:13] # Running command «sudo apt install docker.io» on 192.168.1.121
+        wire@wire-client:~$ sudo apt install docker.io
+        Reading package lists... Done
+        Building dependency tree
+        Reading state information... Done
+        The following additional packages will be installed:
+          bridge-utils containerd pigz runc ubuntu-fan
+        Suggested packages:
+          ifupdown aufs-tools cgroupfs-mount | cgroup-lite debootstrap docker-doc
+          rinse zfs-fuse | zfsutils
+        The following NEW packages will be installed:
+          bridge-utils containerd docker.io pigz runc ubuntu-fan
+        0 upgraded, 6 newly installed, 0 to remove and 71 not upgraded.
+        Need to get 72.1 MB of archives.
+        After this operation, 351 MB of additional disk space will be used.
+        Do you want to continue? [Y/n] y
+        Get:1 http://fr.archive.ubuntu.com/ubuntu bionic/universe amd64 pigz amd64 2.4-1
+         [57.4 kB]
+        Get:2 http://fr.archive.ubuntu.com/ubuntu bionic/main amd64 bridge-utils amd64 1
+        .5-15ubuntu1 [30.1 kB]
+        Get:3 http://fr.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 runc amd
+        64 1.0.0~rc95-0ubuntu1~18.04.1 [4087 kB]
+        Get:4 http://fr.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 containe
+        rd amd64 1.4.4-0ubuntu1~18.04.2 [31.0 MB]
+        Get:5 http://fr.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 docker.i
+        o amd64 20.10.2-0ubuntu1~18.04.2 [36.9 MB]
+        Get:6 http://fr.archive.ubuntu.com/ubuntu bionic/main amd64 ubuntu-fan all 0.12.
+        10 [34.7 kB]
+        Fetched 72.1 MB in 3s (25.4 MB/s)
+        Preconfiguring packages ...
+        Selecting previously unselected package pigz.
+        (Reading database ... 67143 files and directories currently installed.)
+        Preparing to unpack .../0-pigz_2.4-1_amd64.deb ...
+        Unpacking pigz (2.4-1) ...
+        Selecting previously unselected package bridge-utils.
+        Preparing to unpack .../1-bridge-utils_1.5-15ubuntu1_amd64.deb ...
+        Unpacking bridge-utils (1.5-15ubuntu1) ...
+        Selecting previously unselected package runc.
+        Preparing to unpack .../2-runc_1.0.0~rc95-0ubuntu1~18.04.1_amd64.deb ...
+        Unpacking runc (1.0.0~rc95-0ubuntu1~18.04.1) ...
+        Selecting previously unselected package containerd.
+        Preparing to unpack .../3-containerd_1.4.4-0ubuntu1~18.04.2_amd64.deb ...
+        Unpacking containerd (1.4.4-0ubuntu1~18.04.2) ...
+        Selecting previously unselected package docker.io.
+        Preparing to unpack .../4-docker.io_20.10.2-0ubuntu1~18.04.2_amd64.deb ...
+        Unpacking docker.io (20.10.2-0ubuntu1~18.04.2) ...
+        Selecting previously unselected package ubuntu-fan.
+        Preparing to unpack .../5-ubuntu-fan_0.12.10_all.deb ...
+        Unpacking ubuntu-fan (0.12.10) ...
+        Setting up runc (1.0.0~rc95-0ubuntu1~18.04.1) ...
+        Setting up containerd (1.4.4-0ubuntu1~18.04.2) ...
+        Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service →
+         /lib/systemd/system/containerd.service.
+        Setting up bridge-utils (1.5-15ubuntu1) ...
+        Setting up ubuntu-fan (0.12.10) ...
+        Created symlink /etc/systemd/system/multi-user.target.wants/ubuntu-fan.service →
+         /lib/systemd/system/ubuntu-fan.service.
+        Setting up pigz (2.4-1) ...
+        Setting up docker.io (20.10.2-0ubuntu1~18.04.2) ...
+        Adding group `docker' (GID 113) ...
+        Done.
+        Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /li
+        b/systemd/system/docker.service.
+        Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/sy
+        stemd/system/docker.socket.
+        Processing triggers for systemd (237-3ubuntu10.42) ...
+        Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+        Processing triggers for ureadahead (0.100.0-21) ...
+[19:20:18] # Running command «docker -v» on 192.168.1.121
+        wire@wire-client:~$ docker -v
+        Docker version 20.10.2, build 20.10.2-0ubuntu1~18.04.2
+[19:20:24] # Running command «sudo rm -rf /home/wire/wire*» on 192.168.1.121
+        wire@wire-client:~$ sudo rm -rf /home/wire/wire*
+[19:20:30] # Running command «ls -l /home/wire/» on 192.168.1.121
+        wire@wire-client:~$ ls -l /home/wire/
+        total 0
+[19:20:36] # Running command «date» on 192.168.1.121
+        wire@wire-client:~$ date
+        Wed Jul 14 17:20:33 UTC 2021
+[19:20:41] # Running command «uptime» on 192.168.1.121
+        wire@wire-client:~$ uptime
+         17:20:39 up 6 min,  0 users,  load average: 1.00, 0.84, 0.40
+[19:20:49] # Running command «sudo apt update» on 192.168.1.121
+        wire@wire-client:~$ sudo apt update
+        Hit:1 http://fr.archive.ubuntu.com/ubuntu bionic InRelease
+        Hit:2 http://fr.archive.ubuntu.com/ubuntu bionic-updates InRelease
+        Hit:3 http://fr.archive.ubuntu.com/ubuntu bionic-backports InRelease
+        Hit:4 http://fr.archive.ubuntu.com/ubuntu bionic-security InRelease
+        Reading package lists... Done
+        Building dependency tree
+        Reading state information... Done
+        71 packages can be upgraded. Run 'apt list --upgradable' to see them.
+[19:20:55] # Running command «sudo dpkg --configure -a» on 192.168.1.121
+        wire@wire-client:~$ sudo dpkg --configure -a
+[19:21:00] # Running command «date» on 95.216.208.159
+        wire@arthur-demo:~$ date
+        Wed Jul 14 19:20:57 CEST 2021
+[19:21:05] # Running command «uptime» on 95.216.208.159
+        wire@arthur-demo:~$ uptime
+         19:21:02 up 2 days,  8:58,  0 users,  load average: 0.00, 0.00, 0.00
+[19:21:15] # Running command «sudo apt update» on 95.216.208.159
+        wire@arthur-demo:~$ sudo apt update
+        Hit:1 http://mirror.hetzner.de/ubuntu/packages bionic InRelease
+        Hit:2 http://mirror.hetzner.de/ubuntu/packages bionic-updates InRelease
+        Hit:3 http://mirror.hetzner.de/ubuntu/packages bionic-backports InRelease
+        Hit:4 https://mirror.hetzner.com/ubuntu/packages bionic InRelease
+        Hit:5 http://mirror.hetzner.de/ubuntu/packages bionic-security InRelease
+        Hit:6 https://mirror.hetzner.com/ubuntu/packages bionic-updates InRelease
+        Hit:7 https://mirror.hetzner.com/ubuntu/packages bionic-backports InRelease
+        Hit:8 https://mirror.hetzner.com/ubuntu/security bionic-security InRelease
+        Reading package lists... Done
+        Building dependency tree
+        Reading state information... Done
+        All packages are up to date.
+[19:21:20] # Running command «sudo dpkg --configure -a» on 95.216.208.159
+        wire@arthur-demo:~$ sudo dpkg --configure -a
+[19:21:28] # Running command «sudo apt install docker.io» on 192.168.1.121
+        wire@wire-client:~$ sudo apt install docker.io
+        Reading package lists... Done
+        Building dependency tree
+        Reading state information... Done
+        docker.io is already the newest version (20.10.2-0ubuntu1~18.04.2).
+        0 upgraded, 0 newly installed, 0 to remove and 71 not upgraded.
+[19:21:34] # Running command «docker -v» on 192.168.1.121
+        wire@wire-client:~$ docker -v
+        Docker version 20.10.2, build 20.10.2-0ubuntu1~18.04.2
+[19:21:43] # Running command «git clone --branch master https://github.com/wireapp/wire-server-deploy.git» on 192.168.1.121
+        wire@wire-client:~$ git clone --branch master https://github.com/wireapp/wire-se
+        rver-deploy.git
+        Cloning into 'wire-server-deploy'...
+        remote: Enumerating objects: 18498, done.
+        remote: Counting objects: 100% (331/331), done.
+        remote: Compressing objects: 100% (210/210), done.
+        remote: Total 18498 (delta 163), reused 232 (delta 115), pack-reused 18167
+        Receiving objects: 100% (18498/18498), 2.19 MiB | 5.21 MiB/s, done.
+        Resolving deltas: 100% (13819/13819), done.
+[19:21:49] # Running command «ls -l» on 192.168.1.121
+        wire@wire-client:~$ ls -l
+        total 4
+        drwxrwxr-x 12 wire wire 4096 Jul 14 17:21 wire-server-deploy
+[19:21:55] # Running command «cd ~/wire-server-deploy» on 192.168.1.121
+        wire@wire-client:~$ cd ~/wire-server-deploy
+[19:22:01] # Running command «pwd» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy$ pwd
+        /home/wire/wire-server-deploy
+[19:22:07] # Running command «ls -l» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy$ ls -l
+        total 108
+        -rw-rw-r--  1 wire wire 16072 Jul 14 17:21 CHANGELOG.md
+        -rw-rw-r--  1 wire wire  1531 Jul 14 17:21 CONTRIBUTING.md
+        -rw-rw-r--  1 wire wire   252 Jul 14 17:21 Dockerfile
+        -rw-rw-r--  1 wire wire 34520 Jul 14 17:21 LICENSE
+        -rw-rw-r--  1 wire wire  5893 Jul 14 17:21 Makefile
+        -rw-rw-r--  1 wire wire  2251 Jul 14 17:21 README.md
+        drwxrwxr-x  9 wire wire  4096 Jul 14 17:21 ansible
+        drwxrwxr-x  3 wire wire  4096 Jul 14 17:21 bin
+        -rw-rw-r--  1 wire wire  2338 Jul 14 17:21 default.nix
+        drwxrwxr-x  5 wire wire  4096 Jul 14 17:21 examples
+        drwxrwxr-x  2 wire wire  4096 Jul 14 17:21 helm
+        drwxrwxr-x  4 wire wire  4096 Jul 14 17:21 nix
+        drwxrwxr-x  2 wire wire  4096 Jul 14 17:21 offline
+        drwxrwxr-x  5 wire wire  4096 Jul 14 17:21 terraform
+        drwxrwxr-x 15 wire wire  4096 Jul 14 17:21 values
+[19:22:37] # Running command «git submodule update --init --recursive» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy$ git submodule update --init --recursive
+        Submodule 'ansible/roles-external/ANXS.apt' (https://github.com/ANXS/apt.git) re
+        gistered for path 'ansible/roles-external/ANXS.apt'
+        Submodule 'ansible/roles-external/admin_users' (https://github.com/cchurch/ansib
+        le-role-admin-users.git) registered for path 'ansible/roles-external/admin_users
+        '
+        Submodule 'ansible/roles-external/andrewrothstein.unarchive-deps' (https://githu
+        b.com/andrewrothstein/ansible-unarchive-deps) registered for path 'ansible/roles
+        -external/andrewrothstein.unarchive-deps'
+        Submodule 'ansible/roles-external/ansible-cassandra' (https://github.com/wireapp
+        /ansible-cassandra.git) registered for path 'ansible/roles-external/ansible-cass
+        andra'
+        Submodule 'ansible/roles-external/ansible-minio' (https://github.com/wireapp/ans
+        ible-minio.git) registered for path 'ansible/roles-external/ansible-minio'
+        Submodule 'ansible/roles-external/ansible-ntp-verify' (https://github.com/wireap
+        p/ansible-ntp-verify.git) registered for path 'ansible/roles-external/ansible-nt
+        p-verify'
+        Submodule 'ansible/roles-external/ansible-restund' (https://github.com/wireapp/a
+        nsible-restund.git) registered for path 'ansible/roles-external/ansible-restund'
+        Submodule 'ansible/roles-external/ansible-role-java' (https://github.com/geerlin
+        gguy/ansible-role-java.git) registered for path 'ansible/roles-external/ansible-
+        role-java'
+        Submodule 'ansible/roles-external/ansible-role-ntp' (https://github.com/geerling
+        guy/ansible-role-ntp.git) registered for path 'ansible/roles-external/ansible-ro
+        le-ntp'
+        Submodule 'ansible/roles-external/ansible-tinc' (https://github.com/wireapp/ansi
+        ble-tinc.git) registered for path 'ansible/roles-external/ansible-tinc'
+        Submodule 'ansible/roles-external/cloudalchemy.node-exporter' (https://github.co
+        m/cloudalchemy/ansible-node-exporter) registered for path 'ansible/roles-externa
+        l/cloudalchemy.node-exporter'
+        Submodule 'ansible/roles-external/elasticsearch' (https://github.com/elastic/ans
+        ible-elasticsearch.git) registered for path 'ansible/roles-external/elasticsearc
+        h'
+        Submodule 'ansible/roles-external/hostname' (https://github.com/ANXS/hostname.gi
+        t) registered for path 'ansible/roles-external/hostname'
+        Submodule 'ansible/roles-external/kubespray' (https://github.com/kubernetes-sigs
+        /kubespray.git) registered for path 'ansible/roles-external/kubespray'
+        Submodule 'ansible/roles-external/logrotate' (https://github.com/nickhammond/ans
+        ible-logrotate.git) registered for path 'ansible/roles-external/logrotate'
+        Submodule 'ansible/roles-external/sft' (https://github.com/wireapp/ansible-sft.g
+        it) registered for path 'ansible/roles-external/sft'
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ANXS.apt'...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/admin_users'.
+        ..
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/andrewrothste
+        in.unarchive-deps'...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ansible-cassa
+        ndra'...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ansible-minio
+        '...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ansible-ntp-v
+        erify'...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ansible-restu
+        nd'...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ansible-role-
+        java'...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ansible-role-
+        ntp'...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ansible-tinc'
+        ...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/cloudalchemy.
+        node-exporter'...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/elasticsearch
+        '...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/hostname'...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/kubespray'...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/logrotate'...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/sft'...
+        Submodule path 'ansible/roles-external/ANXS.apt': checked out 'f602ba7e88abfbb3a
+        f6679a8ca47207dc3e9d9c4'
+        Submodule path 'ansible/roles-external/admin_users': checked out 'd5bcef7e925ee1
+        acf4e42359f0a95ed788eea58f'
+        Submodule path 'ansible/roles-external/andrewrothstein.unarchive-deps': checked
+        out '4485543262cfe04170d1ec02c8ccb95c44a7a222'
+        Submodule path 'ansible/roles-external/ansible-cassandra': checked out '8a0f029f
+        533856e8270d7fd74d75c099a677b2e3'
+        Submodule path 'ansible/roles-external/ansible-minio': checked out '22ab28f75c00
+        7a0c48dc47db574773773ef19d22'
+        Submodule path 'ansible/roles-external/ansible-ntp-verify': checked out '4c3d0c6
+        7d32d2d74444f4db45b2a4d2efdc7d590'
+        Submodule path 'ansible/roles-external/ansible-restund': checked out '9807313a7c
+        72ffa40e74f69d239404fd87db65ab'
+        Submodule path 'ansible/roles-external/ansible-role-java': checked out '13b42705
+        5702d9e91558cad7dcccab7db91e5663'
+        Submodule path 'ansible/roles-external/ansible-role-ntp': checked out 'af1ec6238
+        5c899a3e3f24407d8417adcdc9eea60'
+        Submodule path 'ansible/roles-external/ansible-tinc': checked out '42951a951f638
+        1e387174178bf3bff228b6a5dc5'
+        Submodule path 'ansible/roles-external/cloudalchemy.node-exporter': checked out
+        '8dc13ae077e3da1a71c268b114cd4fb8103ced80'
+        Submodule path 'ansible/roles-external/elasticsearch': checked out '389a3ff45f8f
+        51de95313ca0354cedcdc92b16f4'
+        Submodule path 'ansible/roles-external/hostname': checked out 'da6f329b2984e84d2
+        248d4251e0c679c53dfbb30'
+        Submodule path 'ansible/roles-external/kubespray': checked out 'c7658c0256bfeb50
+        913ac73f638a760680e4dd6d'
+        Submodule path 'ansible/roles-external/logrotate': checked out '91d570f68c44261d
+        2051a99a2b3c7d736306bf0d'
+        Submodule path 'ansible/roles-external/sft': checked out '126fde847dfc9deffeef8b
+        a133c541c16628a63a'
+[19:22:43] # Running command «mkdir -p wire-server» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy$ mkdir -p wire-server
+[19:22:49] # Running command «cd wire-server» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy$ cd wire-server
+[19:22:55] # Running command «pwd» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ pwd
+        /home/wire/wire-server-deploy/wire-server
+[19:23:00] # Running command «curl -sSL https://raw.githubusercontent.com/wireapp/wire-server-deploy/master/values/wire-server/demo-secrets.example.yaml > secrets.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ curl -sSL https://raw.githubu
+        sercontent.com/wireapp/wire-server-deploy/master/values/wire-server/demo-secrets
+        .example.yaml > secrets.yaml
+[19:23:06] # Running command «curl -sSL https://raw.githubusercontent.com/wireapp/wire-server-deploy/master/values/wire-server/demo-values.example.yaml > values.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ curl -sSL https://raw.githubu
+        sercontent.com/wireapp/wire-server-deploy/master/values/wire-server/demo-values.
+        example.yaml > values.yaml
+[19:23:12] # Running command «openssl rand -base64 64 | env LC_CTYPE=C tr -dc a-zA-Z0-9 | head -c 42 > restund.txt» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ openssl rand -base64 64 | env
+         LC_CTYPE=C tr -dc a-zA-Z0-9 | head -c 42 > restund.txt
+[19:24:57] # Running command «sudo docker run --rm quay.io/wire/alpine-intermediate /dist/zauth -m gen-keypair -i 1 > zauth.txt» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ sudo docker run --rm quay.io/
+        wire/alpine-intermediate /dist/zauth -m gen-keypair -i 1 > zauth.txt
+        Unable to find image 'quay.io/wire/alpine-intermediate:latest' locally
+        latest: Pulling from wire/alpine-intermediate
+        188c0c94c7c5: Pulling fs layer
+        edebdc4a6437: Pulling fs layer
+        d9b6d5749552: Pulling fs layer
+        0dd342b35df2: Pulling fs layer
+        ea7c73d2e35b: Pulling fs layer
+        0dd342b35df2: Waiting
+        ea7c73d2e35b: Waiting
+        edebdc4a6437: Verifying Checksum
+        edebdc4a6437: Download complete
+        d9b6d5749552: Verifying Checksum
+        d9b6d5749552: Download complete
+        188c0c94c7c5: Verifying Checksum
+        188c0c94c7c5: Download complete
+        ea7c73d2e35b: Verifying Checksum
+        ea7c73d2e35b: Download complete
+        188c0c94c7c5: Pull complete
+        edebdc4a6437: Pull complete
+        d9b6d5749552: Pull complete
+        0dd342b35df2: Verifying Checksum
+        0dd342b35df2: Download complete
+        0dd342b35df2: Pull complete
+        ea7c73d2e35b: Pull complete
+        Digest: sha256:bfb7dfd21e389ec699527f3cdad32d158ecab12577404c4578001af7c899d044
+        Status: Downloaded newer image for quay.io/wire/alpine-intermediate:latest
+[19:25:03] # Running command «ls -l» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ ls -l
+        total 20
+        -rw-rw-r-- 1 wire wire   42 Jul 14 17:23 restund.txt
+        -rw-rw-r-- 1 wire wire 1949 Jul 14 17:22 secrets.yaml
+        -rw-rw-r-- 1 wire wire 7642 Jul 14 17:23 values.yaml
+        -rw-rw-r-- 1 wire wire  150 Jul 14 17:24 zauth.txt
+[19:25:11] # Running command «curl -sSL https://raw.githubusercontent.com/wireapp/wire-server-deploy/master/values/wire-server/prod-values.example.yaml > prod-values.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ curl -sSL https://raw.githubu
+        sercontent.com/wireapp/wire-server-deploy/master/values/wire-server/prod-values.
+        example.yaml > prod-values.yaml
+[19:25:17] # Running command «grep 'spar:' prod-values.yaml -A 24 > spar.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ grep 'spar:' prod-values.yaml
+         -A 24 > spar.yaml
+[19:25:23] # Running command «sed -i 's/cassandra-external/cassandra-ephemeral/' spar.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ sed -i 's/cassandra-external/
+        cassandra-ephemeral/' spar.yaml
+[19:25:29] # Running command «ls -l» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ ls -l
+        total 40
+        -rw-rw-r-- 1 wire wire 12606 Jul 14 17:25 prod-values.yaml
+        -rw-rw-r-- 1 wire wire    42 Jul 14 17:23 restund.txt
+        -rw-rw-r-- 1 wire wire  1949 Jul 14 17:22 secrets.yaml
+        -rw-rw-r-- 1 wire wire   744 Jul 14 17:25 spar.yaml
+        -rw-rw-r-- 1 wire wire  7642 Jul 14 17:23 values.yaml
+        -rw-rw-r-- 1 wire wire   150 Jul 14 17:24 zauth.txt
+[19:25:34] # Running command «cat restund.txt && echo» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ cat restund.txt && echo
+        PXG8kMa7ZlwUYHXsbO7K5udPew0Cjp55DgItnQnrzv
+[19:25:40] # Running command «cat zauth.txt» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ cat zauth.txt
+        public: h6M6HL43WY6Cjdbda6zZYPYXFwcpULXmxGY4XkX-qS0=
+        secret: B4-4vG3b4e9uxIeD4ngpOQ4p0Yv4krxDZ8a1KXpwxi2HozocvjdZjoKN1t1rrNlg9hcXBylQ
+        tebEZjheRf6pLQ==
+[19:25:46] # Running command «sed -i 's/secret:$/secret: PXG8kMa7ZlwUYHXsbO7K5udPew0Cjp55DgItnQnrzv/' secrets.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ sed -i 's/secret:$/secret: PX
+        G8kMa7ZlwUYHXsbO7K5udPew0Cjp55DgItnQnrzv/' secrets.yaml
+[19:25:52] # Running command «sed -i 's/publicKeys: "<public key>"/publicKeys: "h6M6HL43WY6Cjdbda6zZYPYXFwcpULXmxGY4XkX-qS0="/' secrets.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ sed -i 's/publicKeys: "<publi
+        c key>"/publicKeys: "h6M6HL43WY6Cjdbda6zZYPYXFwcpULXmxGY4XkX-qS0="/' secrets.yam
+        l
+[19:25:58] # Running command «sed -i 's/privateKeys: "<private key>"/privateKeys: "B4-4vG3b4e9uxIeD4ngpOQ4p0Yv4krxDZ8a1KXpwxi2HozocvjdZjoKN1t1rrNlg9hcXBylQtebEZjheRf6pLQ=="/' secrets.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ sed -i 's/privateKeys: "<priv
+        ate key>"/privateKeys: "B4-4vG3b4e9uxIeD4ngpOQ4p0Yv4krxDZ8a1KXpwxi2HozocvjdZjoKN
+        1t1rrNlg9hcXBylQtebEZjheRf6pLQ=="/' secrets.yaml
+[19:26:03] # Running command «cat secrets.yaml | grep 'PXG8kMa7ZlwUYHXsbO7K5udPew0Cjp55DgItnQnrzv'» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ cat secrets.yaml | grep 'PXG8
+        kMa7ZlwUYHXsbO7K5udPew0Cjp55DgItnQnrzv'
+              secret: PXG8kMa7ZlwUYHXsbO7K5udPew0Cjp55DgItnQnrzv
+[19:26:09] # Running command «cat secrets.yaml | grep 'h6M6HL43WY6Cjdbda6zZYPYXFwcpULXmxGY4XkX-qS0='» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ cat secrets.yaml | grep 'h6M6
+        HL43WY6Cjdbda6zZYPYXFwcpULXmxGY4XkX-qS0='
+              publicKeys: "h6M6HL43WY6Cjdbda6zZYPYXFwcpULXmxGY4XkX-qS0="
+              publicKeys: "h6M6HL43WY6Cjdbda6zZYPYXFwcpULXmxGY4XkX-qS0="
+[19:26:15] # Running command «cat secrets.yaml | grep 'B4-4vG3b4e9uxIeD4ngpOQ4p0Yv4krxDZ8a1KXpwxi2HozocvjdZjoKN1t1rrNlg9hcXBylQtebEZjheRf6pLQ=='» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ cat secrets.yaml | grep 'B4-4
+        vG3b4e9uxIeD4ngpOQ4p0Yv4krxDZ8a1KXpwxi2HozocvjdZjoKN1t1rrNlg9hcXBylQtebEZjheRf6p
+        LQ=='
+              privateKeys: "B4-4vG3b4e9uxIeD4ngpOQ4p0Yv4krxDZ8a1KXpwxi2HozocvjdZjoKN1t1r
+        rNlg9hcXBylQtebEZjheRf6pLQ=="
+[19:26:21] # Running command «cat values.yaml | grep spar» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ cat values.yaml | grep spar
+          spar: false # enable if you want/need Single-Sign-On (SSO)
+[19:26:27] # Running command «sed -i 's/spar: false/spar: true/' values.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ sed -i 's/spar: false/spar: t
+        rue/' values.yaml
+[19:26:33] # Running command «cat spar.yaml >> values.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ cat spar.yaml >> values.yaml
+[19:26:39] # Running command «cat values.yaml | grep spar» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ cat values.yaml | grep spar
+          spar: true # enable if you want/need Single-Sign-On (SSO)
+        spar:
+[19:26:44] # Running command «cd ~/wire-server-deploy» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ cd ~/wire-server-deploy
+[19:26:50] # Running command «pwd» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy$ pwd
+        /home/wire/wire-server-deploy
+[19:26:56] # Running command «ls -l» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy$ ls -l
+        total 112
+        -rw-rw-r--  1 wire wire 16072 Jul 14 17:21 CHANGELOG.md
+        -rw-rw-r--  1 wire wire  1531 Jul 14 17:21 CONTRIBUTING.md
+        -rw-rw-r--  1 wire wire   252 Jul 14 17:21 Dockerfile
+        -rw-rw-r--  1 wire wire 34520 Jul 14 17:21 LICENSE
+        -rw-rw-r--  1 wire wire  5893 Jul 14 17:21 Makefile
+        -rw-rw-r--  1 wire wire  2251 Jul 14 17:21 README.md
+        drwxrwxr-x  9 wire wire  4096 Jul 14 17:21 ansible
+        drwxrwxr-x  3 wire wire  4096 Jul 14 17:21 bin
+        -rw-rw-r--  1 wire wire  2338 Jul 14 17:21 default.nix
+        drwxrwxr-x  5 wire wire  4096 Jul 14 17:21 examples
+        drwxrwxr-x  2 wire wire  4096 Jul 14 17:21 helm
+        drwxrwxr-x  4 wire wire  4096 Jul 14 17:21 nix
+        drwxrwxr-x  2 wire wire  4096 Jul 14 17:21 offline
+        drwxrwxr-x  5 wire wire  4096 Jul 14 17:21 terraform
+        drwxrwxr-x 15 wire wire  4096 Jul 14 17:21 values
+        drwxrwxr-x  2 wire wire  4096 Jul 14 17:26 wire-server
+[19:27:54] # Running command «curl -L https://nixos.org/nix/install | sh» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy$ curl -L https://nixos.org/nix/install | s
+        h
+          % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                         Dload  Upload   Total   Spent    Left  Speed
+          0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+        100  2619  100  2619    0     0   2619      0  0:00:01  0:00:01 --:--:-- 42241
+        downloading Nix 2.3.14 binary tarball for x86_64-linux from 'https://releases.ni
+        xos.org/nix/nix-2.3.14/nix-2.3.14-x86_64-linux.tar.xz' to '/tmp/nix-binary-tarba
+        ll-unpack.AjlSmxTP6B'...
+          % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                         Dload  Upload   Total   Spent    Left  Speed
+        100 25.7M  100 25.7M    0     0  17.8M      0  0:00:01  0:00:01 --:--:-- 17.8M
+        Note: a multi-user installation is possible. See https://nixos.org/nix/manual/#s
+        ect-multi-user-installation
+        performing a single-user installation of Nix...
+        directory /nix does not exist; creating it by running 'mkdir -m 0755 /nix && cho
+        wn wire /nix' using sudo
+        copying Nix to /nix/store...
+        
+        installing 'nix-2.3.14'
+        building '/nix/store/3jgh2s7zvrm4b4c00zqsirzy1wwic7bs-user-environment.drv'...
+        created 6 symlinks in user environment
+        unpacking channels...
+        created 1 symlinks in user environment
+        modifying /home/wire/.profile...
+        
+        Installation finished!  To ensure that the necessary environment
+        variables are set, either log in again, or type
+        
+          . /home/wire/.nix-profile/etc/profile.d/nix.sh
+        
+        in your shell.
+[19:28:00] # Running command «. /home/wire/.nix-profile/etc/profile.d/nix.sh» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy$ . /home/wire/.nix-profile/etc/profile.d/n
+        ix.sh
+[19:28:40] # Running command «sudo apt install direnv» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy$ sudo apt install direnv
+        Reading package lists... Done
+        Building dependency tree
+        Reading state information... Done
+        The following NEW packages will be installed:
+          direnv
+        0 upgraded, 1 newly installed, 0 to remove and 71 not upgraded.
+        Need to get 750 kB of archives.
+        After this operation, 2437 kB of additional disk space will be used.
+        Get:1 http://fr.archive.ubuntu.com/ubuntu bionic/universe amd64 direnv amd64 2.1
+        5.0-1 [750 kB]
+        Fetched 750 kB in 0s (1839 kB/s)
+        Selecting previously unselected package direnv.
+        (Reading database ... 67462 files and directories currently installed.)
+        Preparing to unpack .../direnv_2.15.0-1_amd64.deb ...
+        Unpacking direnv (2.15.0-1) ...
+        Setting up direnv (2.15.0-1) ...
+        Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+[19:28:46] # Running command «eval "$(direnv hook bash)"» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy$ eval "$(direnv hook bash)"
+        direnv: error .envrc is blocked. Run `direnv allow` to approve its content.
+[19:41:22] # Running command «direnv allow» on 192.168.1.121
+        copying path '/nix/store/c0z0fw7yf1yvvnsdwrpfnh3dkzz99qkz-groff-1.22.4' from 'https://cache.nixos.org'...
+        copying path '/nix/store/bnpadh78k2qf3hshwapl5s51dj87yykp-gzip-1.10' from 'https://cache.nixos.org'...
+        copying path '/nix/store/ilxqb60lqwgfv127s1qk744s28r9slzz-hook' from 'https://cache.nixos.org'...
+        copying path '/nix/store/m66lvby2nfnqcl1mn4vq57ij63jijcsd-ilmbase-2.5.3' from 'https://cache.nixos.org'...
+        copying path '/nix/store/33rnhiia9as23s5qr622xrkgrljn0i80-json-c-0.15' from 'https://cache.nixos.org'...
+        copying path '/nix/store/6qqgmghykh5z6zz2apj0j94rrk3xwwdj-keyutils-1.6.3-lib' from 'https://cache.nixos.org'...
+        copying path '/nix/store/p7mmx4rxf22b9w8528jd9vnf21pkaq10-lcms-1.19' from 'https://cache.nixos.org'...
+        copying path '/nix/store/a8v7bhvbhx8z0v82hnnb9chclcqvqgaj-lcms2-2.12' from 'https://cache.nixos.org'...
+        copying path '/nix/store/vbvcil9didsqpgcmwm07lnmd2dk3x4ll-libICE-1.0.10' from 'https://cache.nixos.org'...
+        copying path '/nix/store/icxlx0myvh5ajd1mlaqnlzsqvqx348pg-libXau-1.0.9' from 'https://cache.nixos.org'...
+        copying path '/nix/store/nwcsjyv4rf4d6bkqjcg5c7nr2vh93dz1-libXdmcp-1.1.3' from 'https://cache.nixos.org'...
+        copying path '/nix/store/bfjrh208n4dn8vbyacyfybkzkrv3234y-libapparmor-2.13.6' from 'https://cache.nixos.org'...
+        copying path '/nix/store/7qmny92wsmcp85f06cgw0ia0sf917vkn-libcap-2.47-lib' from 'https://cache.nixos.org'...
+        copying path '/nix/store/cwmbd9mgw0c45vrdxin9y38i19d2mmsw-libcbor-0.8.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/26j95559973ymp25z5x7jy8mbwjmjpqr-libdatrie-2019-12-20-lib' from 'https://cache.nixos.org'...
+        copying path '/nix/store/kdsi031nin9w595qw3ib326dp5a2rixp-libev-4.33' from 'https://cache.nixos.org'...
+        copying path '/nix/store/6c6ifrz2dlbahzg7cjlilb6aj76725vy-libevent-2.1.12' from 'https://cache.nixos.org'...
+        copying path '/nix/store/b7ms1xiy6m51xkw6qk1z0qwhxgnwplkv-libffi-3.3' from 'https://cache.nixos.org'...
+        copying path '/nix/store/4ly3l4g312adn82dha8ic2x1hs4zvq2g-libgpg-error-1.41' from 'https://cache.nixos.org'...
+        copying path '/nix/store/w12s17ajjijvdq8w0r9bbqflqvg378lm-libffi-3.3-dev' from 'https://cache.nixos.org'...
+        copying path '/nix/store/bxp0nq2vmvv1ixihx13jym17pkmq80g2-libassuan-2.5.4' from 'https://cache.nixos.org'...
+        copying path '/nix/store/aagq5fchdf079m8i50rgqa6vyq3xaksa-libgcrypt-1.9.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/6nzyfx921hg2j4i45xv6rklw5f18vvgd-libjpeg-turbo-2.0.6' from 'https://cache.nixos.org'...
+        copying path '/nix/store/ym1d4kx870cpmcj8spf1y9kjdydz25fd-gnupg-2.2.27' from 'https://cache.nixos.org'...
+        copying path '/nix/store/47vk8wb1a0qzixf9bwc2snraci5lwmvy-libkrb5-1.18' from 'https://cache.nixos.org'...
+        copying path '/nix/store/gi12qahl7d6h26sgj04mm89gimkanf6q-libkrb5-1.18' from 'https://cache.nixos.org'...
+        copying path '/nix/store/1arvgqvsnyp6xsgrhmzl6qjb427xr2w9-libkrb5-1.18-dev' from 'https://cache.nixos.org'...
+        copying path '/nix/store/q99n53lcf1f3fzp6pfvlvgasdrdn91ws-libksba-1.5.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/lb8dmjgz65cc737bhraq258zhfmm3p7m-libmnl-1.0.4' from 'https://cache.nixos.org'...
+        copying path '/nix/store/s7ll52xkkl4a2lvx6s9siyvcc2smb5di-libnfnetlink-1.0.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/51fkh7bxlp1120skmrrznx4sq00fwpdy-libnftnl-1.1.9' from 'https://cache.nixos.org'...
+        copying path '/nix/store/lshycmlfx70x83pi059q7csv9l5r30wd-libnetfilter_conntrack-1.0.8' from 'https://cache.nixos.org'...
+        copying path '/nix/store/83ic7dnwgmm4dim4zylrr1ghsfydhgdm-libpcap-1.10.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/n9y6nsg0llg8bdrw37cb54x71jbg98m1-libseccomp-2.5.1-lib' from 'https://cache.nixos.org'...
+        copying path '/nix/store/h606si3hh9myvq2wk753wgn7wkhhxkq4-iptables-1.8.7' from 'https://cache.nixos.org'...
+        copying path '/nix/store/h57yvcannzhpdk1drrc51577l1wqv037-libsodium-1.0.18' from 'https://cache.nixos.org'...
+        copying path '/nix/store/8skdlv4is5dx7k4qv85dky8xqlw56vv0-libtasn1-4.16.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/nqxgzzy2qq1v7jyihvasc026nf9myr5j-libthai-0.1.28' from 'https://cache.nixos.org'...
+        copying path '/nix/store/59mjcnq63546ykw3bry283lp91hmjw4c-libtool-2.4.6-lib' from 'https://cache.nixos.org'...
+        copying path '/nix/store/bkzbjjkfipj6hr1m36yxpxbw16s238wi-libxcb-1.14' from 'https://cache.nixos.org'...
+        copying path '/nix/store/ibzpa5qkz0gk7ikyrsfljgq7l9nxdaxf-libyaml-0.2.5' from 'https://cache.nixos.org'...
+        copying path '/nix/store/aq0wqny5gw6jaf4sr24fp7baf097pfla-libX11-1.7.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/p7gxzcp2jg84q6mr1pgynkql88mzpzaq-linux-pam-1.5.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/qgb0q5rqgpxr5kc7vl2vfhcwg5210dbn-libXext-1.3.4' from 'https://cache.nixos.org'...
+        copying path '/nix/store/l5gn6w5zlrs3iyp5yyrp5ddz6hc97x2y-kbd-2.0.4' from 'https://cache.nixos.org'...
+        copying path '/nix/store/79czdjb9vyzw7ipb0j9bsry839s443yy-libXpm-3.5.13' from 'https://cache.nixos.org'...
+        copying path '/nix/store/abcxd9c3idz2frmaz5n31g13ha7mxrmx-libXrender-0.9.10' from 'https://cache.nixos.org'...
+        copying path '/nix/store/d4z7srqafd4krf10dsg3kqn1fa9hmk25-libglvnd-1.3.2' from 'https://cache.nixos.org'...
+        copying path '/nix/store/yjfdljm8bqhmsxjpr4n9mpzx0ci7srnr-lndir-1.0.3' from 'https://cache.nixos.org'...
+        copying path '/nix/store/0b3bisslwm6hd5pgllbmq6x7z6k4ifwz-lz4-1.9.3' from 'https://cache.nixos.org'...
+        copying path '/nix/store/bb59zsb4imiq6z6n203ic0plk7y5jiw2-ncurses-6.2' from 'https://cache.nixos.org'...
+        copying path '/nix/store/0q22n71lh82nv9vr8lzdwm81mwqipaan-nettle-3.6' from 'https://cache.nixos.org'...
+        copying path '/nix/store/cnjs5wmgfbzmrzj1ffl2093i7mksi0vq-less-563' from 'https://cache.nixos.org'...
+        copying path '/nix/store/6c5bvbn9k2c42c193ihzajr6s3kgiwhk-libedit-20191231-3.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/jzapxl7xc4cd7pjb5fx9mb5ar1iixb9q-nghttp2-1.41.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/kkg51b7v2fcqwl2zgfb85z4zvv47ldx0-nghttp2-1.41.0-lib' from 'https://cache.nixos.org'...
+        copying path '/nix/store/wa8kywmn2aywkrj8n7kir4j90x64cjib-nghttp2-1.41.0-lib' from 'https://cache.nixos.org'...
+        copying path '/nix/store/nn1sncr125sr8mvzk28s8dcda8iijb0p-npth-1.6' from 'https://cache.nixos.org'...
+        copying path '/nix/store/9f7pllxfaswk2zpd4wqmjx5rqvxvkmwq-nss-cacert-3.60' from 'https://cache.nixos.org'...
+        copying path '/nix/store/3qf8yw0jsn051wj9zl3wh76rgqrdw9bz-onig-6.9.6' from 'https://cache.nixos.org'...
+        copying path '/nix/store/f7jpwsi3yiy98pjv6m06m5j2hxds84cm-openssl-1.1.1j' from 'https://cache.nixos.org'...
+        copying path '/nix/store/mssmgliffhn51j1wwm7qnr2rgjyaajqc-jq-1.6-lib' from 'https://cache.nixos.org'...
+        copying path '/nix/store/3hnq4rm3g5map6p9z4nh4s4c5qrzjglz-cyrus-sasl-2.1.27' from 'https://cache.nixos.org'...
+        copying path '/nix/store/n44q2rz1vbamax4c0dli3rlijw8f8xsb-jq-1.6-bin' from 'https://cache.nixos.org'...
+        copying path '/nix/store/q6c2jy9sg7i77m2n2h20mgfxygnvkixd-lynx-2.8.9rel.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/1184p2vsgqprjkyiy9a9yiczb6m1w365-openldap-2.4.57' from 'https://cache.nixos.org'...
+        copying path '/nix/store/ndvl5v0dgk5yf91lr3giwgg2sisnkra1-openssl-1.1.1j' from 'https://cache.nixos.org'...
+        copying path '/nix/store/k8l9bnisrg3aljpzrpgvcgzaccalwnam-apr-util-1.6.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/iy7bp5wbmz6ixr9sfn3gcv0a2v2vqxmi-openssl-1.1.1j-bin' from 'https://cache.nixos.org'...
+        copying path '/nix/store/v8pvp9bk4ab9j1gxlv00m9wjczi2b3an-openssl-1.1.1j-bin' from 'https://cache.nixos.org'...
+        copying path '/nix/store/m00ayhv45q3n0nqxp097817gvw9snvl1-openssl-1.1.1j-man' from 'https://cache.nixos.org'...
+        copying path '/nix/store/xk381kxv0s18zh3v7g43f1m96skxax0v-openssl-1.1.1j-dev' from 'https://cache.nixos.org'...
+        copying path '/nix/store/c1ss4vfipvqp6k2iywsb3zlgcbm7x2r4-p11-kit-0.23.22' from 'https://cache.nixos.org'...
+        copying path '/nix/store/kh9l9zpjxsdnx6zi91pk3yich8ivwii4-patch-2.7.6' from 'https://cache.nixos.org'...
+        copying path '/nix/store/zrh1cskgv6kc8bh7hzfii14h2nck33qv-patchelf-0.12' from 'https://cache.nixos.org'...
+        copying path '/nix/store/4clrialdn6i2w6gdsrbpy76qvgdq20vl-pcre-8.44' from 'https://cache.nixos.org'...
+        copying path '/nix/store/h905c1j6sp6kks9fac1z6c8872rlrqz0-pcre2-10.36' from 'https://cache.nixos.org'...
+        copying path '/nix/store/3mx947xcmsyk79izqc8ifv31qafp80pc-gnugrep-3.6' from 'https://cache.nixos.org'...
+        copying path '/nix/store/wm8aiqpj09xlw1h7cqgsiv0m96qn1mww-libselinux-3.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/192j9y62kp6a5kjw1ylgg1s4w7yxchc5-perl-5.32.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/yvdy5iyxvw0bm73ka6ix4nvc3wmvj572-perl5.32.1-Encode-Locale-1.05' from 'https://cache.nixos.org'...
+        copying path '/nix/store/4hbmbihy5b7lpjpdcvj5jsmj8bgljn38-perl5.32.1-FCGI-0.79' from 'https://cache.nixos.org'...
+        copying path '/nix/store/wn1b9zz714fxy65qiiwwpaqsgd7hla0z-perl5.32.1-FCGI-ProcManager-0.28' from 'https://cache.nixos.org'...
+        copying path '/nix/store/6jgx42lvxik0kl6v5jkzf8mcaznydf52-perl5.32.1-HTML-TagCloud-0.38' from 'https://cache.nixos.org'...
+        copying path '/nix/store/qci0lxfzwkvva87rmqrsv5wf87f9mn6a-perl5.32.1-HTML-Tagset-3.20' from 'https://cache.nixos.org'...
+        copying path '/nix/store/wgjhhypr61vxynx6v1i86y34r4cvhrfk-perl5.32.1-IO-HTML-1.004' from 'https://cache.nixos.org'...
+        copying path '/nix/store/0gvkjb3xjm9inzvf5fiidcq12m43izq0-perl5.32.1-IO-Tty-1.15' from 'https://cache.nixos.org'...
+        copying path '/nix/store/8jvzwxs680b4rsm1v7x8pspswwr9lbij-perl5.32.1-LWP-MediaTypes-6.04' from 'https://cache.nixos.org'...
+        copying path '/nix/store/baxwcqq2jak3i57249l9ymig643zsgri-perl5.32.1-IPC-Run-20200505.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/3hfgmadm0rigwcd3yyv04hwfmwl8xd4z-perl5.32.1-TermReadKey-2.38' from 'https://cache.nixos.org'...
+        copying path '/nix/store/h77hyqvj0vpz3xgii8x7yhhphk8fxv8d-perl5.32.1-Test-Needs-0.002006' from 'https://cache.nixos.org'...
+        copying path '/nix/store/gb6h5f53mgmibhav9dsw1jwh56xn7ha0-perl5.32.1-Test-RequiresInternet-0.05' from 'https://cache.nixos.org'...
+        copying path '/nix/store/lgq1wqjrh4azgj396481lk2vdqd0xhsm-perl5.32.1-Time-Duration-1.21' from 'https://cache.nixos.org'...
+        copying path '/nix/store/mmjwc95jxvijcrb0hsafq6gzy6gid65s-perl5.32.1-TimeDate-2.33' from 'https://cache.nixos.org'...
+        copying path '/nix/store/v96aqxh2rn5zsaxkckimv7j749rg501p-perl5.32.1-Try-Tiny-0.30' from 'https://cache.nixos.org'...
+        copying path '/nix/store/k1nkbcap53jjqc2i578aly3b093ywzd0-moreutils-0.65' from 'https://cache.nixos.org'...
+        copying path '/nix/store/s4g84jk6g0mfplvshg3ypmzlv800mma2-perl5.32.1-HTTP-Date-6.05' from 'https://cache.nixos.org'...
+        copying path '/nix/store/4wjlmc4wbipmqw5xv16dcf6r9m45gs1d-perl5.32.1-Test-Fatal-0.016' from 'https://cache.nixos.org'...
+        copying path '/nix/store/gfx1n8dcxg411db08gyf0c0p9pmgswxk-perl5.32.1-File-Listing-6.14' from 'https://cache.nixos.org'...
+        copying path '/nix/store/p8bcha07bml5h88m1vscn7l73dh5dj2d-perl5.32.1-URI-5.05' from 'https://cache.nixos.org'...
+        copying path '/nix/store/8ksz4gml5094f8xmvzdrhdnpz977m4ng-pixman-0.38.4' from 'https://cache.nixos.org'...
+        copying path '/nix/store/zaqdrxyzq7pjmnzsf57g9z1gk78siml0-perl5.32.1-HTTP-Message-6.26' from 'https://cache.nixos.org'...
+        copying path '/nix/store/06lql68yg0va4hva4wh1k2kynphrdlvx-perl5.32.1-Net-HTTP-6.19' from 'https://cache.nixos.org'...
+        copying path '/nix/store/jn66q5v49281prj6ljpdpslkw9hjx20y-perl5.32.1-HTML-Parser-3.75' from 'https://cache.nixos.org'...
+        copying path '/nix/store/vc2l2lfm5zkyjk7q31lcgh3p25mw4xxl-perl5.32.1-HTTP-Cookies-6.09' from 'https://cache.nixos.org'...
+        copying path '/nix/store/mcrs2bngb8zqablryq7kan25g1q1vvrk-perl5.32.1-CGI-4.51' from 'https://cache.nixos.org'...
+        copying path '/nix/store/n4ph0xsyry9zqyxbgac979pqppzi9bgn-perl5.32.1-HTTP-Daemon-6.01' from 'https://cache.nixos.org'...
+        copying path '/nix/store/my0y4gyhjlgzl9zfpyr1bwar6prlyzry-perl5.32.1-CGI-Fast-2.15' from 'https://cache.nixos.org'...
+        copying path '/nix/store/kryf9l445g8wcprslr7swr2a5ffq5vcn-perl5.32.1-HTTP-Negotiate-6.01' from 'https://cache.nixos.org'...
+        copying path '/nix/store/4iwk4xbh6ylik2amifb61jvdqbd78kvr-perl5.32.1-WWW-RobotRules-6.02' from 'https://cache.nixos.org'...
+        copying path '/nix/store/grmaq7mvpn8br7nmmcl23vsvfh0dp0ic-popt-1.16' from 'https://cache.nixos.org'...
+        copying path '/nix/store/kr0zp68ck7k7vb636z4jghbfh1n314yi-perl5.32.1-libwww-perl-6.49' from 'https://cache.nixos.org'...
+        copying path '/nix/store/169smw8k5pi5dzavnyfz8p36qhkksfl4-python3.8-cffi-1.14.4' from 'https://cache.nixos.org'...
+        copying path '/nix/store/al6x0pk1n8hkjn2bjchbfzs2akn16p9c-python3.8-cryptography-3.4.6' from 'https://cache.nixos.org'...
+        copying path '/nix/store/6l4pc8qbzp4ka9bd9pwp7bqg6slmfnn0-python3.8-pyOpenSSL-20.0.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/1amg8fs88bj0ac06hbs1fbqf22c9rak5-readline-6.3p08' from 'https://cache.nixos.org'...
+        copying path '/nix/store/l8spvm6y3fs8sxingmcphy5nrrv0w8jy-readline-7.0p5' from 'https://cache.nixos.org'...
+        copying path '/nix/store/iazrgcmzx0b4y30msb437bkh8qzd23g2-gnupg-1.4.23' from 'https://cache.nixos.org'...
+        copying path '/nix/store/8wbyyhschvbg0r3p6lh6vpvys6zk4ivc-bash-interactive-4.4-p23' from 'https://cache.nixos.org'...
+        copying path '/nix/store/ilmrf7li6qg85q3h45472wp8337dwi28-shadow-4.8.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/izmqkzx0fw73ihrhjis9icdjqqivwgva-skopeo-1.2.2-man' from 'https://cache.nixos.org'...
+        copying path '/nix/store/jy4laas6pm5xv1pfaxqpiaa0l1by533b-source' from 'https://cache.nixos.org'...
+        copying path '/nix/store/kzywnca37s1hav4cb950v0c6255nimys-tzdata-2020f' from 'https://cache.nixos.org'...
+        copying path '/nix/store/85820n8bc1ygmr93y6rlxhdnpcnx7y5y-unbound-1.13.0-lib' from 'https://cache.nixos.org'...
+        copying path '/nix/store/97jqpixykvdf2awdfymn4xsci38v34yc-go-1.16' from 'https://cache.nixos.org'...
+        copying path '/nix/store/1w61bxm2jywck4z598ymrd1676xwh6qj-gnutls-3.6.15' from 'https://cache.nixos.org'...
+        copying path '/nix/store/iqnlkkprxbas8cjq3v94bcfk9nck77wv-helm-3.5.2' from 'https://cache.nixos.org'...
+        copying path '/nix/store/n7908vdjz8s3dsnahamg7w9cakxlv9sj-libmicrohttpd-0.9.71' from 'https://cache.nixos.org'...
+        copying path '/nix/store/b3sf6ails2hqqwmx393i36nhjjgzybvg-sops-3.6.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/i34f2mh4j17wdsmy8chsgn25apkka7p3-terraform-0.13.6' from 'https://cache.nixos.org'...
+        copying path '/nix/store/xvhjz879aw8h1gizgx8rqlfpxh63y3ww-unzip-6.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/6hcqnys5sii21xi821f8yg7mvj7cx5dl-util-linux-2.36.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/a0ispl1hfg8gfg52pbs8m5n6pmcwrmls-vault-1.6.3' from 'https://cache.nixos.org'...
+        copying path '/nix/store/jf7dcwcmgzwsk8zzdl503mgg5jbqykg4-libSM-1.2.3' from 'https://cache.nixos.org'...
+        copying path '/nix/store/8nxvl94y69nsi0bc5glzakpmd1v755k2-xz-5.2.5' from 'https://cache.nixos.org'...
+        copying path '/nix/store/cbzyljm8dky0kc1raqvjwsqprbqvgmwx-libXt-1.2.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/bn6zidj988hc2pvp6k08slj5fk7qfcc9-kmod-27' from 'https://cache.nixos.org'...
+        copying path '/nix/store/n2glnfa9xb84ndzf3z9gi6mas7bx8cbw-libXmu-1.1.3' from 'https://cache.nixos.org'...
+        copying path '/nix/store/bap20qjfwfzl49zz11prqdyfdmq7w8ca-xz-5.2.5-bin' from 'https://cache.nixos.org'...
+        copying path '/nix/store/fhcmc888cpadgb97z945wr5pv1av2h3x-libXaw-1.0.13' from 'https://cache.nixos.org'...
+        copying path '/nix/store/nadvgnwzdnq6pgj1888s7agymdkv4d56-stdenv-linux' from 'https://cache.nixos.org'...
+        copying path '/nix/store/1srmyg1a8cxqwd0hd24rj6kw4lqd61yq-zlib-1.2.11' from 'https://cache.nixos.org'...
+        building '/nix/store/f1k60mbbbrpfw2zhkzkfcpb54w009dgy-builder.pl.drv'...
+        copying path '/nix/store/cp1sa3xxvl71cypiinw2c62i5s33chlr-binutils-2.35.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/sr0ci8f8pgby77fj4mpcl9bcgxji3676-gcc-10.2.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/jlyaypckqlapwqpck7jscs6qcdwg9bk3-binutils-wrapper-2.35.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/bqgh27q7fhkavvn7jf7gmyy084n5xgy2-glib-2.66.4' from 'https://cache.nixos.org'...
+        copying path '/nix/store/ca37d3qrydh0wpw40kswsx30j8dyzxh2-gcc-wrapper-10.2.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/5j94g7zg8a4d0ij6yfd7j3bq4nnij15d-gts-0.7.6' from 'https://cache.nixos.org'...
+        copying path '/nix/store/lbw8y6y77a6f76rdx7znc9irv5xch5lk-kexec-tools-2.0.20' from 'https://cache.nixos.org'...
+        copying path '/nix/store/ci91cajrr4yrdhc7rkmcaznzand5iaw9-libmng-2.0.3' from 'https://cache.nixos.org'...
+        copying path '/nix/store/68fzwlgvpg00zq8w4n6dg8bmcwyh91ls-libpng-apng-1.6.37' from 'https://cache.nixos.org'...
+        copying path '/nix/store/52nff18kzg5h4nrbbznh7jwchnaw475a-libssh2-1.9.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/fw7djzcdfnwggfg9d4lq016vbb521z93-freetype-2.10.4' from 'https://cache.nixos.org'...
+        copying path '/nix/store/8aiy8lz2hj3m514adimkly50bvhj4bbx-curl-7.74.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/svry86r4mzky8rjh0l94idf9ckgn8cx5-fontconfig-2.13.92-lib' from 'https://cache.nixos.org'...
+        copying path '/nix/store/ciczpgcfnj6s9kj1id4lgkc5i5y1hm4j-curl-7.74.0-bin' from 'https://cache.nixos.org'...
+        copying path '/nix/store/pcqjic85gc9vs4k9vrl8sqskmz4av2pr-cairo-1.16.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/jj9q6laz6f3k2znqbssdyilp6zlqw0ry-harfbuzz-2.7.4' from 'https://cache.nixos.org'...
+        copying path '/nix/store/xsz4wvc3j15nbj4f5l6bw0gdgxcrliqm-libXft-2.3.3' from 'https://cache.nixos.org'...
+        copying path '/nix/store/j0nmv5xsmvil1ia1zgm807905498g78l-libssh2-1.9.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/dnjbcvnv6q10qxphqiqkpfn13azs4972-libtiff-4.1.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/853m36d6r0ngdz71sdxm8i9mp4qg1hdf-curl-7.74.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/skvc7h4qfv43f83pqhqnhk2rjadn96m4-libssh2-1.9.0-dev' from 'https://cache.nixos.org'...
+        copying path '/nix/store/pf58s14vrnnhxa7ykwf4avwnbqwk8ql3-curl-7.74.0-bin' from 'https://cache.nixos.org'...
+        copying path '/nix/store/p7c5clzl2zlrvfjqa9mshm5kk0gf69w4-libwebp-1.1.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/x1b2xssir8y0282i7qmfqdl3vy717sl1-libxml2-2.9.10' from 'https://cache.nixos.org'...
+        copying path '/nix/store/2dsp5vzwh693y0mlivzi273k7g3jpza2-gd-2.3.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/hwavf5aqzdp7pbiwd1sxbzk7bav7gav2-apache-httpd-2.4.46' from 'https://cache.nixos.org'...
+        copying path '/nix/store/0i5fj5h9xwqi4z001ascfva3pfbwv3xr-libxslt-1.1.34' from 'https://cache.nixos.org'...
+        copying path '/nix/store/4pq58bfy1ijv16058fnjqzrbpx2dn2wj-nghttp2-1.41.0-bin' from 'https://cache.nixos.org'...
+        copying path '/nix/store/57nccdgg6777jgg6hzjnrrblis2wpf5j-openexr-2.5.3' from 'https://cache.nixos.org'...
+        copying path '/nix/store/qgfdicyfbaa5px86ag3yx8cl5qy2fzwn-nghttp2-1.41.0-dev' from 'https://cache.nixos.org'...
+        copying path '/nix/store/akv31z87kl2r5vlcrixc56gm4x6pxx2r-libdevil-1.7.8' from 'https://cache.nixos.org'...
+        copying path '/nix/store/54j1pgrcxb9qb2xlqn1dlswqrixjbll0-pango-1.47.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/6smnc44sby6l4k517fchrz6zyzpgfikz-sqlite-3.34.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/kbyvbs6gpl1ndhwpn0mwwj971r3nhl4k-graphviz-2.42.2' from 'https://cache.nixos.org'...
+        copying path '/nix/store/yl69v76azrz4daiqksrhb8nnmdiqdjg9-python3-3.8.8' from 'https://cache.nixos.org'...
+        copying path '/nix/store/6vjmwq0nxsqm4skc8mrwif0zgy2gmn6r-stdenv-linux' from 'https://cache.nixos.org'...
+        copying path '/nix/store/8619ynafa0q6zn78kiawyhp1ssl6bn77-python3.8-MarkupSafe-1.1.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/bpb9fnkf5kcmfxim2vcrnqr5pninznif-python3.8-PyYAML-5.4.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/nfqmmmy98870czalvv0zhbzj77ayl09v-python3.8-bcdoc-0.16.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/8437mm6b8041f34d22kghmd0dy4714l8-python3.8-certifi-2020.12.5' from 'https://cache.nixos.org'...
+        copying path '/nix/store/d1w1vivmz2cqqgb74bbkcbrzyx68rv26-python3.8-chardet-3.0.4' from 'https://cache.nixos.org'...
+        copying path '/nix/store/v28bassl74ilf1nd3h7srbasmcbxpnkw-python3.8-colorama-0.4.3' from 'https://cache.nixos.org'...
+        copying path '/nix/store/ih58p5gpl1jgx4q90hy6qd8pyn8jjd45-python3.8-dicttoxml-1.7.4' from 'https://cache.nixos.org'...
+        copying path '/nix/store/fzg09xw042c36r14vnb8cgzzh1ncdrgw-python3.8-dnspython-2.0.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/w8w51lhbdnswyv0aniijkqmslks1qhq2-python3.8-docutils-0.16' from 'https://cache.nixos.org'...
+        copying path '/nix/store/2mzm9sfdgla2fxxywnj0lk8ghpzybmnb-python3.8-httplib2-0.18.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/skb8mfs4rlhgd9das5hrq2y71w9n4v3s-python3.8-idna-2.10' from 'https://cache.nixos.org'...
+        copying path '/nix/store/68dmlsc6rzl7mxg4kzs0dmnvb3zfcz1a-python3.8-lxml-4.6.2' from 'https://cache.nixos.org'...
+        copying path '/nix/store/p2hq4hp4yfgqhd6axzb7dqv85k7jhg7d-python3.8-netaddr-0.8.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/77d44x14saj68flmzqrjj0b968c5fkcm-python3.8-ordereddict-1.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/s8l0xiy297x7zszlpnchz6v2kpkgbia7-python3.8-ply-3.11' from 'https://cache.nixos.org'...
+        copying path '/nix/store/dkzk05sbcr0l0i3ddmqs6420jk09k7dn-python3.8-ptyprocess-0.6.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/w1n6iwyqqb3fl83jpcd5rs75fi2zjmzn-python3.8-jmespath-0.10.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/7pvr707i18pw6mhl916z7qi2g04z4ng4-python3.8-pexpect-4.8.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/8bc1zgvk9sr3gr91ijzack7y0gl1ayk5-python3.8-pyasn1-0.4.8' from 'https://cache.nixos.org'...
+        copying path '/nix/store/0srilpn8g18smy1jsqm0fipyq809r5hl-python3.8-pycparser-2.20' from 'https://cache.nixos.org'...
+        copying path '/nix/store/a4yz66dysqjhhb2mgcbi1p604jwsfjxy-python3.8-pycryptodome-3.9.9' from 'https://cache.nixos.org'...
+        copying path '/nix/store/2r3ha7lqn2b7wxk4c5xrnhhfdai90hh7-python3.8-cffi-1.14.4-dev' from 'https://cache.nixos.org'...
+        copying path '/nix/store/0iydv2525x3jri0arkvj7ihxdbfcgqlb-python3.8-pycrypto-3.9.9' from 'https://cache.nixos.org'...
+        copying path '/nix/store/wirg14c5f05v3wbhgnib8m20a9hjl3x4-python3.8-pyparsing-2.4.7' from 'https://cache.nixos.org'...
+        copying path '/nix/store/zhl23i0kbyai219azhirvq3lm6xn7fx0-python3.8-pysocks-1.7.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/z15qv90y1hsg25xi6kjas4na03l8z966-python3.8-rsa-3.4.2' from 'https://cache.nixos.org'...
+        copying path '/nix/store/awfrwyr8x0p3ln5mdd29vah854gna9pc-python3.8-selectors2-2.0.2' from 'https://cache.nixos.org'...
+        copying path '/nix/store/z9rg0ff8qdmvg7v83fq0ixzp2vlpl3fl-python3.8-setuptools-50.3.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/zvqnirbkqcpcix2809j5rbw57kzv0420-python3.8-setuptools_scm-4.1.2' from 'https://cache.nixos.org'...
+        copying path '/nix/store/2p9ikvz5k1vbxqgaxvyi3v0j2c9vc8ga-python3.8-Jinja2-2.11.2' from 'https://cache.nixos.org'...
+        copying path '/nix/store/rz63fw9z52wxy3glfvsjdn147a8m88sx-python3.8-simplejson-3.17.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/hmmahv1vcp71w8f63iyra8dkgfqv1pxc-python3.8-six-1.15.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/16cbd7gnb99mbh9mbl5clcq3qk87hf8c-python3.8-wcwidth-0.2.5' from 'https://cache.nixos.org'...
+        copying path '/nix/store/ijqfsnkv2j0691icvfcd86y32ymmygk2-python3.8-bcrypt-3.2.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/r8w1nsgq0l8sd58gr0v0ayxd944z0630-python3.8-httpretty-1.0.3' from 'https://cache.nixos.org'...
+        copying path '/nix/store/31x3gi5f8yabhyjxfj9y8bkzgnallh9m-python3.8-more-itertools-8.6.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/gbz6zd37j94pzk5n5m38y97ml0pahm59-python3.8-packaging-20.7' from 'https://cache.nixos.org'...
+        copying path '/nix/store/20mbk331kg0ypd5b9jfvq2k1pkvn6fbc-python3.8-prettytable-2.0.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/94gy4ifzj8fcmbjbvsdixh6qacppw0qn-python3.8-cryptography-3.4.6-dev' from 'https://cache.nixos.org'...
+        copying path '/nix/store/cnb9j33alqj23dh9137slk8s2j1zhp8n-python3.8-pynacl-1.4.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/6bplql7f2sdqc309m0p86p0jjb64m18a-python3.8-pyOpenSSL-20.0.0-dev' from 'https://cache.nixos.org'...
+        copying path '/nix/store/68ns6mx6yx20zi2wd7jlp5yzk9ll1mvi-python3.8-paramiko-2.7.2' from 'https://cache.nixos.org'...
+        copying path '/nix/store/zr2zmzz73392lmxjnnva1dh0zfnwrric-python3.8-python-dateutil-2.8.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/q759sf9ivsp92ixbkr67y39yk9di9y5a-python3.8-ncclient-0.6.9' from 'https://cache.nixos.org'...
+        copying path '/nix/store/abp1gh00jgg04y1bg8nr1j95kc03i62a-python3.8-urllib3-1.26.2' from 'https://cache.nixos.org'...
+        copying path '/nix/store/1mzplhlcjg4qg0scyxn9riwxlai1krg1-python3.8-xmltodict-0.12.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/66c31w0k9r4ygf3qxih6rvpc4p35zndh-python3.8-botocore-1.20.18' from 'https://cache.nixos.org'...
+        copying path '/nix/store/jprs1kn7hvbv904zx2z0qdkm21qlssg1-python3.8-requests-2.25.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/8zibvzilcpgwqk437s5jxaq6k5iikwgh-python3.8-s3transfer-0.3.3' from 'https://cache.nixos.org'...
+        copying path '/nix/store/yb4rxa3s7fdcpnrjb860057wfpbrz4z2-python3.8-boto-2.49.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/s5aswmvyyqwdiavdq1hbig19ad6zmhd3-awscli-1.19.18' from 'https://cache.nixos.org'...
+        copying path '/nix/store/hs70rxb3ji7nnwpqhcwpgf3alhj68pr6-python3.8-boto3-1.17.18' from 'https://cache.nixos.org'...
+        copying path '/nix/store/3xazli888dgfks818a1bccf869wzc8w9-python3.8-dopy-2016-01-04' from 'https://cache.nixos.org'...
+        copying path '/nix/store/935ccvz1gq2j4q69gh4by5n0wc6g99z1-python3.8-requests-toolbelt-0.9.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/407c5v2x920kri79w0sb9gb1g82q28mg-python3.8-ansible-2.9.12' from 'https://cache.nixos.org'...
+        copying path '/nix/store/2kiy29h83ph379jiyqab0wzjdh0mzi93-python3.8-zipp-3.4.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/mby5cajr19n4akyga9pbjrcimmmr3z9s-util-linux-2.36.1-bin' from 'https://cache.nixos.org'...
+        copying path '/nix/store/j4b0nzp2z8ps9zlsj6g0is5k4zy69zh5-python3.8-importlib-metadata-1.7.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/a5pcs43vdiv5r2rl8dsppc557pmq2s0d-fuse-3.10.2' from 'https://cache.nixos.org'...
+        copying path '/nix/store/saxxi6iwf2dda1lmfbcg7wxyiibc8y6f-python3.8-argcomplete-1.12.2' from 'https://cache.nixos.org'...
+        copying path '/nix/store/798575gdggljb7c2vphm9w3gmgrizm99-fuse-overlayfs-1.4.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/wp92ixig9x9ir1fcdkggnih0ff00a8qc-python3.8-yq-2.12.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/vbyifyycrq5rl8jij32zpw4fryqlwhyn-systemd-minimal-247.3' from 'https://cache.nixos.org'...
+        copying path '/nix/store/kfg661h6yxids2hx9yqxci0n5zp9c4vl-zlib-1.2.11-dev' from 'https://cache.nixos.org'...
+        copying path '/nix/store/wjljrsmgrvimqa205q2c2h8h22xcx137-libusb-1.0.24' from 'https://cache.nixos.org'...
+        copying path '/nix/store/fly6y2h058mp7d1rvfg07kpak3xrx6gg-curl-7.74.0-dev' from 'https://cache.nixos.org'...
+        copying path '/nix/store/ppshfkniccljxvzfpzbfnlgvkhg58g0w-hidapi-0.10.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/yz46zif5vbbk4zvi3w59vp5jvl7sflfw-lvm2-2.03.11-lib' from 'https://cache.nixos.org'...
+        copying path '/nix/store/51chih49v71ywy33n34vb8jgzlinx1zq-libfido2-1.5.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/b9r234wnx3a6snzb3gma244y0b7dmm4b-cryptsetup-2.3.4' from 'https://cache.nixos.org'...
+        copying path '/nix/store/yvqp7nay7r0j7dx381yvnyxn7ijilp60-openssh-8.4p1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/4712fsjq670jsqjrpkkmpfzhi9g1k4nj-systemd-247.3' from 'https://cache.nixos.org'...
+        copying path '/nix/store/sav7kixag3gl1yfb224bhi02nlzy3nyb-git-2.30.1' from 'https://cache.nixos.org'...
+        copying path '/nix/store/8ln5lkk8w4dbss3wwqln660xzs1345dm-pcsclite-1.9.1-bin' from 'https://cache.nixos.org'...
+        building '/nix/store/6svbgjf3qpdvchhvy1ifgvxb57lpaj9w-calicoctl-linux-amd64.drv'...
+        
+        trying https://github.com/projectcalico/calicoctl/releases/download/v3.16.6/calicoctl-linux-amd64
+          % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                         Dload  Upload   Total   Spent    Left  Speed
+        100   627  100   627    0     0   1320      0 --:--:-- --:--:-- --:--:--  1320
+        100 38.4M  100 38.4M    0     0  16.2M      0  0:00:02  0:00:02 --:--:-- 26.0M
+        copying path '/nix/store/dpnqpw833nfmvg9ck5jphmi6jppxyqyh-pcsclite-1.9.1' from 'https://cache.nixos.org'...
+        building '/nix/store/n8lslj8l2sn8kawkginpc7y0cwd8ain8-cni-plugins-linux-amd64-v0.9.0.tgz.drv'...
+        
+        trying https://github.com/containernetworking/plugins/releases/download/v0.9.0/cni-plugins-linux-amd64-v0.9.0.tgz
+          % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                         Dload  Upload   Total   Spent    Left  Speed
+        100   640  100   640    0     0   2622      0 --:--:-- --:--:-- --:--:--  2622
+        100 37.8M  100 37.8M    0     0  19.4M      0  0:00:01  0:00:01 --:--:-- 26.1M
+        copying path '/nix/store/gxcxs69x75rnc67223ijbw5js4vqihpg-gnupg-2.2.27' from 'https://cache.nixos.org'...
+        building '/nix/store/fx1s0yj8gf7rfnpvydphfyzwqnlmr8jn-elasticsearch-oss-6.6.0.deb.drv'...
+        
+        trying https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-oss-6.6.0.deb
+          % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                         Dload  Upload   Total   Spent    Left  Speed
+        100 32.8M  100 32.8M    0     0  1894k      0  0:00:17  0:00:17 --:--:-- 2807k
+        copying path '/nix/store/6wjp6gxwq3nhrpf7a3s9jrhih99ghy2j-aptly-1.4.0' from 'https://cache.nixos.org'...
+        copying path '/nix/store/gr4kx84a68zhf419sirff1m4k9qmrirv-gpgme-1.15.1' from 'https://cache.nixos.org'...
+        building '/nix/store/6f9bkgr4bx3i3sihhlnzl9w44p8l6l3h-etcd-v3.4.13-linux-amd64.tar.gz.drv'...
+        
+        trying https://github.com/coreos/etcd/releases/download/v3.4.13/etcd-v3.4.13-linux-amd64.tar.gz
+          % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                         Dload  Upload   Total   Spent    Left  Speed
+        100   155  100   155    0     0    632      0 --:--:-- --:--:-- --:--:--   630
+        100   637  100   637    0     0   1297      0 --:--:-- --:--:-- --:--:--  1297
+        100 16.5M  100 16.5M    0     0  11.2M      0  0:00:01  0:00:01 --:--:-- 26.0M
+        copying path '/nix/store/dz922iz0bzjxv4fcpig3g7pgdchlj1vv-skopeo-1.2.2' from 'https://cache.nixos.org'...
+        building '/nix/store/npw4xpr7h33jybmh4172hqvmqy9kjjcp-generate-gpg1-key.drv'...
+        building '/nix/store/22bkj9mf6i8j33m9nsnki9q2nh9mlc0n-create-container-dump.drv'...
+        building '/nix/store/ydqjazyp565fq959czywfrq8mfdvsllx-jmx_prometheus_javaagent-0.10.jar.drv'...
+        
+        trying https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/0.10/jmx_prometheus_javaagent-0.10.jar
+          % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                         Dload  Upload   Total   Spent    Left  Speed
+        100  348k  100  348k    0     0  2405k      0 --:--:-- --:--:-- --:--:-- 2405k
+        building '/nix/store/p2rxpfcmq6q311krc0swsimjjzpiby9q-kubeadm.drv'...
+        
+        trying https://storage.googleapis.com/kubernetes-release/release/v1.19.7/bin/linux/amd64/kubeadm
+          % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                         Dload  Upload   Total   Spent    Left  Speed
+        100 37.2M  100 37.2M    0     0  13.4M      0  0:00:02  0:00:02 --:--:-- 13.4M
+        building '/nix/store/cqcq1gwfl857h36lh2cin1hvrinq95fd-kubectl.drv'...
+        
+        trying https://storage.googleapis.com/kubernetes-release/release/v1.19.7/bin/linux/amd64/kubectl
+          % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                         Dload  Upload   Total   Spent    Left  Speed
+        100 40.9M  100 40.9M    0     0  17.2M      0  0:00:02  0:00:02 --:--:-- 17.2M
+        building '/nix/store/bjxa3nrmkr4wcrw9vzq1jkaaavy48d7k-kubelet.drv'...
+        
+        trying https://storage.googleapis.com/kubernetes-release/release/v1.19.7/bin/linux/amd64/kubelet
+          % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                         Dload  Upload   Total   Spent    Left  Speed
+        100  104M  100  104M    0     0  21.3M      0  0:00:04  0:00:04 --:--:-- 25.0M
+        building '/nix/store/2llcj18qq7pay3qriawm5r74fzkc52b0-kubectl-1.19.7.drv'...
+        patching sources
+        configuring
+        no configure script, doing nothing
+        installing
+        post-installation fixup
+        shrinking RPATHs of ELF executables and libraries in /nix/store/pz9c5mxqshlwfv97n3q9jcsqzigqhb26-kubectl-1.19.7
+        shrinking /nix/store/pz9c5mxqshlwfv97n3q9jcsqzigqhb26-kubectl-1.19.7/bin/kubectl
+        patchelf: cannot find section '.dynamic'. The input file is most likely statically linked
+        strip is /nix/store/cp1sa3xxvl71cypiinw2c62i5s33chlr-binutils-2.35.1/bin/strip
+        stripping (with command strip and flags -S) in /nix/store/pz9c5mxqshlwfv97n3q9jcsqzigqhb26-kubectl-1.19.7/bin
+        patching script interpreter paths in /nix/store/pz9c5mxqshlwfv97n3q9jcsqzigqhb26-kubectl-1.19.7
+        checking for references to /build/ in /nix/store/pz9c5mxqshlwfv97n3q9jcsqzigqhb26-kubectl-1.19.7...
+        patchelf: cannot find section '.dynamic'. The input file is most likely statically linked
+        building '/nix/store/vslcwcv6yk21lfh04ydlmikkgq82bdnj-mc.RELEASE.2020-10-03T02-54-56Z.drv'...
+        
+        trying https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2020-10-03T02-54-56Z
+          % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                         Dload  Upload   Total   Spent    Left  Speed
+        100 20.2M  100 20.2M    0     0  6520k      0  0:00:03  0:00:03 --:--:-- 6518k
+        building '/nix/store/8vqnwpx33z8chw26jr4i7paprf220kh7-minio.RELEASE.2020-10-28T08-16-50Z.drv'...
+        
+        trying https://dl.min.io/server/minio/release/linux-amd64/archive/minio.RELEASE.2020-10-28T08-16-50Z
+          % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                         Dload  Upload   Total   Spent    Left  Speed
+        100 46.0M  100 46.0M    0     0  2305k      0  0:00:20  0:00:20 --:--:-- 4002k
+        building '/nix/store/nv97s8hnl0w79s210k7xxmj9vji64bpq-mirror-apt.drv'...
+        building '/nix/store/6s5dgg65hkvlq6pgackrxq35r9sy7wmn-profile-env.drv'...
+        building '/nix/store/p94nkkqm3brh9fpaw62gl2zlg3bcg13q-python3-3.8.8-env.drv'...
+        created 375 symlinks in user environment
+        building '/nix/store/3dlmm20yvqn81vzllpjdb8mx2l7g7b6g-source.drv'...
+        
+        trying https://github.com/hypnoglow/helm-s3/archive/v0.10.0.tar.gz
+          % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                         Dload  Upload   Total   Spent    Left  Speed
+        100   126  100   126    0     0    565      0 --:--:-- --:--:-- --:--:--   565
+        100 76680    0 76680    0     0   133k      0 --:--:-- --:--:-- --:--:--  713k
+        unpacking source archive /build/v0.10.0.tar.gz
+        building '/nix/store/fx6f8rwj31nj7yxkwhyv96277ap1ma94-source.drv'...
+        
+        trying https://github.com/databus23/helm-diff/archive/v3.1.3.tar.gz
+          % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                         Dload  Upload   Total   Spent    Left  Speed
+        100   127  100   127    0     0    682      0 --:--:-- --:--:-- --:--:--   679
+        100 44177    0 44177    0     0  96246      0 --:--:-- --:--:-- --:--:-- 96246
+        unpacking source archive /build/v3.1.3.tar.gz
+        building '/nix/store/gbj77qg90x9jk6idgldwc9zhb9p7ivji-helm-s3-0.10.0-go-modules.drv'...
+        unpacking sources
+        unpacking source archive /nix/store/d4z49ksly0059sdw2dlshr6dci6mqff6-source
+        source root is source
+        patching sources
+        configuring
+        building
+        go: downloading github.com/aws/aws-sdk-go v1.27.0
+        go: downloading github.com/pkg/errors v0.9.1
+        go: downloading gopkg.in/alecthomas/kingpin.v2 v2.2.6
+        go: downloading github.com/google/go-cmp v0.4.0
+        go: downloading github.com/minio/minio-go/v6 v6.0.40
+        go: downloading helm.sh/helm/v3 v3.4.0
+        go: downloading github.com/Masterminds/semver v1.5.0
+        go: downloading github.com/Masterminds/semver/v3 v3.1.0
+        go: downloading github.com/ghodss/yaml v1.0.0
+        go: downloading k8s.io/helm v2.17.0+incompatible
+        go: downloading sigs.k8s.io/yaml v1.2.0
+        go: downloading github.com/stretchr/testify v1.6.1
+        go: downloading github.com/alecthomas/template v0.0.0-20190718012654-fb15b899a751
+        go: downloading github.com/alecthomas/units v0.0.0-20190717042225-c3de453c63f4
+        go: downloading github.com/minio/sha256-simd v0.1.1
+        go: downloading golang.org/x/net v0.0.0-20200707034311-ab3426394381
+        go: downloading github.com/spf13/pflag v1.0.5
+        go: downloading k8s.io/cli-runtime v0.19.2
+        go: downloading golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9
+        go: downloading gopkg.in/yaml.v2 v2.2.8
+        go: downloading k8s.io/client-go v0.19.2
+        go: downloading github.com/golang/protobuf v1.4.2
+        go: downloading github.com/BurntSushi/toml v0.3.1
+        go: downloading github.com/cyphar/filepath-securejoin v0.2.2
+        go: downloading github.com/gobwas/glob v0.2.3
+        go: downloading k8s.io/apimachinery v0.19.2
+        go: downloading github.com/davecgh/go-spew v1.1.1
+        go: downloading github.com/pmezard/go-difflib v1.0.0
+        go: downloading gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c
+        go: downloading github.com/jmespath/go-jmespath v0.0.0-20180206201540-c2b33e8439af
+        go: downloading github.com/mitchellh/go-homedir v1.1.0
+        go: downloading gopkg.in/ini.v1 v1.49.0
+        go: downloading github.com/evanphx/json-patch v4.9.0+incompatible
+        go: downloading github.com/spf13/cobra v1.0.0
+        go: downloading google.golang.org/protobuf v1.24.0
+        go: downloading golang.org/x/sys v0.0.0-20200622214017-ed371f2e16b4
+        go: downloading golang.org/x/text v0.3.3
+        go: downloading k8s.io/klog v1.0.0
+        go: downloading github.com/gogo/protobuf v1.3.1
+        go: downloading k8s.io/klog/v2 v2.2.0
+        go: downloading sigs.k8s.io/structured-merge-diff/v4 v4.0.1
+        go: downloading github.com/liggitt/tabwriter v0.0.0-20181228230101-89fcab3d43de
+        go: downloading github.com/googleapis/gnostic v0.4.1
+        go: downloading k8s.io/api v0.19.2
+        go: downloading sigs.k8s.io/kustomize v2.0.3+incompatible
+        go: downloading github.com/gregjones/httpcache v0.0.0-20180305231024-9cad4c3443a7
+        go: downloading github.com/peterbourgon/diskv v2.0.1+incompatible
+        go: downloading github.com/imdario/mergo v0.3.8
+        go: downloading github.com/inconshreveable/mousetrap v1.0.0
+        go: downloading github.com/google/gofuzz v1.1.0
+        go: downloading github.com/go-logr/logr v0.2.0
+        go: downloading github.com/json-iterator/go v1.1.10
+        go: downloading github.com/modern-go/reflect2 v1.0.1
+        go: downloading golang.org/x/oauth2 v0.0.0-20191202225959-858c2ad4c8b6
+        go: downloading golang.org/x/time v0.0.0-20191024005414-555d28b269f0
+        go: downloading k8s.io/utils v0.0.0-20200729134348-d5654de09c73
+        go: downloading github.com/google/btree v1.0.0
+        go: downloading gopkg.in/inf.v0 v0.9.1
+        go: downloading github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
+        go: downloading google.golang.org/appengine v1.6.5
+        go: downloading github.com/go-openapi/spec v0.19.3
+        go: downloading k8s.io/kube-openapi v0.0.0-20200805222855-6aeccd4b50c6
+        go: downloading github.com/go-openapi/jsonpointer v0.19.3
+        go: downloading github.com/go-openapi/jsonreference v0.19.3
+        go: downloading github.com/go-openapi/swag v0.19.5
+        go: downloading github.com/emicklei/go-restful v2.9.5+incompatible
+        go: downloading github.com/PuerkitoBio/purell v1.1.1
+        go: downloading github.com/mailru/easyjson v0.7.0
+        go: downloading github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578
+        installing
+        building '/nix/store/x0kbgq0ddqv7850w49d1zk91sv0ngv3y-helm-diff-3.1.3-go-modules.drv'...
+        unpacking sources
+        unpacking source archive /nix/store/w1p937cb6yf99g9icfmjjri6bp30vcxz-source
+        source root is source
+        patching sources
+        configuring
+        building
+        go: downloading github.com/Masterminds/semver v1.5.0
+        go: downloading github.com/ghodss/yaml v1.0.0
+        go: downloading github.com/mgutz/ansi v0.0.0-20200706080929-d51e80ef957d
+        go: downloading github.com/spf13/cobra v1.0.0
+        go: downloading github.com/spf13/pflag v1.0.5
+        go: downloading google.golang.org/grpc v1.30.0
+        go: downloading k8s.io/client-go v0.18.6
+        go: downloading k8s.io/helm v2.16.9+incompatible
+        go: downloading gopkg.in/yaml.v2 v2.3.0
+        go: downloading github.com/stretchr/testify v1.5.1
+        go: downloading github.com/aryann/difflib v0.0.0-20170710044230-e206f873d14a
+        go: downloading k8s.io/api v0.18.6
+        go: downloading k8s.io/apimachinery v0.18.6
+        go: downloading github.com/mattn/go-colorable v0.1.7
+        go: downloading github.com/inconshreveable/mousetrap v1.0.0
+        go: downloading golang.org/x/net v0.0.0-20191004110552-13f9640d40b9
+        go: downloading github.com/golang/protobuf v1.3.3
+        go: downloading github.com/gogo/protobuf v1.3.1
+        go: downloading github.com/json-iterator/go v1.1.8
+        go: downloading github.com/modern-go/reflect2 v1.0.1
+        go: downloading k8s.io/klog v1.0.0
+        go: downloading sigs.k8s.io/yaml v1.2.0
+        go: downloading github.com/mattn/go-isatty v0.0.12
+        go: downloading golang.org/x/sys v0.0.0-20200223170610-d5e6a3e2c0ae
+        go: downloading google.golang.org/genproto v0.0.0-20190819201941-24fa4b261c55
+        go: downloading github.com/pkg/errors v0.9.1
+        go: downloading github.com/BurntSushi/toml v0.3.1
+        go: downloading github.com/cyphar/filepath-securejoin v0.2.2
+        go: downloading github.com/gobwas/glob v0.2.3
+        go: downloading golang.org/x/crypto v0.0.0-20200220183623-bac4c82f6975
+        go: downloading github.com/davecgh/go-spew v1.1.1
+        go: downloading github.com/pmezard/go-difflib v1.0.0
+        go: downloading gopkg.in/inf.v0 v0.9.1
+        go: downloading github.com/google/gofuzz v1.1.0
+        go: downloading sigs.k8s.io/structured-merge-diff/v3 v3.0.0
+        go: downloading github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
+        go: downloading github.com/Masterminds/sprig v2.22.0+incompatible
+        go: downloading golang.org/x/text v0.3.2
+        go: downloading github.com/Masterminds/goutils v1.1.0
+        go: downloading github.com/google/uuid v1.1.1
+        go: downloading github.com/huandu/xstrings v1.3.2
+        go: downloading github.com/imdario/mergo v0.3.10
+        go: downloading github.com/mitchellh/copystructure v1.0.0
+        go: downloading github.com/mitchellh/reflectwalk v1.0.1
+        installing
+        building '/nix/store/ylm9zrdwz9z1zyki2fjgyw1y481hldk4-helm-s3-0.10.0.drv'...
+        unpacking sources
+        unpacking source archive /nix/store/d4z49ksly0059sdw2dlshr6dci6mqff6-source
+        source root is source
+        patching sources
+        configuring
+        building
+        Building subPackage ./cmd/helms3
+        internal/unsafeheader
+        internal/cpu
+        internal/bytealg
+        runtime/internal/atomic
+        runtime/internal/sys
+        runtime/internal/math
+        runtime
+        internal/reflectlite
+        errors
+        internal/race
+        sync/atomic
+        sync
+        internal/oserror
+        syscall
+        time
+        context
+        math/bits
+        math
+        unicode/utf8
+        strconv
+        unicode
+        reflect
+        sort
+        internal/fmtsort
+        io
+        internal/syscall/unix
+        internal/poll
+        internal/syscall/execenv
+        internal/testlog
+        path
+        io/fs
+        os
+        fmt
+        bytes
+        strings
+        encoding/hex
+        github.com/aws/aws-sdk-go/aws/awserr
+        path/filepath
+        io/ioutil
+        github.com/aws/aws-sdk-go/internal/ini
+        github.com/aws/aws-sdk-go/internal/shareddefaults
+        github.com/aws/aws-sdk-go/aws/credentials
+        encoding
+        encoding/binary
+        encoding/base64
+        unicode/utf16
+        encoding/json
+        regexp/syntax
+        regexp
+        github.com/aws/aws-sdk-go/aws/endpoints
+        github.com/aws/aws-sdk-go/internal/sdkio
+        log
+        bufio
+        compress/flate
+        hash
+        hash/crc32
+        compress/gzip
+        container/list
+        crypto/internal/subtle
+        crypto/subtle
+        crypto/cipher
+        crypto/aes
+        math/rand
+        math/big
+        crypto/rand
+        crypto
+        crypto/des
+        crypto/elliptic
+        crypto/internal/randutil
+        crypto/sha512
+        encoding/asn1
+        vendor/golang.org/x/crypto/cryptobyte/asn1
+        vendor/golang.org/x/crypto/cryptobyte
+        crypto/ecdsa
+        crypto/ed25519/internal/edwards25519
+        crypto/ed25519
+        crypto/hmac
+        crypto/md5
+        crypto/rc4
+        crypto/rsa
+        crypto/sha1
+        crypto/sha256
+        crypto/dsa
+        crypto/x509/pkix
+        encoding/pem
+        vendor/golang.org/x/net/dns/dnsmessage
+        internal/nettrace
+        internal/singleflight
+        runtime/cgo
+        net
+        net/url
+        crypto/x509
+        vendor/golang.org/x/crypto/internal/subtle
+        vendor/golang.org/x/crypto/chacha20
+        vendor/golang.org/x/crypto/poly1305
+        vendor/golang.org/x/sys/cpu
+        vendor/golang.org/x/crypto/chacha20poly1305
+        vendor/golang.org/x/crypto/curve25519
+        vendor/golang.org/x/crypto/hkdf
+        crypto/tls
+        vendor/golang.org/x/text/transform
+        vendor/golang.org/x/text/unicode/bidi
+        vendor/golang.org/x/text/secure/bidirule
+        vendor/golang.org/x/text/unicode/norm
+        vendor/golang.org/x/net/idna
+        net/textproto
+        vendor/golang.org/x/net/http/httpguts
+        vendor/golang.org/x/net/http/httpproxy
+        vendor/golang.org/x/net/http2/hpack
+        mime
+        mime/quotedprintable
+        mime/multipart
+        net/http/httptrace
+        net/http/internal
+        net/http
+        github.com/aws/aws-sdk-go/aws
+        github.com/aws/aws-sdk-go/aws/client/metadata
+        github.com/jmespath/go-jmespath
+        github.com/aws/aws-sdk-go/aws/awsutil
+        github.com/aws/aws-sdk-go/aws/request
+        github.com/aws/aws-sdk-go/internal/sdkrand
+        net/http/httputil
+        github.com/aws/aws-sdk-go/aws/client
+        github.com/aws/aws-sdk-go/aws/corehandlers
+        os/exec
+        github.com/aws/aws-sdk-go/aws/credentials/processcreds
+        github.com/aws/aws-sdk-go/internal/sdkmath
+        github.com/aws/aws-sdk-go/private/protocol
+        github.com/aws/aws-sdk-go/private/protocol/rest
+        github.com/aws/aws-sdk-go/aws/signer/v4
+        encoding/xml
+        github.com/aws/aws-sdk-go/private/protocol/query/queryutil
+        github.com/aws/aws-sdk-go/private/protocol/xml/xmlutil
+        github.com/aws/aws-sdk-go/private/protocol/query
+        github.com/aws/aws-sdk-go/service/sts
+        github.com/aws/aws-sdk-go/service/sts/stsiface
+        github.com/aws/aws-sdk-go/aws/credentials/stscreds
+        github.com/aws/aws-sdk-go/aws/csm
+        github.com/aws/aws-sdk-go/internal/sdkuri
+        github.com/aws/aws-sdk-go/aws/ec2metadata
+        github.com/aws/aws-sdk-go/aws/credentials/ec2rolecreds
+        github.com/aws/aws-sdk-go/private/protocol/json/jsonutil
+        github.com/aws/aws-sdk-go/aws/credentials/endpointcreds
+        github.com/aws/aws-sdk-go/aws/defaults
+        github.com/aws/aws-sdk-go/aws/session
+        github.com/aws/aws-sdk-go/aws/arn
+        github.com/aws/aws-sdk-go/internal/s3err
+        github.com/aws/aws-sdk-go/private/protocol/eventstream
+        github.com/aws/aws-sdk-go/private/protocol/eventstream/eventstreamapi
+        github.com/aws/aws-sdk-go/private/protocol/restxml
+        github.com/aws/aws-sdk-go/service/s3/internal/arn
+        github.com/aws/aws-sdk-go/service/s3
+        github.com/aws/aws-sdk-go/service/s3/s3iface
+        github.com/aws/aws-sdk-go/service/s3/s3manager
+        github.com/Masterminds/semver
+        database/sql/driver
+        github.com/Masterminds/semver/v3
+        gopkg.in/yaml.v2
+        github.com/ghodss/yaml
+        github.com/pkg/errors
+        helm.sh/helm/v3/pkg/chart
+        os/user
+        archive/tar
+        helm.sh/helm/v3/internal/ignore
+        helm.sh/helm/v3/internal/sympath
+        sigs.k8s.io/yaml
+        helm.sh/helm/v3/pkg/chart/loader
+        encoding/csv
+        flag
+        github.com/spf13/pflag
+        helm.sh/helm/v3/pkg/helmpath/xdg
+        k8s.io/client-go/util/homedir
+        helm.sh/helm/v3/pkg/helmpath
+        github.com/evanphx/json-patch
+        text/template/parse
+        text/template
+        github.com/spf13/cobra
+        github.com/gogo/protobuf/proto
+        github.com/gogo/protobuf/sortkeys
+        github.com/google/gofuzz
+        gopkg.in/inf.v0
+        k8s.io/apimachinery/pkg/api/resource
+        k8s.io/apimachinery/third_party/forked/golang/reflect
+        k8s.io/apimachinery/pkg/conversion
+        k8s.io/apimachinery/pkg/selection
+        k8s.io/apimachinery/pkg/fields
+        k8s.io/apimachinery/pkg/util/sets
+        k8s.io/apimachinery/pkg/util/errors
+        k8s.io/apimachinery/pkg/util/validation/field
+        k8s.io/apimachinery/pkg/util/validation
+        github.com/go-logr/logr
+        k8s.io/klog/v2
+        k8s.io/apimachinery/pkg/labels
+        go/token
+        go/scanner
+        go/ast
+        internal/lazyregexp
+        go/doc
+        go/parser
+        k8s.io/apimachinery/pkg/conversion/queryparams
+        k8s.io/apimachinery/pkg/runtime/schema
+        k8s.io/apimachinery/pkg/util/json
+        runtime/debug
+        k8s.io/apimachinery/pkg/util/naming
+        k8s.io/apimachinery/pkg/util/runtime
+        github.com/modern-go/concurrent
+        github.com/modern-go/reflect2
+        github.com/json-iterator/go
+        sigs.k8s.io/structured-merge-diff/v4/value
+        k8s.io/apimachinery/pkg/runtime
+        k8s.io/apimachinery/pkg/types
+        k8s.io/apimachinery/pkg/util/intstr
+        golang.org/x/text/transform
+        golang.org/x/text/unicode/bidi
+        golang.org/x/text/secure/bidirule
+        golang.org/x/text/unicode/norm
+        golang.org/x/net/idna
+        golang.org/x/net/http/httpguts
+        golang.org/x/net/http2/hpack
+        golang.org/x/net/http2
+        k8s.io/apimachinery/pkg/util/net
+        k8s.io/apimachinery/pkg/watch
+        k8s.io/apimachinery/pkg/apis/meta/v1
+        k8s.io/apimachinery/pkg/api/meta
+        github.com/liggitt/tabwriter
+        k8s.io/apimachinery/pkg/apis/meta/v1/unstructured
+        k8s.io/apimachinery/pkg/util/duration
+        k8s.io/client-go/third_party/forked/golang/template
+        k8s.io/client-go/util/jsonpath
+        k8s.io/cli-runtime/pkg/printers
+        hash/fnv
+        google.golang.org/protobuf/internal/detrand
+        google.golang.org/protobuf/internal/errors
+        google.golang.org/protobuf/encoding/protowire
+        google.golang.org/protobuf/internal/pragma
+        google.golang.org/protobuf/reflect/protoreflect
+        google.golang.org/protobuf/reflect/protoregistry
+        google.golang.org/protobuf/internal/encoding/messageset
+        google.golang.org/protobuf/internal/flags
+        google.golang.org/protobuf/internal/strs
+        google.golang.org/protobuf/internal/encoding/text
+        google.golang.org/protobuf/internal/fieldnum
+        google.golang.org/protobuf/internal/mapsort
+        google.golang.org/protobuf/internal/set
+        google.golang.org/protobuf/internal/fieldsort
+        google.golang.org/protobuf/runtime/protoiface
+        google.golang.org/protobuf/proto
+        google.golang.org/protobuf/encoding/prototext
+        google.golang.org/protobuf/internal/descfmt
+        google.golang.org/protobuf/internal/descopts
+        google.golang.org/protobuf/internal/encoding/defval
+        google.golang.org/protobuf/internal/filedesc
+        google.golang.org/protobuf/internal/encoding/tag
+        google.golang.org/protobuf/internal/genname
+        google.golang.org/protobuf/internal/impl
+        google.golang.org/protobuf/internal/filetype
+        google.golang.org/protobuf/internal/version
+        google.golang.org/protobuf/runtime/protoimpl
+        github.com/golang/protobuf/proto
+        google.golang.org/protobuf/types/known/anypb
+        github.com/golang/protobuf/ptypes/any
+        google.golang.org/protobuf/types/known/durationpb
+        github.com/golang/protobuf/ptypes/duration
+        google.golang.org/protobuf/types/known/timestamppb
+        github.com/golang/protobuf/ptypes/timestamp
+        github.com/golang/protobuf/ptypes
+        github.com/googleapis/gnostic/extensions
+        github.com/googleapis/gnostic/compiler
+        github.com/googleapis/gnostic/openapiv2
+        golang.org/x/text/encoding/internal/identifier
+        golang.org/x/text/encoding
+        golang.org/x/text/encoding/internal
+        golang.org/x/text/internal/utf8internal
+        golang.org/x/text/runes
+        golang.org/x/text/encoding/unicode
+        k8s.io/api/core/v1
+        k8s.io/apimachinery/pkg/api/errors
+        k8s.io/apimachinery/pkg/runtime/serializer/recognizer
+        k8s.io/apimachinery/pkg/util/framer
+        k8s.io/apimachinery/pkg/util/yaml
+        k8s.io/apimachinery/pkg/runtime/serializer/json
+        k8s.io/apimachinery/pkg/runtime/serializer/protobuf
+        k8s.io/apimachinery/pkg/runtime/serializer/versioning
+        k8s.io/apimachinery/pkg/runtime/serializer
+        k8s.io/apimachinery/pkg/apis/meta/v1/unstructured/unstructuredscheme
+        k8s.io/cli-runtime/pkg/kustomize/k8sdeps/kv
+        sigs.k8s.io/kustomize/pkg/gvk
+        sigs.k8s.io/kustomize/pkg/image
+        sigs.k8s.io/kustomize/pkg/patch
+        sigs.k8s.io/kustomize/pkg/types
+        sigs.k8s.io/kustomize/pkg/ifc
+        k8s.io/cli-runtime/pkg/kustomize/k8sdeps/configmapandsecret
+        k8s.io/cli-runtime/pkg/kustomize/k8sdeps/kunstruct
+        sigs.k8s.io/kustomize/pkg/internal/error
+        sigs.k8s.io/kustomize/pkg/resid
+        sigs.k8s.io/kustomize/pkg/resource
+        sigs.k8s.io/kustomize/pkg/resmap
+        sigs.k8s.io/kustomize/pkg/expansion
+        encoding/gob
+        github.com/mailru/easyjson/jlexer
+        github.com/mailru/easyjson/buffer
+        github.com/mailru/easyjson/jwriter
+        github.com/go-openapi/swag
+        github.com/go-openapi/jsonpointer
+        github.com/PuerkitoBio/urlesc
+        golang.org/x/text/width
+        github.com/PuerkitoBio/purell
+        github.com/go-openapi/jsonreference
+        github.com/go-openapi/spec
+        hash/adler32
+        compress/zlib
+        github.com/emicklei/go-restful/log
+        github.com/emicklei/go-restful
+        k8s.io/kube-openapi/pkg/common
+        sigs.k8s.io/kustomize/pkg/transformers/config/defaultconfig
+        sigs.k8s.io/kustomize/pkg/transformers/config
+        sigs.k8s.io/kustomize/pkg/transformers
+        k8s.io/cli-runtime/pkg/kustomize/k8sdeps/transformer/hash
+        github.com/davecgh/go-spew/spew
+        k8s.io/apimachinery/pkg/util/mergepatch
+        k8s.io/apimachinery/third_party/forked/golang/json
+        k8s.io/kube-openapi/pkg/util/proto
+        k8s.io/apimachinery/pkg/util/strategicpatch
+        k8s.io/api/admissionregistration/v1
+        k8s.io/api/admissionregistration/v1beta1
+        k8s.io/api/apps/v1
+        k8s.io/api/apps/v1beta1
+        k8s.io/api/apps/v1beta2
+        k8s.io/api/authentication/v1
+        k8s.io/api/authentication/v1beta1
+        k8s.io/api/authorization/v1
+        k8s.io/api/authorization/v1beta1
+        k8s.io/api/autoscaling/v1
+        k8s.io/api/autoscaling/v2beta1
+        k8s.io/api/autoscaling/v2beta2
+        k8s.io/api/batch/v1
+        k8s.io/api/batch/v1beta1
+        k8s.io/api/batch/v2alpha1
+        k8s.io/api/certificates/v1
+        k8s.io/api/certificates/v1beta1
+        k8s.io/api/coordination/v1
+        k8s.io/api/coordination/v1beta1
+        k8s.io/api/discovery/v1alpha1
+        k8s.io/api/discovery/v1beta1
+        k8s.io/api/events/v1
+        k8s.io/api/events/v1beta1
+        k8s.io/api/extensions/v1beta1
+        k8s.io/api/flowcontrol/v1alpha1
+        k8s.io/api/networking/v1
+        k8s.io/api/networking/v1beta1
+        k8s.io/api/node/v1alpha1
+        k8s.io/api/node/v1beta1
+        k8s.io/api/policy/v1beta1
+        k8s.io/api/rbac/v1
+        k8s.io/api/rbac/v1alpha1
+        k8s.io/api/rbac/v1beta1
+        k8s.io/api/scheduling/v1
+        k8s.io/api/scheduling/v1alpha1
+        k8s.io/api/scheduling/v1beta1
+        k8s.io/api/settings/v1alpha1
+        k8s.io/api/storage/v1
+        k8s.io/api/storage/v1alpha1
+        k8s.io/api/storage/v1beta1
+        k8s.io/client-go/kubernetes/scheme
+        k8s.io/cli-runtime/pkg/kustomize/k8sdeps/transformer/patch
+        k8s.io/cli-runtime/pkg/kustomize/k8sdeps/transformer
+        k8s.io/apimachinery/pkg/api/equality
+        k8s.io/apimachinery/pkg/apis/meta/v1/validation
+        k8s.io/apimachinery/pkg/api/validation
+        k8s.io/cli-runtime/pkg/kustomize/k8sdeps/validator
+        sigs.k8s.io/kustomize/pkg/ifc/transformer
+        sigs.k8s.io/kustomize/pkg/factory
+        k8s.io/cli-runtime/pkg/kustomize/k8sdeps
+        sigs.k8s.io/kustomize/pkg/constants
+        sigs.k8s.io/kustomize/pkg/fs
+        sigs.k8s.io/kustomize/pkg/git
+        sigs.k8s.io/kustomize/pkg/loader
+        sigs.k8s.io/kustomize/pkg/patch/transformer
+        sigs.k8s.io/kustomize/pkg/target
+        sigs.k8s.io/kustomize/pkg/commands/build
+        k8s.io/cli-runtime/pkg/kustomize
+        k8s.io/apimachinery/pkg/version
+        k8s.io/apimachinery/pkg/runtime/serializer/streaming
+        k8s.io/apimachinery/pkg/util/clock
+        k8s.io/client-go/pkg/version
+        golang.org/x/sys/internal/unsafeheader
+        golang.org/x/sys/unix
+        golang.org/x/crypto/ssh/terminal
+        k8s.io/client-go/pkg/apis/clientauthentication
+        k8s.io/client-go/pkg/apis/clientauthentication/v1alpha1
+        k8s.io/client-go/pkg/apis/clientauthentication/v1beta1
+        k8s.io/client-go/tools/clientcmd/api
+        k8s.io/client-go/tools/metrics
+        golang.org/x/net/context/ctxhttp
+        golang.org/x/oauth2/internal
+        golang.org/x/oauth2
+        k8s.io/apimachinery/pkg/util/wait
+        k8s.io/client-go/util/connrotation
+        container/heap
+        golang.org/x/time/rate
+        k8s.io/client-go/util/workqueue
+        k8s.io/client-go/transport
+        k8s.io/client-go/plugin/pkg/client/auth/exec
+        k8s.io/client-go/rest/watch
+        k8s.io/client-go/util/keyutil
+        k8s.io/client-go/util/cert
+        k8s.io/utils/integer
+        k8s.io/client-go/util/flowcontrol
+        k8s.io/client-go/rest
+        k8s.io/client-go/discovery
+        k8s.io/client-go/dynamic
+        k8s.io/client-go/restmapper
+        k8s.io/cli-runtime/pkg/resource
+        github.com/gregjones/httpcache
+        github.com/google/btree
+        github.com/peterbourgon/diskv
+        github.com/gregjones/httpcache/diskcache
+        k8s.io/client-go/discovery/cached/disk
+        github.com/imdario/mergo
+        k8s.io/client-go/tools/auth
+        k8s.io/client-go/tools/clientcmd/api/v1
+        k8s.io/client-go/tools/clientcmd/api/latest
+        k8s.io/client-go/tools/clientcmd
+        k8s.io/cli-runtime/pkg/genericclioptions
+        helm.sh/helm/v3/pkg/cli
+        golang.org/x/crypto/openpgp/errors
+        golang.org/x/crypto/openpgp/armor
+        compress/bzip2
+        golang.org/x/crypto/cast5
+        golang.org/x/crypto/openpgp/elgamal
+        golang.org/x/crypto/openpgp/s2k
+        image/color
+        image
+        image/internal/imageutil
+        image/jpeg
+        golang.org/x/crypto/openpgp/packet
+        golang.org/x/crypto/openpgp
+        golang.org/x/crypto/openpgp/clearsign
+        helm.sh/helm/v3/pkg/provenance
+        helm.sh/helm/v3/internal/third_party/dep/fs
+        helm.sh/helm/v3/internal/fileutil
+        helm.sh/helm/v3/internal/urlutil
+        helm.sh/helm/v3/internal/tlsutil
+        helm.sh/helm/v3/internal/version
+        helm.sh/helm/v3/pkg/plugin
+        helm.sh/helm/v3/pkg/getter
+        helm.sh/helm/v3/pkg/repo
+        github.com/BurntSushi/toml
+        github.com/cyphar/filepath-securejoin
+        github.com/gobwas/glob/util/runes
+        github.com/gobwas/glob/util/strings
+        github.com/gobwas/glob/match
+        github.com/gobwas/glob/syntax/lexer
+        github.com/gobwas/glob/syntax/ast
+        github.com/gobwas/glob/compiler
+        github.com/gobwas/glob/syntax
+        github.com/gobwas/glob
+        k8s.io/helm/pkg/ignore
+        k8s.io/helm/pkg/proto/hapi/chart
+        k8s.io/helm/pkg/proto/hapi/version
+        k8s.io/helm/pkg/sympath
+        k8s.io/helm/pkg/version
+        k8s.io/helm/pkg/chartutil
+        k8s.io/helm/pkg/helm/helmpath
+        k8s.io/helm/pkg/helm/environment
+        k8s.io/helm/pkg/provenance
+        html
+        html/template
+        k8s.io/helm/pkg/plugin
+        k8s.io/helm/pkg/urlutil
+        k8s.io/helm/pkg/tlsutil
+        k8s.io/helm/pkg/getter
+        k8s.io/helm/pkg/repo
+        github.com/hypnoglow/helm-s3/internal/helmutil
+        github.com/hypnoglow/helm-s3/internal/awss3
+        github.com/hypnoglow/helm-s3/internal/awsutil
+        github.com/alecthomas/template/parse
+        github.com/alecthomas/template
+        github.com/alecthomas/units
+        gopkg.in/alecthomas/kingpin.v2
+        github.com/hypnoglow/helm-s3/cmd/helms3
+        Building subPackage ./internal/awss3
+        Building subPackage ./internal/awsutil
+        Building subPackage ./internal/helmutil
+        Building subPackage ./tests/e2e
+        github.com/hypnoglow/helm-s3/tests/e2e
+        running tests
+        go test $(go list ./... | grep -v e2e)
+        ?       github.com/hypnoglow/helm-s3/cmd/helms3 [no test files]
+        ?       github.com/hypnoglow/helm-s3/internal/awss3     [no test files]
+        ok      github.com/hypnoglow/helm-s3/internal/awsutil   0.006s
+        ok      github.com/hypnoglow/helm-s3/internal/helmutil  0.041s
+        installing
+        post-installation fixup
+        shrinking RPATHs of ELF executables and libraries in /nix/store/n1cfd9naa76ap7xfxb42gfakq93abcjs-helm-s3-0.10.0
+        shrinking /nix/store/n1cfd9naa76ap7xfxb42gfakq93abcjs-helm-s3-0.10.0/helm-s3/bin/helms3
+        strip is /nix/store/cp1sa3xxvl71cypiinw2c62i5s33chlr-binutils-2.35.1/bin/strip
+        patching script interpreter paths in /nix/store/n1cfd9naa76ap7xfxb42gfakq93abcjs-helm-s3-0.10.0
+        checking for references to /build/ in /nix/store/n1cfd9naa76ap7xfxb42gfakq93abcjs-helm-s3-0.10.0...
+        building '/nix/store/wm1czmqzpnx32673mhv8v9d9ikgkf425-helm-diff-3.1.3.drv'...
+        unpacking sources
+        unpacking source archive /nix/store/w1p937cb6yf99g9icfmjjri6bp30vcxz-source
+        source root is source
+        patching sources
+        configuring
+        building
+        Building subPackage .
+        internal/unsafeheader
+        internal/cpu
+        internal/bytealg
+        runtime/internal/atomic
+        runtime/internal/sys
+        runtime/internal/math
+        runtime
+        internal/reflectlite
+        errors
+        math/bits
+        math
+        unicode/utf8
+        strconv
+        internal/race
+        sync/atomic
+        sync
+        unicode
+        reflect
+        sort
+        internal/fmtsort
+        io
+        internal/oserror
+        syscall
+        internal/syscall/unix
+        time
+        internal/poll
+        internal/syscall/execenv
+        internal/testlog
+        path
+        io/fs
+        os
+        fmt
+        bytes
+        encoding
+        encoding/binary
+        encoding/base64
+        strings
+        unicode/utf16
+        encoding/json
+        regexp/syntax
+        regexp
+        github.com/Masterminds/semver
+        github.com/aryann/difflib
+        bufio
+        gopkg.in/yaml.v2
+        log
+        github.com/golang/protobuf/proto
+        github.com/golang/protobuf/ptypes/any
+        github.com/golang/protobuf/ptypes/timestamp
+        k8s.io/helm/pkg/proto/hapi/chart
+        k8s.io/helm/pkg/proto/hapi/release
+        github.com/databus23/helm-diff/v3/manifest
+        golang.org/x/sys/unix
+        github.com/mattn/go-isatty
+        github.com/mattn/go-colorable
+        github.com/mgutz/ansi
+        github.com/gogo/protobuf/proto
+        github.com/gogo/protobuf/sortkeys
+        math/rand
+        math/big
+        gopkg.in/inf.v0
+        k8s.io/apimachinery/pkg/api/resource
+        github.com/google/gofuzz
+        k8s.io/apimachinery/third_party/forked/golang/reflect
+        k8s.io/apimachinery/pkg/conversion
+        k8s.io/apimachinery/pkg/selection
+        k8s.io/apimachinery/pkg/fields
+        k8s.io/apimachinery/pkg/util/sets
+        k8s.io/apimachinery/pkg/util/errors
+        k8s.io/apimachinery/pkg/util/validation/field
+        context
+        vendor/golang.org/x/net/dns/dnsmessage
+        internal/nettrace
+        internal/singleflight
+        runtime/cgo
+        net
+        k8s.io/apimachinery/pkg/util/validation
+        flag
+        os/user
+        path/filepath
+        k8s.io/klog
+        k8s.io/apimachinery/pkg/labels
+        go/token
+        go/scanner
+        go/ast
+        internal/lazyregexp
+        net/url
+        text/template/parse
+        text/template
+        go/doc
+        go/parser
+        k8s.io/apimachinery/pkg/conversion/queryparams
+        k8s.io/apimachinery/pkg/runtime/schema
+        k8s.io/apimachinery/pkg/util/json
+        runtime/debug
+        k8s.io/apimachinery/pkg/util/naming
+        compress/flate
+        hash
+        hash/crc32
+        compress/gzip
+        container/list
+        crypto/internal/subtle
+        crypto/subtle
+        crypto/cipher
+        crypto/aes
+        crypto/rand
+        crypto
+        crypto/des
+        crypto/elliptic
+        crypto/internal/randutil
+        crypto/sha512
+        encoding/asn1
+        vendor/golang.org/x/crypto/cryptobyte/asn1
+        vendor/golang.org/x/crypto/cryptobyte
+        crypto/ecdsa
+        crypto/ed25519/internal/edwards25519
+        crypto/ed25519
+        crypto/hmac
+        crypto/md5
+        crypto/rc4
+        crypto/rsa
+        crypto/sha1
+        crypto/sha256
+        crypto/dsa
+        encoding/hex
+        crypto/x509/pkix
+        encoding/pem
+        io/ioutil
+        crypto/x509
+        vendor/golang.org/x/crypto/internal/subtle
+        vendor/golang.org/x/crypto/chacha20
+        vendor/golang.org/x/crypto/poly1305
+        vendor/golang.org/x/sys/cpu
+        vendor/golang.org/x/crypto/chacha20poly1305
+        vendor/golang.org/x/crypto/curve25519
+        vendor/golang.org/x/crypto/hkdf
+        crypto/tls
+        vendor/golang.org/x/text/transform
+        vendor/golang.org/x/text/unicode/bidi
+        vendor/golang.org/x/text/secure/bidirule
+        vendor/golang.org/x/text/unicode/norm
+        vendor/golang.org/x/net/idna
+        net/textproto
+        vendor/golang.org/x/net/http/httpguts
+        vendor/golang.org/x/net/http/httpproxy
+        vendor/golang.org/x/net/http2/hpack
+        mime
+        mime/quotedprintable
+        mime/multipart
+        net/http/httptrace
+        net/http/internal
+        net/http
+        k8s.io/apimachinery/pkg/util/runtime
+        github.com/modern-go/concurrent
+        github.com/modern-go/reflect2
+        github.com/json-iterator/go
+        sigs.k8s.io/structured-merge-diff/v3/value
+        k8s.io/apimachinery/pkg/runtime
+        k8s.io/apimachinery/pkg/types
+        k8s.io/apimachinery/pkg/util/intstr
+        golang.org/x/text/transform
+        golang.org/x/text/unicode/bidi
+        golang.org/x/text/secure/bidirule
+        golang.org/x/text/unicode/norm
+        golang.org/x/net/idna
+        golang.org/x/net/http/httpguts
+        golang.org/x/net/http2/hpack
+        golang.org/x/net/http2
+        k8s.io/apimachinery/pkg/util/net
+        k8s.io/apimachinery/pkg/watch
+        k8s.io/apimachinery/pkg/apis/meta/v1
+        k8s.io/api/core/v1
+        k8s.io/apimachinery/pkg/runtime/serializer/recognizer
+        k8s.io/apimachinery/pkg/util/framer
+        sigs.k8s.io/yaml
+        k8s.io/apimachinery/pkg/util/yaml
+        k8s.io/apimachinery/pkg/runtime/serializer/json
+        k8s.io/api/admissionregistration/v1
+        k8s.io/api/admissionregistration/v1beta1
+        k8s.io/api/apps/v1
+        k8s.io/api/apps/v1beta1
+        k8s.io/api/apps/v1beta2
+        k8s.io/api/auditregistration/v1alpha1
+        k8s.io/api/authentication/v1
+        k8s.io/api/authentication/v1beta1
+        k8s.io/api/authorization/v1
+        k8s.io/api/authorization/v1beta1
+        k8s.io/api/autoscaling/v1
+        k8s.io/api/autoscaling/v2beta1
+        k8s.io/api/autoscaling/v2beta2
+        k8s.io/api/batch/v1
+        k8s.io/api/batch/v1beta1
+        k8s.io/api/batch/v2alpha1
+        k8s.io/api/certificates/v1beta1
+        k8s.io/api/coordination/v1
+        k8s.io/api/coordination/v1beta1
+        k8s.io/api/discovery/v1alpha1
+        k8s.io/api/discovery/v1beta1
+        k8s.io/api/events/v1beta1
+        k8s.io/api/extensions/v1beta1
+        k8s.io/api/flowcontrol/v1alpha1
+        k8s.io/api/networking/v1
+        k8s.io/api/networking/v1beta1
+        k8s.io/api/node/v1alpha1
+        k8s.io/api/node/v1beta1
+        k8s.io/api/policy/v1beta1
+        k8s.io/api/rbac/v1
+        k8s.io/api/rbac/v1alpha1
+        k8s.io/api/rbac/v1beta1
+        k8s.io/api/scheduling/v1
+        k8s.io/api/scheduling/v1alpha1
+        k8s.io/api/scheduling/v1beta1
+        k8s.io/api/settings/v1alpha1
+        k8s.io/api/storage/v1
+        k8s.io/api/storage/v1alpha1
+        k8s.io/api/storage/v1beta1
+        k8s.io/apimachinery/pkg/runtime/serializer/protobuf
+        k8s.io/apimachinery/pkg/apis/meta/v1/unstructured
+        k8s.io/apimachinery/pkg/runtime/serializer/versioning
+        k8s.io/apimachinery/pkg/runtime/serializer
+        k8s.io/client-go/kubernetes/scheme
+        github.com/databus23/helm-diff/v3/diff
+        github.com/ghodss/yaml
+        encoding/csv
+        github.com/spf13/pflag
+        github.com/spf13/cobra
+        golang.org/x/net/internal/timeseries
+        html
+        html/template
+        text/tabwriter
+        golang.org/x/net/trace
+        google.golang.org/grpc/backoff
+        google.golang.org/grpc/internal/grpclog
+        google.golang.org/grpc/grpclog
+        google.golang.org/grpc/connectivity
+        google.golang.org/grpc/attributes
+        google.golang.org/grpc/credentials/internal
+        google.golang.org/grpc/serviceconfig
+        google.golang.org/grpc/internal
+        google.golang.org/grpc/credentials
+        google.golang.org/grpc/metadata
+        google.golang.org/grpc/resolver
+        google.golang.org/grpc/balancer
+        google.golang.org/grpc/balancer/base
+        google.golang.org/grpc/internal/grpcrand
+        google.golang.org/grpc/balancer/roundrobin
+        google.golang.org/grpc/codes
+        google.golang.org/grpc/encoding
+        google.golang.org/grpc/encoding/proto
+        google.golang.org/grpc/internal/backoff
+        google.golang.org/grpc/internal/balancerload
+        github.com/golang/protobuf/ptypes/duration
+        github.com/golang/protobuf/ptypes
+        google.golang.org/grpc/binarylog/grpc_binarylog_v1
+        google.golang.org/grpc/internal/grpcutil
+        google.golang.org/genproto/googleapis/rpc/status
+        google.golang.org/grpc/internal/status
+        google.golang.org/grpc/status
+        google.golang.org/grpc/internal/binarylog
+        google.golang.org/grpc/internal/buffer
+        google.golang.org/grpc/internal/channelz
+        google.golang.org/grpc/internal/envconfig
+        google.golang.org/grpc/internal/grpcsync
+        google.golang.org/grpc/balancer/grpclb/state
+        google.golang.org/grpc/internal/resolver/dns
+        google.golang.org/grpc/internal/resolver/passthrough
+        google.golang.org/grpc/internal/serviceconfig
+        google.golang.org/grpc/internal/syscall
+        google.golang.org/grpc/keepalive
+        google.golang.org/grpc/peer
+        google.golang.org/grpc/stats
+        google.golang.org/grpc/tap
+        google.golang.org/grpc/internal/transport
+        net/http/httputil
+        google.golang.org/grpc
+        k8s.io/client-go/util/homedir
+        github.com/pkg/errors
+        k8s.io/helm/internal/third_party/dep/fs
+        archive/tar
+        github.com/BurntSushi/toml
+        github.com/cyphar/filepath-securejoin
+        github.com/gobwas/glob/util/runes
+        github.com/gobwas/glob/util/strings
+        github.com/gobwas/glob/match
+        github.com/gobwas/glob/syntax/lexer
+        github.com/gobwas/glob/syntax/ast
+        github.com/gobwas/glob/compiler
+        github.com/gobwas/glob/syntax
+        github.com/gobwas/glob
+        k8s.io/apimachinery/pkg/version
+        k8s.io/helm/pkg/ignore
+        k8s.io/helm/pkg/proto/hapi/version
+        k8s.io/helm/pkg/sympath
+        k8s.io/helm/pkg/version
+        k8s.io/helm/pkg/chartutil
+        k8s.io/helm/pkg/helm/helmpath
+        k8s.io/helm/pkg/helm/environment
+        k8s.io/helm/pkg/plugin
+        k8s.io/helm/pkg/urlutil
+        k8s.io/helm/pkg/tlsutil
+        os/exec
+        k8s.io/helm/pkg/getter
+        golang.org/x/crypto/openpgp/errors
+        golang.org/x/crypto/openpgp/armor
+        compress/bzip2
+        hash/adler32
+        compress/zlib
+        golang.org/x/crypto/cast5
+        golang.org/x/crypto/openpgp/elgamal
+        golang.org/x/crypto/openpgp/s2k
+        image/color
+        image
+        image/internal/imageutil
+        image/jpeg
+        golang.org/x/crypto/openpgp/packet
+        golang.org/x/crypto/openpgp
+        golang.org/x/crypto/openpgp/clearsign
+        k8s.io/helm/pkg/provenance
+        k8s.io/helm/pkg/repo
+        k8s.io/helm/pkg/resolver
+        k8s.io/helm/pkg/downloader
+        golang.org/x/net/context
+        google.golang.org/grpc/health/grpc_health_v1
+        k8s.io/helm/pkg/releaseutil
+        k8s.io/helm/pkg/manifest
+        k8s.io/helm/pkg/proto/hapi/services
+        encoding/base32
+        github.com/Masterminds/goutils
+        database/sql/driver
+        github.com/google/uuid
+        github.com/huandu/xstrings
+        github.com/imdario/mergo
+        github.com/mitchellh/reflectwalk
+        github.com/mitchellh/copystructure
+        golang.org/x/crypto/pbkdf2
+        golang.org/x/crypto/scrypt
+        github.com/Masterminds/sprig
+        k8s.io/helm/pkg/engine
+        k8s.io/helm/pkg/renderutil
+        k8s.io/helm/pkg/storage/errors
+        k8s.io/helm/pkg/helm
+        k8s.io/helm/pkg/strvals
+        github.com/databus23/helm-diff/v3/cmd
+        github.com/databus23/helm-diff/v3
+        Building subPackage ./cmd
+        Building subPackage ./diff
+        Building subPackage ./manifest
+        running tests
+        === RUN   TestPrintDiffWithContext
+        === RUN   TestPrintDiffWithContext/context-disabled
+        === RUN   TestPrintDiffWithContext/context-0
+        === RUN   TestPrintDiffWithContext/context-1
+        === RUN   TestPrintDiffWithContext/context-2
+        === RUN   TestPrintDiffWithContext/context-3
+        --- PASS: TestPrintDiffWithContext (0.00s)
+            --- PASS: TestPrintDiffWithContext/context-disabled (0.00s)
+            --- PASS: TestPrintDiffWithContext/context-0 (0.00s)
+            --- PASS: TestPrintDiffWithContext/context-1 (0.00s)
+            --- PASS: TestPrintDiffWithContext/context-2 (0.00s)
+            --- PASS: TestPrintDiffWithContext/context-3 (0.00s)
+        === RUN   TestManifests
+        === RUN   TestManifests/OnChange
+        === RUN   TestManifests/OnNoChange
+        === RUN   TestManifests/OnChangeSimple
+        === RUN   TestManifests/OnNoChangeSimple
+        === RUN   TestManifests/OnChangeTemplate
+        === RUN   TestManifests/OnChangeJSON
+        === RUN   TestManifests/OnNoChangeTemplate
+        === RUN   TestManifests/OnChangeCustomTemplate
+        --- PASS: TestManifests (0.00s)
+            --- PASS: TestManifests/OnChange (0.00s)
+            --- PASS: TestManifests/OnNoChange (0.00s)
+            --- PASS: TestManifests/OnChangeSimple (0.00s)
+            --- PASS: TestManifests/OnNoChangeSimple (0.00s)
+            --- PASS: TestManifests/OnChangeTemplate (0.00s)
+            --- PASS: TestManifests/OnChangeJSON (0.00s)
+            --- PASS: TestManifests/OnNoChangeTemplate (0.00s)
+            --- PASS: TestManifests/OnChangeCustomTemplate (0.00s)
+        PASS
+        ok      github.com/databus23/helm-diff/v3/diff  0.011s
+        === RUN   TestPod
+        --- PASS: TestPod (0.00s)
+        === RUN   TestPodNamespace
+        --- PASS: TestPodNamespace (0.00s)
+        === RUN   TestPodHook
+        --- PASS: TestPodHook (0.00s)
+        === RUN   TestDeployV1
+        --- PASS: TestDeployV1 (0.00s)
+        === RUN   TestDeployV1Beta1
+        --- PASS: TestDeployV1Beta1 (0.00s)
+        === RUN   TestList
+        --- PASS: TestList (0.00s)
+        === RUN   TestEmpty
+        --- PASS: TestEmpty (0.00s)
+        PASS
+        ok      github.com/databus23/helm-diff/v3/manifest      0.006s
+        installing
+        post-installation fixup
+        shrinking RPATHs of ELF executables and libraries in /nix/store/qgs64hfxbinj6lw14s4i6v4g9nzv8w72-helm-diff-3.1.3
+        shrinking /nix/store/qgs64hfxbinj6lw14s4i6v4g9nzv8w72-helm-diff-3.1.3/helm-diff/bin/diff
+        strip is /nix/store/cp1sa3xxvl71cypiinw2c62i5s33chlr-binutils-2.35.1/bin/strip
+        patching script interpreter paths in /nix/store/qgs64hfxbinj6lw14s4i6v4g9nzv8w72-helm-diff-3.1.3
+        checking for references to /build/ in /nix/store/qgs64hfxbinj6lw14s4i6v4g9nzv8w72-helm-diff-3.1.3...
+        building '/nix/store/v87c63c026qc7yah4g27hl2mq9wls2v6-source.drv'...
+        
+        trying https://github.com/jkroepke/helm-secrets/archive/v3.4.1.tar.gz
+          % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                         Dload  Upload   Total   Spent    Left  Speed
+        100   129  100   129    0     0    635      0 --:--:-- --:--:-- --:--:--   635
+        100 46387    0 46387    0     0  82686      0 --:--:-- --:--:-- --:--:--  704k
+        unpacking source archive /build/v3.4.1.tar.gz
+        building '/nix/store/1a038ivksyjlbhzyr0nkf3nbdka6mjrv-wire-binaries.drv'...
+        building '/nix/store/kc1wh80nmw0zbmfchn6dvavqphay30fd-helm-secrets-3.4.1.drv'...
+        unpacking sources
+        unpacking source archive /nix/store/5na91i97szlbw2jhw85fblr1s2bd4if0-source
+        source root is source
+        patching sources
+        configuring
+        no configure script, doing nothing
+        installing
+        post-installation fixup
+        shrinking RPATHs of ELF executables and libraries in /nix/store/m67aiqqyipxnyq94jfq0s43cs3c43rqn-helm-secrets-3.4.1
+        strip is /nix/store/cp1sa3xxvl71cypiinw2c62i5s33chlr-binutils-2.35.1/bin/strip
+        patching script interpreter paths in /nix/store/m67aiqqyipxnyq94jfq0s43cs3c43rqn-helm-secrets-3.4.1
+        /nix/store/m67aiqqyipxnyq94jfq0s43cs3c43rqn-helm-secrets-3.4.1/helm-secrets/scripts/.run.sh-wrapped: interpreter directive changed from "#!/usr/bin/env sh" to "/nix/store/f7jzmxq9bpbxsg69cszx56mw14n115n5-bash-4.4-p23/bin/sh"
+        /nix/store/m67aiqqyipxnyq94jfq0s43cs3c43rqn-helm-secrets-3.4.1/helm-secrets/scripts/commands/downloader.sh: interpreter directive changed from "#!/usr/bin/env sh" to "/nix/store/f7jzmxq9bpbxsg69cszx56mw14n115n5-bash-4.4-p23/bin/sh"
+        /nix/store/m67aiqqyipxnyq94jfq0s43cs3c43rqn-helm-secrets-3.4.1/helm-secrets/scripts/install.sh: interpreter directive changed from "#!/usr/bin/env sh" to "/nix/store/f7jzmxq9bpbxsg69cszx56mw14n115n5-bash-4.4-p23/bin/sh"
+        checking for references to /build/ in /nix/store/m67aiqqyipxnyq94jfq0s43cs3c43rqn-helm-secrets-3.4.1...
+        building '/nix/store/24nqp300d3bg2wswci068fk3xz053lwp-kubeadm.drv'...
+        building '/nix/store/92gdp8dnkli136p272fk6xjb0ymj9hl6-helm-plugins.drv'...
+        building '/nix/store/m6rywdjmvdrgivx4nwasklml0iwk9ndk-helm-3.5.2.drv'...
+        building '/nix/store/k94r99xr01mnq2a2359rd9972fv9s2a7-helmfile-0.138.4.drv'...
+        unpacking sources
+        unpacking source archive /nix/store/jy4laas6pm5xv1pfaxqpiaa0l1by533b-source
+        source root is source
+        patching sources
+        configuring
+        building
+        Building subPackage ./.
+        internal/unsafeheader
+        internal/cpu
+        internal/bytealg
+        runtime/internal/atomic
+        runtime/internal/sys
+        runtime/internal/math
+        runtime
+        internal/reflectlite
+        errors
+        math/bits
+        math
+        unicode/utf8
+        strconv
+        internal/race
+        sync/atomic
+        sync
+        unicode
+        reflect
+        sort
+        internal/fmtsort
+        io
+        internal/oserror
+        syscall
+        internal/syscall/unix
+        time
+        internal/poll
+        internal/syscall/execenv
+        internal/testlog
+        path
+        io/fs
+        os
+        fmt
+        bytes
+        strings
+        bufio
+        encoding
+        encoding/binary
+        encoding/base64
+        unicode/utf16
+        encoding/json
+        github.com/google/go-cmp/cmp/internal/flags
+        math/rand
+        github.com/google/go-cmp/cmp/internal/diff
+        regexp/syntax
+        regexp
+        github.com/google/go-cmp/cmp/internal/function
+        github.com/google/go-cmp/cmp/internal/value
+        github.com/google/go-cmp/cmp
+        golang.org/x/sys/internal/unsafeheader
+        golang.org/x/sys/unix
+        github.com/mattn/go-isatty
+        github.com/mattn/go-colorable
+        github.com/fatih/color
+        github.com/mattn/go-runewidth
+        github.com/gosuri/uitable/util/strutil
+        github.com/gosuri/uitable/util/wordwrap
+        github.com/gosuri/uitable
+        github.com/imdario/mergo
+        hash
+        crypto
+        crypto/sha1
+        encoding/hex
+        context
+        database/sql/driver
+        github.com/Masterminds/semver/v3
+        github.com/davecgh/go-spew/spew
+        github.com/hashicorp/go-version
+        github.com/r3labs/diff
+        github.com/roboll/helmfile/pkg/app/version
+        github.com/roboll/helmfile/pkg/maputil
+        gopkg.in/yaml.v2
+        github.com/roboll/helmfile/pkg/environment
+        flag
+        go.uber.org/atomic
+        go.uber.org/multierr
+        go.uber.org/zap/buffer
+        go.uber.org/zap/internal/bufferpool
+        go.uber.org/zap/internal/color
+        go.uber.org/zap/internal/exit
+        go.uber.org/zap/zapcore
+        path/filepath
+        io/ioutil
+        log
+        compress/flate
+        hash/crc32
+        compress/gzip
+        container/list
+        crypto/internal/subtle
+        crypto/subtle
+        crypto/cipher
+        crypto/aes
+        math/big
+        crypto/rand
+        crypto/des
+        crypto/elliptic
+        crypto/internal/randutil
+        crypto/sha512
+        encoding/asn1
+        vendor/golang.org/x/crypto/cryptobyte/asn1
+        vendor/golang.org/x/crypto/cryptobyte
+        crypto/ecdsa
+        crypto/ed25519/internal/edwards25519
+        crypto/ed25519
+        crypto/hmac
+        crypto/md5
+        crypto/rc4
+        crypto/rsa
+        crypto/sha256
+        crypto/dsa
+        crypto/x509/pkix
+        encoding/pem
+        vendor/golang.org/x/net/dns/dnsmessage
+        internal/nettrace
+        internal/singleflight
+        runtime/cgo
+        net
+        net/url
+        crypto/x509
+        vendor/golang.org/x/crypto/internal/subtle
+        vendor/golang.org/x/crypto/chacha20
+        vendor/golang.org/x/crypto/poly1305
+        vendor/golang.org/x/sys/cpu
+        vendor/golang.org/x/crypto/chacha20poly1305
+        vendor/golang.org/x/crypto/curve25519
+        vendor/golang.org/x/crypto/hkdf
+        crypto/tls
+        vendor/golang.org/x/text/transform
+        vendor/golang.org/x/text/unicode/bidi
+        vendor/golang.org/x/text/secure/bidirule
+        vendor/golang.org/x/text/unicode/norm
+        vendor/golang.org/x/net/idna
+        net/textproto
+        vendor/golang.org/x/net/http/httpguts
+        vendor/golang.org/x/net/http/httpproxy
+        vendor/golang.org/x/net/http2/hpack
+        mime
+        mime/quotedprintable
+        mime/multipart
+        net/http/httptrace
+        net/http/internal
+        net/http
+        go.uber.org/zap
+        os/exec
+        github.com/roboll/helmfile/pkg/helmexec
+        encoding/base32
+        github.com/Masterminds/goutils
+        github.com/google/uuid
+        github.com/huandu/xstrings
+        github.com/mitchellh/reflectwalk
+        github.com/mitchellh/copystructure
+        html
+        text/template/parse
+        text/template
+        html/template
+        github.com/spf13/cast
+        golang.org/x/crypto/blowfish
+        golang.org/x/crypto/bcrypt
+        golang.org/x/crypto/pbkdf2
+        golang.org/x/crypto/scrypt
+        hash/adler32
+        github.com/Masterminds/sprig/v3
+        github.com/ghodss/yaml
+        github.com/golang/mock/gomock
+        github.com/hashicorp/golang-lru/simplelru
+        github.com/hashicorp/golang-lru
+        github.com/variantdev/vals/pkg/api
+        github.com/variantdev/vals/pkg/config
+        gopkg.in/yaml.v3
+        github.com/variantdev/vals/pkg/expansion
+        github.com/aws/aws-sdk-go/aws/awserr
+        github.com/aws/aws-sdk-go/internal/ini
+        github.com/aws/aws-sdk-go/internal/shareddefaults
+        github.com/aws/aws-sdk-go/internal/sync/singleflight
+        github.com/aws/aws-sdk-go/aws/credentials
+        github.com/aws/aws-sdk-go/aws/endpoints
+        github.com/aws/aws-sdk-go/internal/sdkio
+        github.com/aws/aws-sdk-go/aws
+        github.com/jmespath/go-jmespath
+        github.com/aws/aws-sdk-go/aws/awsutil
+        github.com/aws/aws-sdk-go/aws/client/metadata
+        github.com/aws/aws-sdk-go/aws/request
+        github.com/aws/aws-sdk-go/internal/sdkrand
+        net/http/httputil
+        github.com/aws/aws-sdk-go/aws/client
+        github.com/aws/aws-sdk-go/internal/strings
+        github.com/aws/aws-sdk-go/internal/sdkmath
+        github.com/aws/aws-sdk-go/private/protocol
+        github.com/aws/aws-sdk-go/private/protocol/rest
+        github.com/aws/aws-sdk-go/aws/signer/v4
+        github.com/aws/aws-sdk-go/private/protocol/json/jsonutil
+        github.com/aws/aws-sdk-go/private/protocol/jsonrpc
+        github.com/aws/aws-sdk-go/service/secretsmanager
+        encoding/xml
+        github.com/aws/aws-sdk-go/private/protocol/query/queryutil
+        github.com/aws/aws-sdk-go/private/protocol/xml/xmlutil
+        github.com/aws/aws-sdk-go/private/protocol/query
+        github.com/aws/aws-sdk-go/service/sts
+        github.com/aws/aws-sdk-go/service/sts/stsiface
+        github.com/aws/aws-sdk-go/aws/credentials/stscreds
+        github.com/aws/aws-sdk-go/aws/corehandlers
+        github.com/aws/aws-sdk-go/aws/credentials/processcreds
+        github.com/aws/aws-sdk-go/aws/csm
+        github.com/aws/aws-sdk-go/internal/sdkuri
+        github.com/aws/aws-sdk-go/aws/ec2metadata
+        github.com/aws/aws-sdk-go/aws/credentials/ec2rolecreds
+        github.com/aws/aws-sdk-go/aws/credentials/endpointcreds
+        github.com/aws/aws-sdk-go/aws/defaults
+        github.com/aws/aws-sdk-go/aws/session
+        github.com/variantdev/vals/pkg/awsclicompat
+        github.com/variantdev/vals/pkg/providers/awssecrets
+        github.com/Azure/azure-sdk-for-go/version
+        github.com/Azure/go-autorest/autorest/date
+        github.com/Azure/go-autorest/tracing
+        github.com/dgrijalva/jwt-go
+        net/http/cookiejar
+        github.com/Azure/go-autorest/autorest/adal
+        github.com/Azure/go-autorest/logger
+        github.com/Azure/go-autorest/autorest
+        github.com/Azure/go-autorest/autorest/azure
+        github.com/Azure/go-autorest/autorest/to
+        github.com/Azure/go-autorest/autorest/validation
+        github.com/Azure/azure-sdk-for-go/services/keyvault/2016-10-01/keyvault
+        github.com/Azure/azure-sdk-for-go/profiles/latest/keyvault/keyvault
+        github.com/dimchansky/utfbom
+        github.com/mitchellh/go-homedir
+        github.com/Azure/go-autorest/autorest/azure/cli
+        golang.org/x/crypto/pkcs12/internal/rc2
+        golang.org/x/crypto/pkcs12
+        github.com/Azure/go-autorest/autorest/azure/auth
+        github.com/variantdev/vals/pkg/providers/azurekeyvault
+        github.com/variantdev/vals/pkg/providers/echo
+        github.com/variantdev/vals/pkg/providers/file
+        golang.org/x/net/internal/timeseries
+        text/tabwriter
+        golang.org/x/net/trace
+        google.golang.org/grpc/backoff
+        google.golang.org/grpc/internal/grpclog
+        google.golang.org/grpc/grpclog
+        google.golang.org/grpc/connectivity
+        hash/fnv
+        google.golang.org/protobuf/internal/detrand
+        google.golang.org/protobuf/internal/errors
+        google.golang.org/protobuf/encoding/protowire
+        google.golang.org/protobuf/internal/pragma
+        google.golang.org/protobuf/reflect/protoreflect
+        google.golang.org/protobuf/reflect/protoregistry
+        google.golang.org/protobuf/internal/encoding/messageset
+        google.golang.org/protobuf/internal/flags
+        go/token
+        google.golang.org/protobuf/internal/strs
+        google.golang.org/protobuf/internal/encoding/text
+        google.golang.org/protobuf/internal/genid
+        google.golang.org/protobuf/internal/mapsort
+        google.golang.org/protobuf/internal/set
+        google.golang.org/protobuf/internal/fieldsort
+        google.golang.org/protobuf/runtime/protoiface
+        google.golang.org/protobuf/proto
+        google.golang.org/protobuf/encoding/prototext
+        google.golang.org/protobuf/internal/descfmt
+        google.golang.org/protobuf/internal/descopts
+        google.golang.org/protobuf/internal/encoding/defval
+        google.golang.org/protobuf/internal/filedesc
+        google.golang.org/protobuf/internal/encoding/tag
+        google.golang.org/protobuf/internal/impl
+        google.golang.org/protobuf/internal/filetype
+        google.golang.org/protobuf/internal/version
+        google.golang.org/protobuf/runtime/protoimpl
+        github.com/golang/protobuf/proto
+        google.golang.org/grpc/attributes
+        google.golang.org/grpc/serviceconfig
+        google.golang.org/grpc/internal
+        google.golang.org/grpc/internal/credentials
+        google.golang.org/grpc/credentials
+        google.golang.org/grpc/metadata
+        google.golang.org/grpc/resolver
+        google.golang.org/grpc/balancer
+        google.golang.org/grpc/balancer/base
+        google.golang.org/grpc/internal/grpcrand
+        google.golang.org/grpc/balancer/roundrobin
+        google.golang.org/grpc/codes
+        google.golang.org/grpc/encoding
+        google.golang.org/grpc/encoding/proto
+        google.golang.org/grpc/internal/backoff
+        google.golang.org/grpc/internal/balancerload
+        google.golang.org/protobuf/types/known/anypb
+        github.com/golang/protobuf/ptypes/any
+        google.golang.org/protobuf/types/known/durationpb
+        github.com/golang/protobuf/ptypes/duration
+        google.golang.org/protobuf/types/known/timestamppb
+        github.com/golang/protobuf/ptypes/timestamp
+        github.com/golang/protobuf/ptypes
+        google.golang.org/grpc/binarylog/grpc_binarylog_v1
+        google.golang.org/grpc/internal/grpcutil
+        google.golang.org/genproto/googleapis/rpc/status
+        google.golang.org/grpc/internal/status
+        google.golang.org/grpc/status
+        google.golang.org/grpc/internal/binarylog
+        google.golang.org/grpc/internal/buffer
+        google.golang.org/grpc/internal/channelz
+        google.golang.org/grpc/internal/envconfig
+        google.golang.org/grpc/internal/grpcsync
+        google.golang.org/grpc/balancer/grpclb/state
+        google.golang.org/grpc/internal/resolver/dns
+        google.golang.org/grpc/internal/resolver/passthrough
+        google.golang.org/grpc/internal/serviceconfig
+        golang.org/x/text/transform
+        golang.org/x/text/unicode/bidi
+        golang.org/x/text/secure/bidirule
+        golang.org/x/text/unicode/norm
+        golang.org/x/net/idna
+        golang.org/x/net/http/httpguts
+        golang.org/x/net/http2/hpack
+        golang.org/x/net/http2
+        google.golang.org/grpc/internal/syscall
+        google.golang.org/grpc/keepalive
+        google.golang.org/grpc/peer
+        google.golang.org/grpc/stats
+        google.golang.org/grpc/tap
+        google.golang.org/grpc/internal/transport
+        google.golang.org/grpc
+        github.com/googleapis/gax-go/v2
+        google.golang.org/protobuf/types/descriptorpb
+        google.golang.org/genproto/googleapis/api/annotations
+        google.golang.org/genproto/googleapis/type/expr
+        google.golang.org/genproto/googleapis/iam/v1
+        cloud.google.com/go/iam
+        google.golang.org/api/iterator
+        golang.org/x/net/context/ctxhttp
+        golang.org/x/oauth2/internal
+        golang.org/x/oauth2
+        cloud.google.com/go/compute/metadata
+        golang.org/x/oauth2/jws
+        golang.org/x/oauth2/jwt
+        os/user
+        golang.org/x/oauth2/google
+        google.golang.org/api/internal/impersonate
+        google.golang.org/api/internal
+        google.golang.org/api/option
+        go.opencensus.io/resource
+        go.opencensus.io/metric/metricdata
+        runtime/pprof
+        go.opencensus.io/tag
+        go.opencensus.io/stats/internal
+        go.opencensus.io/stats
+        go.opencensus.io/internal/tagencoding
+        go.opencensus.io/metric/metricproducer
+        go.opencensus.io/stats/view
+        github.com/golang/groupcache/lru
+        go.opencensus.io
+        go.opencensus.io/internal
+        go.opencensus.io/trace/internal
+        go.opencensus.io/trace/tracestate
+        runtime/trace
+        go.opencensus.io/trace
+        go.opencensus.io/trace/propagation
+        go.opencensus.io/plugin/ocgrpc
+        google.golang.org/api/transport/cert
+        google.golang.org/api/transport/internal/dca
+        google.golang.org/grpc/balancer/grpclb/grpc_lb_v1
+        google.golang.org/grpc/balancer/grpclb
+        google.golang.org/grpc/credentials/alts/internal
+        google.golang.org/grpc/credentials/alts/internal/proto/grpc_gcp
+        google.golang.org/grpc/credentials/alts/internal/authinfo
+        google.golang.org/grpc/credentials/alts/internal/conn
+        google.golang.org/grpc/credentials/alts/internal/handshaker
+        google.golang.org/grpc/credentials/alts/internal/handshaker/service
+        google.golang.org/grpc/credentials/alts
+        google.golang.org/grpc/credentials/oauth
+        google.golang.org/grpc/credentials/google
+        google.golang.org/api/transport/grpc
+        google.golang.org/protobuf/types/known/emptypb
+        google.golang.org/protobuf/types/known/fieldmaskpb
+        google.golang.org/genproto/googleapis/cloud/secretmanager/v1beta1
+        cloud.google.com/go/secretmanager/apiv1beta1
+        github.com/variantdev/vals/pkg/providers/gcpsecrets
+        github.com/aws/aws-sdk-go/aws/arn
+        github.com/aws/aws-sdk-go/internal/s3shared/arn
+        github.com/aws/aws-sdk-go/internal/s3shared
+        github.com/aws/aws-sdk-go/internal/s3shared/s3err
+        github.com/aws/aws-sdk-go/private/checksum
+        github.com/aws/aws-sdk-go/private/protocol/eventstream
+        github.com/aws/aws-sdk-go/private/protocol/eventstream/eventstreamapi
+        github.com/aws/aws-sdk-go/private/protocol/restxml
+        github.com/aws/aws-sdk-go/service/s3
+        github.com/aws/aws-sdk-go/service/s3/s3iface
+        github.com/variantdev/vals/pkg/providers/s3
+        github.com/sirupsen/logrus
+        github.com/goware/prefixer
+        github.com/mitchellh/go-wordwrap
+        database/sql
+        github.com/lib/pq/oid
+        github.com/lib/pq/scram
+        github.com/lib/pq
+        github.com/mozilla-services/yaml
+        github.com/pkg/errors
+        go.mozilla.org/sops/v3/logging
+        go.mozilla.org/sops/v3/audit
+        go.mozilla.org/sops/v3/keys
+        go.mozilla.org/sops/v3/azkv
+        golang.org/x/net/context
+        google.golang.org/api/internal/third_party/uritemplates
+        google.golang.org/api/googleapi
+        google.golang.org/api/internal/gensupport
+        google.golang.org/api/option/internaloption
+        go.opencensus.io/plugin/ochttp/propagation/b3
+        go.opencensus.io/plugin/ochttp
+        google.golang.org/api/googleapi/transport
+        google.golang.org/api/transport/http/internal/propagation
+        google.golang.org/api/transport/http
+        google.golang.org/api/cloudkms/v1
+        go.mozilla.org/sops/v3/gcpkms
+        github.com/hashicorp/errwrap
+        github.com/hashicorp/go-cleanhttp
+        github.com/hashicorp/go-multierror
+        github.com/hashicorp/go-hclog
+        github.com/hashicorp/go-retryablehttp
+        github.com/hashicorp/go-rootcerts
+        github.com/hashicorp/hcl/hcl/strconv
+        github.com/hashicorp/hcl/hcl/token
+        github.com/hashicorp/hcl/hcl/ast
+        github.com/hashicorp/hcl/hcl/scanner
+        github.com/hashicorp/hcl/hcl/parser
+        github.com/hashicorp/hcl/json/token
+        github.com/hashicorp/hcl/json/scanner
+        github.com/hashicorp/hcl/json/parser
+        github.com/hashicorp/hcl
+        github.com/hashicorp/vault/sdk/helper/consts
+        github.com/hashicorp/vault/sdk/helper/hclutil
+        compress/lzw
+        github.com/golang/snappy
+        github.com/pierrec/lz4/internal/xxh32
+        runtime/debug
+        github.com/pierrec/lz4
+        github.com/hashicorp/vault/sdk/helper/compressutil
+        github.com/hashicorp/vault/sdk/helper/jsonutil
+        github.com/hashicorp/go-sockaddr
+        github.com/ryanuber/go-glob
+        github.com/hashicorp/vault/sdk/helper/strutil
+        github.com/mitchellh/mapstructure
+        github.com/hashicorp/vault/sdk/helper/parseutil
+        golang.org/x/time/rate
+        golang.org/x/crypto/ed25519
+        gopkg.in/square/go-jose.v2/cipher
+        gopkg.in/square/go-jose.v2/json
+        gopkg.in/square/go-jose.v2
+        gopkg.in/square/go-jose.v2/jwt
+        github.com/hashicorp/vault/api
+        go.mozilla.org/sops/v3/hcvault
+        github.com/aws/aws-sdk-go/service/kms
+        github.com/aws/aws-sdk-go/service/kms/kmsiface
+        go.mozilla.org/sops/v3/kms
+        golang.org/x/crypto/ssh/terminal
+        github.com/howeyc/gopass
+        go.mozilla.org/gopgagent
+        golang.org/x/crypto/openpgp/errors
+        golang.org/x/crypto/openpgp/armor
+        compress/bzip2
+        compress/zlib
+        golang.org/x/crypto/cast5
+        golang.org/x/crypto/openpgp/elgamal
+        golang.org/x/crypto/openpgp/s2k
+        image/color
+        image
+        image/internal/imageutil
+        image/jpeg
+        golang.org/x/crypto/openpgp/packet
+        golang.org/x/crypto/openpgp
+        go.mozilla.org/sops/v3/pgp
+        go.mozilla.org/sops/v3/keyservice
+        go.mozilla.org/sops/v3/shamir
+        go.mozilla.org/sops/v3
+        go.mozilla.org/sops/v3/aes
+        go.mozilla.org/sops/v3/cmd/sops/codes
+        go.mozilla.org/sops/v3/cmd/sops/formats
+        go.mozilla.org/sops/v3/stores
+        go.mozilla.org/sops/v3/stores/dotenv
+        gopkg.in/ini.v1
+        go.mozilla.org/sops/v3/stores/ini
+        go.mozilla.org/sops/v3/stores/json
+        go.mozilla.org/sops/v3/stores/yaml
+        github.com/blang/semver
+        gopkg.in/urfave/cli.v1
+        go.mozilla.org/sops/v3/version
+        go.mozilla.org/sops/v3/cmd/sops/common
+        go.mozilla.org/sops/v3/decrypt
+        github.com/variantdev/vals/pkg/providers/sops
+        github.com/aws/aws-sdk-go/service/ssm
+        github.com/aws/aws-sdk-go/service/ssm/ssmiface
+        github.com/variantdev/vals/pkg/providers/ssm
+        text/scanner
+        github.com/alecthomas/participle/lexer
+        github.com/alecthomas/participle
+        github.com/lestrrat-go/strftime
+        github.com/pbnjay/strptime
+        github.com/itchyny/gojq
+        github.com/fujiwara/tfstate-lookup/tfstate
+        github.com/variantdev/vals/pkg/providers/tfstate
+        github.com/variantdev/vals/pkg/providers/vault
+        github.com/variantdev/vals/pkg/stringmapprovider
+        github.com/variantdev/vals/pkg/stringprovider
+        github.com/variantdev/vals
+        github.com/roboll/helmfile/pkg/plugins
+        golang.org/x/sync/errgroup
+        github.com/roboll/helmfile/pkg/tmpl
+        github.com/roboll/helmfile/pkg/event
+        archive/tar
+        archive/zip
+        cloud.google.com/go/internal
+        cloud.google.com/go/internal/optional
+        google.golang.org/genproto/googleapis/rpc/code
+        cloud.google.com/go/internal/trace
+        cloud.google.com/go/internal/version
+        google.golang.org/api/storage/v1
+        cloud.google.com/go/storage
+        github.com/bgentry/go-netrc/netrc
+        github.com/hashicorp/go-getter/helper/url
+        github.com/hashicorp/go-safetemp
+        github.com/mitchellh/go-testing-interface
+        github.com/ulikunitz/xz/internal/xlog
+        github.com/ulikunitz/xz/internal/hash
+        github.com/ulikunitz/xz/lzma
+        hash/crc64
+        github.com/ulikunitz/xz
+        github.com/hashicorp/go-getter
+        github.com/roboll/helmfile/pkg/remote
+        github.com/tatsushid/go-prettytable
+        github.com/otiai10/copy
+        github.com/variantdev/chartify
+        github.com/variantdev/dag/pkg/dag
+        github.com/roboll/helmfile/pkg/state
+        github.com/roboll/helmfile/pkg/argparser
+        os/signal
+        github.com/roboll/helmfile/pkg/app
+        github.com/shurcooL/sanitized_anchor_name
+        github.com/russross/blackfriday/v2
+        github.com/cpuguy83/go-md2man/v2/md2man
+        github.com/urfave/cli
+        github.com/roboll/helmfile
+        installing
+        post-installation fixup
+        shrinking RPATHs of ELF executables and libraries in /nix/store/ha6sggy1rxk4wsmf4nzll7pz4bkq0v1f-helmfile-0.138.4
+        shrinking /nix/store/ha6sggy1rxk4wsmf4nzll7pz4bkq0v1f-helmfile-0.138.4/bin/.helmfile-wrapped
+        strip is /nix/store/cp1sa3xxvl71cypiinw2c62i5s33chlr-binutils-2.35.1/bin/strip
+        stripping (with command strip and flags -S) in /nix/store/ha6sggy1rxk4wsmf4nzll7pz4bkq0v1f-helmfile-0.138.4/bin
+        patching script interpreter paths in /nix/store/ha6sggy1rxk4wsmf4nzll7pz4bkq0v1f-helmfile-0.138.4
+        checking for references to /build/ in /nix/store/ha6sggy1rxk4wsmf4nzll7pz4bkq0v1f-helmfile-0.138.4...
+        building '/nix/store/hvvmxsr08007l1h9ws069lk00qfi7b4m-list-helm-containers.drv'...
+        building '/nix/store/anlifb5929h4vxfx2z2y2b1d9vklsk76-wire-server-deploy.drv'...
+        created 745 symlinks in user environment
+        /nix/store/1iwi052fr70hdv02n2dr9d094lk5nrlr-wire-server-deploy
+        direnv: loading .nix-env/.profile
+        direnv: export +LOCALHOST_PYTHON ~NIX_PATH ~PATH
+[19:41:35] # Running command «ansible --version» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy$ ansible --version
+        ansible 2.9.12
+          config file = None
+          configured module search path = ['/home/wire/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+          ansible python module location = /nix/store/407c5v2x920kri79w0sb9gb1g82q28mg-python3.8-ansible-2.9.12/lib/python3.8/site-packages/ansible
+          executable location = /nix/store/407c5v2x920kri79w0sb9gb1g82q28mg-python3.8-ansible-2.9.12/bin/ansible
+          python version = 3.8.8 (default, Feb 19 2021, 11:04:50) [GCC 10.2.0]

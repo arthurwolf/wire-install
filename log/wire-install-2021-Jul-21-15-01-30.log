@@ -1,0 +1,517 @@
+[15:01:30] # Logging to: wire-install-2021-Jul-21-15-01-30.log in log/ and tmp/
+[15:01:30] # Shutting down virtual machine "Wire Demo Client Clone"
+[15:01:32] # Deleting virtual machine "Wire Demo Client Clone"
+[15:01:33] # Creating virtual machine "Wire Demo Client Clone" from snapshot
+[15:01:34] # Starting virtual machine "Wire Demo Client Clone"
+[15:01:42] # Initial install of tmux on 192.168.1.121
+[15:01:54] # Running command «sudo date --set="Wed Jul 21 2021 15:01:36 GMT+0200 (Central European Summer Time)"» on 192.168.1.121
+        wire@wire-client:~$ sudo date --set="Wed Jul 21 2021 15:01:36 GMT+0200 (Central
+        European Summer Time)"
+        [sudo] password for wire:
+        Wed Jul 21 13:01:36 UTC 2021
+[15:01:59] # Running command «sudo date --set="Wed Jul 21 2021 15:01:54 GMT+0200 (Central European Summer Time)"» on 95.216.208.159
+        wire@arthur-demo:~$ sudo date --set="Wed Jul 21 2021 15:01:54 GMT+0200 (Central
+        European Summer Time)"
+        Wed Jul 21 15:01:54 CEST 2021
+[15:02:05] # Running command «cat /proc/cpuinfo | grep processor | wc -l» on 192.168.1.121
+        wire@wire-client:~$ cat /proc/cpuinfo | grep processor | wc -l
+        2
+[15:02:11] # Running command «free -m && uptime» on 192.168.1.121
+        wire@wire-client:~$ free -m && uptime
+                      total        used        free      shared  buff/cache   available
+        Mem:           2928         112        2614           0         202        2671
+        Swap:          3943           0        3943
+         13:01:52 up 1 min,  0 users,  load average: 0.67, 0.36, 0.14
+[15:02:15] # Running command «cat /proc/cpuinfo | grep processor | wc -l» on 95.216.208.159
+        wire@arthur-demo:~$ cat /proc/cpuinfo | grep processor | wc -l
+        8
+[15:02:20] # Running command «free -m && uptime» on 95.216.208.159
+        wire@arthur-demo:~$ free -m && uptime
+                      total        used        free      shared  buff/cache   available
+        Mem:          15661        5701         627           4        9331       10066
+        Swap:             0           0           0
+         15:02:18 up 9 days,  4:39,  0 users,  load average: 1.02, 0.99, 1.07
+[15:02:26] # Running command «cd» on 192.168.1.121
+        wire@wire-client:~$ cd
+[15:02:32] # Running command «cat /etc/hostname» on 192.168.1.121
+        wire@wire-client:~$ cat /etc/hostname
+        wire-client
+[15:02:38] # Running command «pwd» on 192.168.1.121
+        wire@wire-client:~$ pwd
+        /home/wire
+[15:02:44] # Running command «date» on 192.168.1.121
+        wire@wire-client:~$ date
+        Wed Jul 21 13:02:41 UTC 2021
+[15:02:50] # Running command «uptime» on 192.168.1.121
+        wire@wire-client:~$ uptime
+         13:02:47 up 2 min,  0 users,  load average: 0.52, 0.36, 0.14
+[15:03:11] # Running command «sudo apt update» on 192.168.1.121
+        wire@wire-client:~$ sudo apt update
+        [sudo] password for wire:
+        Hit:1 http://fr.archive.ubuntu.com/ubuntu bionic InRelease
+        Get:2 http://fr.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+        Get:3 http://fr.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+        Get:4 http://fr.archive.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+        Get:5 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [21
+        60 kB]
+        Get:6 http://fr.archive.ubuntu.com/ubuntu bionic-updates/main Translation-en [42
+        5 kB]
+        Get:7 http://fr.archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packag
+        es [410 kB]
+        Get:8 http://fr.archive.ubuntu.com/ubuntu bionic-updates/restricted Translation-
+        en [55.8 kB]
+        Get:9 http://fr.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages
+         [1740 kB]
+        Get:10 http://fr.archive.ubuntu.com/ubuntu bionic-updates/universe Translation-e
+        n [372 kB]
+        Get:11 http://fr.archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packa
+        ges [30.5 kB]
+        Get:12 http://fr.archive.ubuntu.com/ubuntu bionic-updates/multiverse Translation
+        -en [7120 B]
+        Get:13 http://fr.archive.ubuntu.com/ubuntu bionic-security/main amd64 Packages [
+        1814 kB]
+        Get:14 http://fr.archive.ubuntu.com/ubuntu bionic-security/main Translation-en [
+        333 kB]
+        Get:15 http://fr.archive.ubuntu.com/ubuntu bionic-security/restricted amd64 Pack
+        ages [386 kB]
+        Get:16 http://fr.archive.ubuntu.com/ubuntu bionic-security/restricted Translatio
+        n-en [52.2 kB]
+        Get:17 http://fr.archive.ubuntu.com/ubuntu bionic-security/universe amd64 Packag
+        es [1132 kB]
+        Get:18 http://fr.archive.ubuntu.com/ubuntu bionic-security/universe Translation-
+        en [257 kB]
+        Get:19 http://fr.archive.ubuntu.com/ubuntu bionic-security/multiverse amd64 Pack
+        ages [24.8 kB]
+        Get:20 http://fr.archive.ubuntu.com/ubuntu bionic-security/multiverse Translatio
+        n-en [5072 B]
+        Fetched 9457 kB in 3s (3125 kB/s)
+        Reading package lists... Done
+        Building dependency tree
+        Reading state information... Done
+        72 packages can be upgraded. Run 'apt list --upgradable' to see them.
+[15:04:19] # Running command «sudo dpkg --configure -a» on 192.168.1.121
+        wire@wire-client:~$ sudo dpkg --configure -a
+        Setting up initramfs-tools (0.130ubuntu3.9) ...
+        update-initramfs: deferring update (trigger activated)
+        Processing triggers for initramfs-tools (0.130ubuntu3.9) ...
+        update-initramfs: Generating /boot/initrd.img-4.15.0-144-generic
+[15:05:44] # Running command «sudo apt install docker.io» on 192.168.1.121
+        wire@wire-client:~$ sudo apt install docker.io
+        Reading package lists... Done
+        Building dependency tree
+        Reading state information... Done
+        The following additional packages will be installed:
+          bridge-utils containerd pigz runc ubuntu-fan
+        Suggested packages:
+          ifupdown aufs-tools cgroupfs-mount | cgroup-lite debootstrap docker-doc
+          rinse zfs-fuse | zfsutils
+        The following NEW packages will be installed:
+          bridge-utils containerd docker.io pigz runc ubuntu-fan
+        0 upgraded, 6 newly installed, 0 to remove and 72 not upgraded.
+        Need to get 74.0 MB of archives.
+        After this operation, 359 MB of additional disk space will be used.
+        Do you want to continue? [Y/n] y
+        Get:1 http://fr.archive.ubuntu.com/ubuntu bionic/universe amd64 pigz amd64 2.4-1
+         [57.4 kB]
+        Get:2 http://fr.archive.ubuntu.com/ubuntu bionic/main amd64 bridge-utils amd64 1
+        .5-15ubuntu1 [30.1 kB]
+        Get:3 http://fr.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 runc amd
+        64 1.0.0~rc95-0ubuntu1~18.04.1 [4087 kB]
+        Get:4 http://fr.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 containe
+        rd amd64 1.5.2-0ubuntu1~18.04.2 [32.9 MB]
+        Get:5 http://fr.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 docker.i
+        o amd64 20.10.2-0ubuntu1~18.04.2 [36.9 MB]
+        Get:6 http://fr.archive.ubuntu.com/ubuntu bionic/main amd64 ubuntu-fan all 0.12.
+        10 [34.7 kB]
+        Fetched 74.0 MB in 3s (29.0 MB/s)
+        Preconfiguring packages ...
+        Selecting previously unselected package pigz.
+        (Reading database ... 67143 files and directories currently installed.)
+        Preparing to unpack .../0-pigz_2.4-1_amd64.deb ...
+        Unpacking pigz (2.4-1) ...
+        Selecting previously unselected package bridge-utils.
+        Preparing to unpack .../1-bridge-utils_1.5-15ubuntu1_amd64.deb ...
+        Unpacking bridge-utils (1.5-15ubuntu1) ...
+        Selecting previously unselected package runc.
+        Preparing to unpack .../2-runc_1.0.0~rc95-0ubuntu1~18.04.1_amd64.deb ...
+        Unpacking runc (1.0.0~rc95-0ubuntu1~18.04.1) ...
+        Selecting previously unselected package containerd.
+        Preparing to unpack .../3-containerd_1.5.2-0ubuntu1~18.04.2_amd64.deb ...
+        Unpacking containerd (1.5.2-0ubuntu1~18.04.2) ...
+        Selecting previously unselected package docker.io.
+        Preparing to unpack .../4-docker.io_20.10.2-0ubuntu1~18.04.2_amd64.deb ...
+        Unpacking docker.io (20.10.2-0ubuntu1~18.04.2) ...
+        Selecting previously unselected package ubuntu-fan.
+        Preparing to unpack .../5-ubuntu-fan_0.12.10_all.deb ...
+        Unpacking ubuntu-fan (0.12.10) ...
+        Setting up runc (1.0.0~rc95-0ubuntu1~18.04.1) ...
+        Setting up containerd (1.5.2-0ubuntu1~18.04.2) ...
+        Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service →
+         /lib/systemd/system/containerd.service.
+        Setting up bridge-utils (1.5-15ubuntu1) ...
+        Setting up ubuntu-fan (0.12.10) ...
+        Created symlink /etc/systemd/system/multi-user.target.wants/ubuntu-fan.service →
+         /lib/systemd/system/ubuntu-fan.service.
+        Setting up pigz (2.4-1) ...
+        Setting up docker.io (20.10.2-0ubuntu1~18.04.2) ...
+        Adding group `docker' (GID 113) ...
+        Done.
+        Created symlink /etc/systemd/system/multi-user.target.wants/docker.service → /li
+        b/systemd/system/docker.service.
+        Created symlink /etc/systemd/system/sockets.target.wants/docker.socket → /lib/sy
+        stemd/system/docker.socket.
+        Processing triggers for systemd (237-3ubuntu10.42) ...
+        Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+        Processing triggers for ureadahead (0.100.0-21) ...
+[15:05:50] # Running command «docker -v» on 192.168.1.121
+        wire@wire-client:~$ docker -v
+        Docker version 20.10.2, build 20.10.2-0ubuntu1~18.04.2
+[15:05:56] # Running command «sudo rm -rf /home/wire/wire*» on 192.168.1.121
+        wire@wire-client:~$ sudo rm -rf /home/wire/wire*
+[15:06:02] # Running command «ls -l /home/wire/» on 192.168.1.121
+        wire@wire-client:~$ ls -l /home/wire/
+        total 0
+[15:06:08] # Running command «date» on 192.168.1.121
+        wire@wire-client:~$ date
+        Wed Jul 21 13:06:05 UTC 2021
+[15:06:14] # Running command «uptime» on 192.168.1.121
+        wire@wire-client:~$ uptime
+         13:06:11 up 6 min,  0 users,  load average: 0.95, 0.75, 0.35
+[15:06:22] # Running command «sudo apt update» on 192.168.1.121
+        wire@wire-client:~$ sudo apt update
+        Hit:1 http://fr.archive.ubuntu.com/ubuntu bionic InRelease
+        Hit:2 http://fr.archive.ubuntu.com/ubuntu bionic-updates InRelease
+        Hit:3 http://fr.archive.ubuntu.com/ubuntu bionic-backports InRelease
+        Hit:4 http://fr.archive.ubuntu.com/ubuntu bionic-security InRelease
+        Reading package lists... Done
+        Building dependency tree
+        Reading state information... Done
+        72 packages can be upgraded. Run 'apt list --upgradable' to see them.
+[15:06:28] # Running command «sudo dpkg --configure -a» on 192.168.1.121
+        wire@wire-client:~$ sudo dpkg --configure -a
+[15:06:33] # Running command «date» on 95.216.208.159
+        wire@arthur-demo:~$ date
+        Wed Jul 21 15:06:30 CEST 2021
+[15:06:37] # Running command «uptime» on 95.216.208.159
+        wire@arthur-demo:~$ uptime
+         15:06:35 up 9 days,  4:43,  0 users,  load average: 0.59, 0.87, 1.00
+[15:06:48] # Running command «sudo apt update» on 95.216.208.159
+        wire@arthur-demo:~$ sudo apt update
+        Hit:1 http://mirror.hetzner.de/ubuntu/packages bionic InRelease
+        Hit:2 http://mirror.hetzner.de/ubuntu/packages bionic-updates InRelease
+        Hit:3 https://download.docker.com/linux/ubuntu bionic InRelease
+        Hit:4 http://mirror.hetzner.de/ubuntu/packages bionic-backports InRelease
+        Hit:5 http://mirror.hetzner.de/ubuntu/packages bionic-security InRelease
+        Hit:6 https://mirror.hetzner.com/ubuntu/packages bionic InRelease
+        Hit:7 https://mirror.hetzner.com/ubuntu/packages bionic-updates InRelease
+        Hit:8 https://mirror.hetzner.com/ubuntu/packages bionic-backports InRelease
+        Hit:9 https://mirror.hetzner.com/ubuntu/security bionic-security InRelease
+        Reading package lists... Done
+        Building dependency tree
+        Reading state information... Done
+        16 packages can be upgraded. Run 'apt list --upgradable' to see them.
+[15:06:53] # Running command «sudo dpkg --configure -a» on 95.216.208.159
+        wire@arthur-demo:~$ sudo dpkg --configure -a
+[15:07:02] # Running command «sudo apt install docker.io» on 192.168.1.121
+        wire@wire-client:~$ sudo apt install docker.io
+        Reading package lists... Done
+        Building dependency tree
+        Reading state information... Done
+        docker.io is already the newest version (20.10.2-0ubuntu1~18.04.2).
+        0 upgraded, 0 newly installed, 0 to remove and 72 not upgraded.
+[15:07:08] # Running command «docker -v» on 192.168.1.121
+        wire@wire-client:~$ docker -v
+        Docker version 20.10.2, build 20.10.2-0ubuntu1~18.04.2
+[15:07:16] # Running command «git clone --branch master https://github.com/wireapp/wire-server-deploy.git» on 192.168.1.121
+        wire@wire-client:~$ git clone --branch master https://github.com/wireapp/wire-se
+        rver-deploy.git
+        Cloning into 'wire-server-deploy'...
+        remote: Enumerating objects: 18502, done.
+        remote: Counting objects: 100% (335/335), done.
+        remote: Compressing objects: 100% (214/214), done.
+        remote: Total 18502 (delta 165), reused 232 (delta 115), pack-reused 18167
+        Receiving objects: 100% (18502/18502), 2.20 MiB | 5.27 MiB/s, done.
+        Resolving deltas: 100% (13821/13821), done.
+[15:07:22] # Running command «ls -l» on 192.168.1.121
+        wire@wire-client:~$ ls -l
+        total 4
+        drwxrwxr-x 12 wire wire 4096 Jul 21 13:07 wire-server-deploy
+[15:07:28] # Running command «cd ~/wire-server-deploy» on 192.168.1.121
+        wire@wire-client:~$ cd ~/wire-server-deploy
+[15:07:33] # Running command «pwd» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy$ pwd
+        /home/wire/wire-server-deploy
+[15:07:39] # Running command «ls -l» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy$ ls -l
+        total 108
+        -rw-rw-r--  1 wire wire 16072 Jul 21 13:07 CHANGELOG.md
+        -rw-rw-r--  1 wire wire  1531 Jul 21 13:07 CONTRIBUTING.md
+        -rw-rw-r--  1 wire wire   252 Jul 21 13:07 Dockerfile
+        -rw-rw-r--  1 wire wire 34520 Jul 21 13:07 LICENSE
+        -rw-rw-r--  1 wire wire  5893 Jul 21 13:07 Makefile
+        -rw-rw-r--  1 wire wire  2251 Jul 21 13:07 README.md
+        drwxrwxr-x  9 wire wire  4096 Jul 21 13:07 ansible
+        drwxrwxr-x  3 wire wire  4096 Jul 21 13:07 bin
+        -rw-rw-r--  1 wire wire  2338 Jul 21 13:07 default.nix
+        drwxrwxr-x  5 wire wire  4096 Jul 21 13:07 examples
+        drwxrwxr-x  2 wire wire  4096 Jul 21 13:07 helm
+        drwxrwxr-x  4 wire wire  4096 Jul 21 13:07 nix
+        drwxrwxr-x  2 wire wire  4096 Jul 21 13:07 offline
+        drwxrwxr-x  5 wire wire  4096 Jul 21 13:07 terraform
+        drwxrwxr-x 15 wire wire  4096 Jul 21 13:07 values
+[15:08:03] # Running command «git submodule update --init --recursive» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy$ git submodule update --init --recursive
+        Submodule 'ansible/roles-external/ANXS.apt' (https://github.com/ANXS/apt.git) re
+        gistered for path 'ansible/roles-external/ANXS.apt'
+        Submodule 'ansible/roles-external/admin_users' (https://github.com/cchurch/ansib
+        le-role-admin-users.git) registered for path 'ansible/roles-external/admin_users
+        '
+        Submodule 'ansible/roles-external/andrewrothstein.unarchive-deps' (https://githu
+        b.com/andrewrothstein/ansible-unarchive-deps) registered for path 'ansible/roles
+        -external/andrewrothstein.unarchive-deps'
+        Submodule 'ansible/roles-external/ansible-cassandra' (https://github.com/wireapp
+        /ansible-cassandra.git) registered for path 'ansible/roles-external/ansible-cass
+        andra'
+        Submodule 'ansible/roles-external/ansible-minio' (https://github.com/wireapp/ans
+        ible-minio.git) registered for path 'ansible/roles-external/ansible-minio'
+        Submodule 'ansible/roles-external/ansible-ntp-verify' (https://github.com/wireap
+        p/ansible-ntp-verify.git) registered for path 'ansible/roles-external/ansible-nt
+        p-verify'
+        Submodule 'ansible/roles-external/ansible-restund' (https://github.com/wireapp/a
+        nsible-restund.git) registered for path 'ansible/roles-external/ansible-restund'
+        Submodule 'ansible/roles-external/ansible-role-java' (https://github.com/geerlin
+        gguy/ansible-role-java.git) registered for path 'ansible/roles-external/ansible-
+        role-java'
+        Submodule 'ansible/roles-external/ansible-role-ntp' (https://github.com/geerling
+        guy/ansible-role-ntp.git) registered for path 'ansible/roles-external/ansible-ro
+        le-ntp'
+        Submodule 'ansible/roles-external/ansible-tinc' (https://github.com/wireapp/ansi
+        ble-tinc.git) registered for path 'ansible/roles-external/ansible-tinc'
+        Submodule 'ansible/roles-external/cloudalchemy.node-exporter' (https://github.co
+        m/cloudalchemy/ansible-node-exporter) registered for path 'ansible/roles-externa
+        l/cloudalchemy.node-exporter'
+        Submodule 'ansible/roles-external/elasticsearch' (https://github.com/elastic/ans
+        ible-elasticsearch.git) registered for path 'ansible/roles-external/elasticsearc
+        h'
+        Submodule 'ansible/roles-external/hostname' (https://github.com/ANXS/hostname.gi
+        t) registered for path 'ansible/roles-external/hostname'
+        Submodule 'ansible/roles-external/kubespray' (https://github.com/kubernetes-sigs
+        /kubespray.git) registered for path 'ansible/roles-external/kubespray'
+        Submodule 'ansible/roles-external/logrotate' (https://github.com/nickhammond/ans
+        ible-logrotate.git) registered for path 'ansible/roles-external/logrotate'
+        Submodule 'ansible/roles-external/sft' (https://github.com/wireapp/ansible-sft.g
+        it) registered for path 'ansible/roles-external/sft'
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ANXS.apt'...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/admin_users'.
+        ..
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/andrewrothste
+        in.unarchive-deps'...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ansible-cassa
+        ndra'...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ansible-minio
+        '...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ansible-ntp-v
+        erify'...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ansible-restu
+        nd'...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ansible-role-
+        java'...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ansible-role-
+        ntp'...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/ansible-tinc'
+        ...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/cloudalchemy.
+        node-exporter'...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/elasticsearch
+        '...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/hostname'...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/kubespray'...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/logrotate'...
+        Cloning into '/home/wire/wire-server-deploy/ansible/roles-external/sft'...
+        Submodule path 'ansible/roles-external/ANXS.apt': checked out 'f602ba7e88abfbb3a
+        f6679a8ca47207dc3e9d9c4'
+        Submodule path 'ansible/roles-external/admin_users': checked out 'd5bcef7e925ee1
+        acf4e42359f0a95ed788eea58f'
+        Submodule path 'ansible/roles-external/andrewrothstein.unarchive-deps': checked
+        out '4485543262cfe04170d1ec02c8ccb95c44a7a222'
+        Submodule path 'ansible/roles-external/ansible-cassandra': checked out '8a0f029f
+        533856e8270d7fd74d75c099a677b2e3'
+        Submodule path 'ansible/roles-external/ansible-minio': checked out '22ab28f75c00
+        7a0c48dc47db574773773ef19d22'
+        Submodule path 'ansible/roles-external/ansible-ntp-verify': checked out '4c3d0c6
+        7d32d2d74444f4db45b2a4d2efdc7d590'
+        Submodule path 'ansible/roles-external/ansible-restund': checked out '9807313a7c
+        72ffa40e74f69d239404fd87db65ab'
+        Submodule path 'ansible/roles-external/ansible-role-java': checked out '13b42705
+        5702d9e91558cad7dcccab7db91e5663'
+        Submodule path 'ansible/roles-external/ansible-role-ntp': checked out 'af1ec6238
+        5c899a3e3f24407d8417adcdc9eea60'
+        Submodule path 'ansible/roles-external/ansible-tinc': checked out '42951a951f638
+        1e387174178bf3bff228b6a5dc5'
+        Submodule path 'ansible/roles-external/cloudalchemy.node-exporter': checked out
+        '8dc13ae077e3da1a71c268b114cd4fb8103ced80'
+        Submodule path 'ansible/roles-external/elasticsearch': checked out '389a3ff45f8f
+        51de95313ca0354cedcdc92b16f4'
+        Submodule path 'ansible/roles-external/hostname': checked out 'da6f329b2984e84d2
+        248d4251e0c679c53dfbb30'
+        Submodule path 'ansible/roles-external/kubespray': checked out 'c7658c0256bfeb50
+        913ac73f638a760680e4dd6d'
+        Submodule path 'ansible/roles-external/logrotate': checked out '91d570f68c44261d
+        2051a99a2b3c7d736306bf0d'
+        Submodule path 'ansible/roles-external/sft': checked out '126fde847dfc9deffeef8b
+        a133c541c16628a63a'
+[15:08:09] # Running command «mkdir -p wire-server» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy$ mkdir -p wire-server
+[15:08:15] # Running command «cd wire-server» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy$ cd wire-server
+[15:08:21] # Running command «pwd» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ pwd
+        /home/wire/wire-server-deploy/wire-server
+[15:08:27] # Running command «curl -sSL https://raw.githubusercontent.com/wireapp/wire-server-deploy/master/values/wire-server/demo-secrets.example.yaml > secrets.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ curl -sSL https://raw.githubu
+        sercontent.com/wireapp/wire-server-deploy/master/values/wire-server/demo-secrets
+        .example.yaml > secrets.yaml
+[15:08:33] # Running command «curl -sSL https://raw.githubusercontent.com/wireapp/wire-server-deploy/master/values/wire-server/demo-values.example.yaml > values.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ curl -sSL https://raw.githubu
+        sercontent.com/wireapp/wire-server-deploy/master/values/wire-server/demo-values.
+        example.yaml > values.yaml
+[15:08:39] # Running command «openssl rand -base64 64 | env LC_CTYPE=C tr -dc a-zA-Z0-9 | head -c 42 > restund.txt» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ openssl rand -base64 64 | env
+         LC_CTYPE=C tr -dc a-zA-Z0-9 | head -c 42 > restund.txt
+[15:09:58] # Running command «sudo docker run --rm quay.io/wire/alpine-intermediate /dist/zauth -m gen-keypair -i 1 > zauth.txt» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ sudo docker run --rm quay.io/
+        wire/alpine-intermediate /dist/zauth -m gen-keypair -i 1 > zauth.txt
+        Unable to find image 'quay.io/wire/alpine-intermediate:latest' locally
+        latest: Pulling from wire/alpine-intermediate
+        188c0c94c7c5: Pulling fs layer
+        edebdc4a6437: Pulling fs layer
+        d9b6d5749552: Pulling fs layer
+        0dd342b35df2: Pulling fs layer
+        ea7c73d2e35b: Pulling fs layer
+        0dd342b35df2: Waiting
+        ea7c73d2e35b: Waiting
+        edebdc4a6437: Verifying Checksum
+        edebdc4a6437: Download complete
+        188c0c94c7c5: Verifying Checksum
+        188c0c94c7c5: Download complete
+        ea7c73d2e35b: Verifying Checksum
+        ea7c73d2e35b: Download complete
+        188c0c94c7c5: Pull complete
+        d9b6d5749552: Verifying Checksum
+        d9b6d5749552: Download complete
+        edebdc4a6437: Pull complete
+        d9b6d5749552: Pull complete
+        0dd342b35df2: Verifying Checksum
+        0dd342b35df2: Download complete
+        0dd342b35df2: Pull complete
+        ea7c73d2e35b: Pull complete
+        Digest: sha256:bfb7dfd21e389ec699527f3cdad32d158ecab12577404c4578001af7c899d044
+        Status: Downloaded newer image for quay.io/wire/alpine-intermediate:latest
+[15:10:04] # Running command «ls -l» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ ls -l
+        total 20
+        -rw-rw-r-- 1 wire wire   42 Jul 21 13:08 restund.txt
+        -rw-rw-r-- 1 wire wire 1949 Jul 21 13:08 secrets.yaml
+        -rw-rw-r-- 1 wire wire 7642 Jul 21 13:08 values.yaml
+        -rw-rw-r-- 1 wire wire  150 Jul 21 13:09 zauth.txt
+[15:10:11] # Running command «curl -sSL https://raw.githubusercontent.com/wireapp/wire-server-deploy/master/values/wire-server/prod-values.example.yaml > prod-values.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ curl -sSL https://raw.githubu
+        sercontent.com/wireapp/wire-server-deploy/master/values/wire-server/prod-values.
+        example.yaml > prod-values.yaml
+[15:10:17] # Running command «grep 'spar:' prod-values.yaml -A 24 > spar.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ grep 'spar:' prod-values.yaml
+         -A 24 > spar.yaml
+[15:10:23] # Running command «sed -i 's/cassandra-external/cassandra-ephemeral/' spar.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ sed -i 's/cassandra-external/
+        cassandra-ephemeral/' spar.yaml
+[15:10:29] # Running command «ls -l» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ ls -l
+        total 40
+        -rw-rw-r-- 1 wire wire 12606 Jul 21 13:10 prod-values.yaml
+        -rw-rw-r-- 1 wire wire    42 Jul 21 13:08 restund.txt
+        -rw-rw-r-- 1 wire wire  1949 Jul 21 13:08 secrets.yaml
+        -rw-rw-r-- 1 wire wire   744 Jul 21 13:10 spar.yaml
+        -rw-rw-r-- 1 wire wire  7642 Jul 21 13:08 values.yaml
+        -rw-rw-r-- 1 wire wire   150 Jul 21 13:09 zauth.txt
+[15:10:35] # Running command «cat restund.txt && echo» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ cat restund.txt && echo
+        mMFFdNtSfarA6z8WenM68M8KAtmMtiR5V7qgpJQObk
+[15:10:41] # Running command «cat zauth.txt» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ cat zauth.txt
+        public: R4EM-G3McWjLV3De_KJsFso-04FhFVqN0q3Ds7DiCNk=
+        secret: DVA4324eUqabGVSMrFGnu2QsoItGkC2K0T_2B_QWIVNHgQz4bcxxaMtXcN78omwWyj7TgWEV
+        Wo3SrcOzsOII2Q==
+[15:10:47] # Running command «sed -i 's/secret:$/secret: mMFFdNtSfarA6z8WenM68M8KAtmMtiR5V7qgpJQObk/' secrets.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ sed -i 's/secret:$/secret: mM
+        FFdNtSfarA6z8WenM68M8KAtmMtiR5V7qgpJQObk/' secrets.yaml
+[15:10:53] # Running command «sed -i 's/publicKeys: "<public key>"/publicKeys: "R4EM-G3McWjLV3De_KJsFso-04FhFVqN0q3Ds7DiCNk="/' secrets.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ sed -i 's/publicKeys: "<publi
+        c key>"/publicKeys: "R4EM-G3McWjLV3De_KJsFso-04FhFVqN0q3Ds7DiCNk="/' secrets.yam
+        l
+[15:10:59] # Running command «sed -i 's/privateKeys: "<private key>"/privateKeys: "DVA4324eUqabGVSMrFGnu2QsoItGkC2K0T_2B_QWIVNHgQz4bcxxaMtXcN78omwWyj7TgWEVWo3SrcOzsOII2Q=="/' secrets.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ sed -i 's/privateKeys: "<priv
+        ate key>"/privateKeys: "DVA4324eUqabGVSMrFGnu2QsoItGkC2K0T_2B_QWIVNHgQz4bcxxaMtX
+        cN78omwWyj7TgWEVWo3SrcOzsOII2Q=="/' secrets.yaml
+[15:11:04] # Running command «cat secrets.yaml | grep 'mMFFdNtSfarA6z8WenM68M8KAtmMtiR5V7qgpJQObk'» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ cat secrets.yaml | grep 'mMFF
+        dNtSfarA6z8WenM68M8KAtmMtiR5V7qgpJQObk'
+              secret: mMFFdNtSfarA6z8WenM68M8KAtmMtiR5V7qgpJQObk
+[15:11:10] # Running command «cat secrets.yaml | grep 'R4EM-G3McWjLV3De_KJsFso-04FhFVqN0q3Ds7DiCNk='» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ cat secrets.yaml | grep 'R4EM
+        -G3McWjLV3De_KJsFso-04FhFVqN0q3Ds7DiCNk='
+              publicKeys: "R4EM-G3McWjLV3De_KJsFso-04FhFVqN0q3Ds7DiCNk="
+              publicKeys: "R4EM-G3McWjLV3De_KJsFso-04FhFVqN0q3Ds7DiCNk="
+[15:11:16] # Running command «cat secrets.yaml | grep 'DVA4324eUqabGVSMrFGnu2QsoItGkC2K0T_2B_QWIVNHgQz4bcxxaMtXcN78omwWyj7TgWEVWo3SrcOzsOII2Q=='» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ cat secrets.yaml | grep 'DVA4
+        324eUqabGVSMrFGnu2QsoItGkC2K0T_2B_QWIVNHgQz4bcxxaMtXcN78omwWyj7TgWEVWo3SrcOzsOII
+        2Q=='
+              privateKeys: "DVA4324eUqabGVSMrFGnu2QsoItGkC2K0T_2B_QWIVNHgQz4bcxxaMtXcN78
+        omwWyj7TgWEVWo3SrcOzsOII2Q=="
+[15:11:22] # Running command «cat values.yaml | grep spar» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ cat values.yaml | grep spar
+          spar: false # enable if you want/need Single-Sign-On (SSO)
+[15:11:28] # Running command «sed -i 's/spar: false/spar: true/' values.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ sed -i 's/spar: false/spar: t
+        rue/' values.yaml
+[15:11:34] # Running command «cat spar.yaml >> values.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ cat spar.yaml >> values.yaml
+[15:11:40] # Running command «cat values.yaml | grep spar» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ cat values.yaml | grep spar
+          spar: true # enable if you want/need Single-Sign-On (SSO)
+        spar:
+[15:11:46] # Running command «grep demo-smtp values.yaml -A 3» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ grep demo-smtp values.yaml -A
+         3
+              host: demo-smtp # change this if you want to use your own SMTP server
+              port: 25        # change this
+              connType: plain # change this. Possible values: plain|ssl|tls
+        #    proxy:
+[15:11:51] # Running command «sed -i 's/host: demo-smtp/host: smtp.gmail.com/' values.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ sed -i 's/host: demo-smtp/hos
+        t: smtp.gmail.com/' values.yaml
+[15:11:57] # Running command «sed -i 's/port: 25/port: 587/' values.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ sed -i 's/port: 25/port: 587/
+        ' values.yaml
+[15:12:03] # Running command «sed -i 's/connType: plain/connType: tls/' values.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ sed -i 's/connType: plain/con
+        nType: tls/' values.yaml
+[15:12:09] # Running command «sed -i 's/plain|ssl|tls/plain|ssl|tls
+		test: test
+        testotest:/' values.yaml» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ sed -i 's/plain|ssl|tls/plain
+        |ssl|tls
+        >
+        prod-values.yaml  secrets.yaml      values.yaml
+        restund.txt       spar.yaml         zauth.txt
+        > test: test
+        >         testotest:/' values.yaml
+        sed: -e expression #1, char 29: unterminated `s' command
+[15:12:15] # Running command «grep smtp.gmail.com values.yaml -A 5» on 192.168.1.121
+        wire@wire-client:~/wire-server-deploy/wire-server$ grep smtp.gmail.com values.ya
+        ml -A 5
+              host: smtp.gmail.com # change this if you want to use your own SMTP server
+              port: 587        # change this
+              connType: tls # change this. Possible values: plain|ssl|tls
+        #    proxy:
+        #      httpProxy: "http://proxy.example.com"
+        #      httpsProxy: "https://proxy.example.com"

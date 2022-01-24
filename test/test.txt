@@ -1,0 +1,82 @@
+bash-4.4# kubectl get pods          
+NAME                                                      READY   STATUS      RESTARTS   AGE
+brig-b488b779b-blhf4                                      1/1     Running     0          14m
+brig-index-migrate-data-g48pc                             0/1     Completed   0          13m
+cannon-0                                                  1/1     Running     0          14m
+cargohold-864c4889c5-qfbx9                                1/1     Running     0          14m
+cassandra-ephemeral-0                                     1/1     Running     0          23m
+cassandra-migrations-dkwwk                                0/1     Completed   0          15m
+demo-smtp-85557f6877-qxk2p                                1/1     Running     0          18m
+elasticsearch-ephemeral-86f4b8ff6f-thxn2                  1/1     Running     0          23m
+elasticsearch-index-create-4zfxc                          0/1     Completed   0          14m
+fake-aws-s3-77d9447b8f-9gx46                              1/1     Running     0          20m
+fake-aws-s3-reaper-78d9f58dd4-ngq6k                       1/1     Running     0          20m
+fake-aws-sns-6c7c4b7479-9bkf2                             2/2     Running     0          20m
+fake-aws-sqs-59fbfbcbd4-gwmzd                             2/2     Running     0          20m
+galley-57698866d5-n2c97                                   1/1     Running     0          14m
+galley-migrate-data-2sr5d                                 0/1     Completed   0          13m
+gundeck-77fd5b6b76-h2wb8                                  1/1     Running     0          14m
+nginx-ingress-controller-controller-lpvlp                 1/1     Running     0          9m5s
+nginx-ingress-controller-default-backend-dd5c45cf-nvg96   1/1     Running     0          9m5s
+nginz-85db7d896-wvrlg                                     2/2     Running     0          14m
+redis-ephemeral-master-0                                  1/1     Running     0          23m
+spar-7b588467f6-4b8gv                                     1/1     Running     0          14m
+spar-7b588467f6-7fksz                                     1/1     Running     0          14m
+spar-7b588467f6-gkphp                                     1/1     Running     0          14m
+spar-migrate-data-x5sr4                                   0/1     Completed   0          13m
+webapp-7678f9457-mqkt7                                    1/1     Running     0          14m
+bash-4.4# kubectl logs brig-b488b779b-blhf4
+{"logger":"cassandra.brig","msgs":["I","Known hosts: [datacenter1:rack1:10.233.64.5:9042]"]}
+{"logger":"cassandra.brig","msgs":["I","New control connection: datacenter1:rack1:10.233.64.5:9042#<socket: 11>"]}
+{"msgs":["I","Listening on 0.0.0.0:8080"]}
+{"user":"24bdd52e-af33-400c-8e47-d16bf8695dbd","request":"c0575ff5a2d61bfc2be21e77260fccab","msgs":["I","Creating user"]}
+{"activation.code":"949721","activation.key":"p8o032Ljqhjgcea9R0AAnOeiUniGm63BrY9q_aeS1Cc=","request":"c0575ff5a2d61bfc2be21e77260fccab","msgs":["I","Activating"]}
+{"user":"24bdd52e-af33-400c-8e47-d16bf8695dbd","request":"c0575ff5a2d61bfc2be21e77260fccab","msgs":["I","User activated"]}
+{"user":"24bdd52e-af33-400c-8e47-d16bf8695dbd","logger":"index.brig","msgs":["I","Indexing user"]}
+{"email_sha256":"a7ca34df62e3aa18e071e6bd4740009ce7a25278869badc1ad8f6afda792d427","team":"6ef03a2b-34b5-4b65-8d72-1e4fc7697553","user":"24bdd52e-af33-400c-8e47-d16bf8695dbd","module":"Brig.API.Public","fn":"Brig.API.Public.createUser","request":"c0575ff5a2d61bfc2be21e77260fccab","msgs":["I","Sucessfully created user"]}
+{"user":"24bdd52e-af33-400c-8e47-d16bf8695dbd","logger":"index.brig","msgs":["I","Indexing user"]}
+{"invitation_code":"hJuh1C1PzMkgtesAYZZ4SZrP5xO-xM_m","email_sha256":"eef48a690436699c653110387455a4afe93ce29febc348acd20f6605787956e6","team":"6ef03a2b-34b5-4b65-8d72-1e4fc7697553","module":"Brig.Team.API","fn":"Brig.Team.API.createInvitationPublic","request":"c43440074629d802a199464dd892cd92","msgs":["I","Succesfully created invitation"]}
+
+bash-4.4# kubectl logs spar-7b588467f6-4b8gv
+1:D,6:logger,1:=,14:cassandra.spar,30:Connecting to 10.233.64.5:9042,
+1:I,6:logger,1:=,14:cassandra.spar,49:Known hosts: [datacenter1:rack1:10.233.64.5:9042],
+1:I,6:logger,1:=,14:cassandra.spar,71:New control connection: datacenter1:rack1:10.233.64.5:9042#<socket: 11>,
+1:D,6:logger,1:=,14:cassandra.spar,71:Connection established: datacenter1:rack1:10.233.64.5:9042#<socket: 12>,
+1:I,25:Listening on 0.0.0.0:8080,
+1:D,6:logger,1:=,14:cassandra.spar,72:Reaping idle connection: datacenter1:rack1:10.233.64.5:9042#<socket: 12>,
+1:D,6:logger,1:=,14:cassandra.spar,66:Connection closed: datacenter1:rack1:10.233.64.5:9042#<socket: 12>,
+1:D,6:logger,1:=,14:cassandra.spar,71:Connection established: datacenter1:rack1:10.233.64.5:9042#<socket: 14>,
+1:D,6:logger,1:=,14:cassandra.spar,71:Connection established: datacenter1:rack1:10.233.64.5:9042#<socket: 15>,
+1:D,6:logger,1:=,14:cassandra.spar,71:Connection established: datacenter1:rack1:10.233.64.5:9042#<socket: 16>,
+1:D,6:logger,1:=,14:cassandra.spar,71:Connection established: datacenter1:rack1:10.233.64.5:9042#<socket: 17>,
+1:D,6:logger,1:=,14:cassandra.spar,72:Reaping idle connection: datacenter1:rack1:10.233.64.5:9042#<socket: 14>,
+1:D,6:logger,1:=,14:cassandra.spar,66:Connection closed: datacenter1:rack1:10.233.64.5:9042#<socket: 14>,
+1:D,6:logger,1:=,14:cassandra.spar,72:Reaping idle connection: datacenter1:rack1:10.233.64.5:9042#<socket: 15>,
+1:D,6:logger,1:=,14:cassandra.spar,66:Connection closed: datacenter1:rack1:10.233.64.5:9042#<socket: 15>,
+1:D,6:logger,1:=,14:cassandra.spar,72:Reaping idle connection: datacenter1:rack1:10.233.64.5:9042#<socket: 16>,
+1:D,6:logger,1:=,14:cassandra.spar,66:Connection closed: datacenter1:rack1:10.233.64.5:9042#<socket: 16>,
+1:D,6:logger,1:=,14:cassandra.spar,72:Reaping idle connection: datacenter1:rack1:10.233.64.5:9042#<socket: 17>,
+1:D,6:logger,1:=,14:cassandra.spar,66:Connection closed: datacenter1:rack1:10.233.64.5:9042#<socket: 17>,
+bash-4.4# kubectl logs spar-7b588467f6-7fksz
+1:D,6:logger,1:=,14:cassandra.spar,30:Connecting to 10.233.64.5:9042,
+1:I,6:logger,1:=,14:cassandra.spar,49:Known hosts: [datacenter1:rack1:10.233.64.5:9042],
+1:I,6:logger,1:=,14:cassandra.spar,71:New control connection: datacenter1:rack1:10.233.64.5:9042#<socket: 11>,
+1:D,6:logger,1:=,14:cassandra.spar,71:Connection established: datacenter1:rack1:10.233.64.5:9042#<socket: 12>,
+1:I,25:Listening on 0.0.0.0:8080,
+1:D,6:logger,1:=,14:cassandra.spar,72:Reaping idle connection: datacenter1:rack1:10.233.64.5:9042#<socket: 12>,
+1:D,6:logger,1:=,14:cassandra.spar,66:Connection closed: datacenter1:rack1:10.233.64.5:9042#<socket: 12>,
+bash-4.4# kubectl logs spar-7b588467f6-gkphp
+1:D,6:logger,1:=,14:cassandra.spar,30:Connecting to 10.233.64.5:9042,
+1:I,6:logger,1:=,14:cassandra.spar,49:Known hosts: [datacenter1:rack1:10.233.64.5:9042],
+1:I,6:logger,1:=,14:cassandra.spar,71:New control connection: datacenter1:rack1:10.233.64.5:9042#<socket: 11>,
+1:D,6:logger,1:=,14:cassandra.spar,71:Connection established: datacenter1:rack1:10.233.64.5:9042#<socket: 12>,
+1:I,25:Listening on 0.0.0.0:8080,
+1:D,6:logger,1:=,14:cassandra.spar,72:Reaping idle connection: datacenter1:rack1:10.233.64.5:9042#<socket: 12>,
+1:D,6:logger,1:=,14:cassandra.spar,66:Connection closed: datacenter1:rack1:10.233.64.5:9042#<socket: 12>,
+bash-4.4# 
+
+kubectl logs $(kubectl get pod -lapp=demo-smtp | grep demo | awk '{print $1;}')
+
+kubectl exec $(kubectl get pod -lapp=demo-smtp | grep demo | awk '{print $1;}') -- sh -c 'head -n 30 /var/spool/exim4/input/*'
+
+bash-4.4# kubectl exec $(kubectl get pod -lapp=demo-smtp | grep demo | awk '{print $1;}') -- sh -c 'cat /var/spool/exim4/input/* | grep -Po "^\\d{6}$" '

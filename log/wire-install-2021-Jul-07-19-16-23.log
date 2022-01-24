@@ -1,0 +1,11 @@
+[19:16:23] # Logging to: wire-install-2021-Jul-07-19-16-23.log in log/ and tmp/
+[19:16:23] # Shutting down virtual machine "Wire Demo Client Clone"
+[19:16:25] # Deleting virtual machine "Wire Demo Client Clone"
+[19:16:26] # Creating virtual machine "Wire Demo Client Clone" from snapshot
+[19:16:28] # Starting virtual machine "Wire Demo Client Clone"
+[19:16:37] # Initial install of tmux on 192.168.1.121
+[19:16:51] # Running command «sudo date --set="Wed Jul 07 2021 19:16:31 GMT+0200 (Central European Summer Time)"» on 192.168.1.121
+        wire@wire-client:~$ sudo date --set="Wed Jul 07 2021 19:16:31 GMT+0200 (Central
+        European Summer Time)"
+        [sudo] password for wire:
+        Wed Jul  7 17:16:31 UTC 2021

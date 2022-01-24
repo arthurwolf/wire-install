@@ -1,0 +1,13 @@
+127.0.0.1       localhost
+127.0.1.1       aquarelle
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+10.8.0.1     robotseed 
+10.8.0.6     aquarelle 
+10.8.0.10    celine
+
+95.216.208.159 nginz-https.example.com nginz-ssl.example.com assets.example.com webapp.example.com teams.example.com account.example.com restund01.example.com

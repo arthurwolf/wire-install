@@ -1,0 +1,5 @@
+[18:22:21] # Logging to: wire-install-2021-Jul-07-18-22-21.log in log/ and tmp/
+[18:22:21] # Shutting down virtual machine "Wire Demo Client Clone"
+[18:22:22] # Deleting virtual machine "Wire Demo Client Clone"
+[18:22:23] # Creating virtual machine "Wire Demo Client Clone" from snapshot
+[18:22:25] # Starting virtual machine "Wire Demo Client Clone"

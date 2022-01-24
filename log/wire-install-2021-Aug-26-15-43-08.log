@@ -1,0 +1,6 @@
+[15:43:08] # Logging to: wire-install-2021-Aug-26-15-43-08.log in log/ and tmp/
+[15:43:08] # Shutting down virtual machine "Wire Demo Client Clone"
+[15:43:10] # Deleting virtual machine "Wire Demo Client Clone"
+[15:43:10] # Creating virtual machine "Wire Demo Client Clone" from snapshot
+[15:43:11] # Starting virtual machine "Wire Demo Client Clone"
+[15:43:36] # Initial install of tmux on 192.168.1.122
