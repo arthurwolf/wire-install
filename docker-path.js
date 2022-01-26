@@ -8,30 +8,35 @@ const sh = require('shelljs');
 // TODO: Read the commands to send from the actual documentation files (after first cloning wire-docs automatically)
 // TODO: Make username and passwords configurable. Make sure it gets passed to the "remote" plugin etc
 // TODO: Capture entire histories and not just the current buffer, either cumulatively or all at once
-
+// TODO: Merge docker-path and nix-path into a single script with command line options
 
 // Configuration
 // TODO: Move to JSON file 
 let config = {
     network: '192.168.1.',
-    wire_user: 'wire',
+    wire_user: 'root', //was: "wire"
+    home_folder: '/root/',
 };
 
 // Logger to save command output 
 let logger = new Logger();
 
+// 159.69.208.221 and 159.69.199.136
+
 // Create the machines 
-let client = new Machine({ ip: config['wire-client'], user: config.wire_user, clone: "Wire Demo Client", logger: logger });
-let server = new Machine({ ip: "95.216.208.159", user: config.wire_user, clone: "Wire Demo Server", logger: logger });
+let client = new Machine({ ip: "159.69.208.221", user: config.wire_user, clone: "Wire Demo Client", logger: logger });
+let server = new Machine({ ip: "159.69.199.136", user: config.wire_user, clone: "Wire Demo Server", logger: logger }); //was: 95.216.208.159
 
 
 // For each machine, do VM tasks 
+/*
 for (let machine of [client]) {
     machine.vm.shut_off(); // Shut off the machine 
     machine.vm.delete_clone(); // Delete the current clone 
     machine.vm.create_clone(); // Create a new clone 
     machine.vm.start(); // Start the clone 
 }
+*/
 
 // Scan the network 
 /*let scan = new Scanner(config);
@@ -41,8 +46,8 @@ for (let machine of scan.search(/wire-client/)) {
 
 // In case the host was already configured (repeat runs) and its hostname has now changed. This should at least throw a warning in case we did not intend a repeat run.
 // Or used for fixed-IP setups to save the time of scanning
-config['wire-server'] = "95.216.208.159";
-config['wire-client'] = "192.168.1.122";
+config['wire-client'] = "159.69.208.221";
+config['wire-server'] = "159.69.199.136"; //"95.216.208.159";
 
 // We found each IP 
 client.set_ip(config['wire-client']);
@@ -52,8 +57,7 @@ console.log(config);
 
 // TODO: Create the wire user on the server, and ssh-copy-id and visudo
 
-sh.exec('sleep 20');
-
+//sh.exec('sleep 20');
 
 // Before anything else, set the date on both client and server (otherwise APT might break from waking up an out-of-date VM)
 client.ssh.run(`sudo date --set="${new Date()}"`);
@@ -79,13 +83,13 @@ client.ssh.run("date");
 client.ssh.run("uptime");
 client.ssh.run("sudo apt update");
 client.ssh.run("sudo dpkg --configure -a");
-client.ssh.run("sudo apt install docker.io");
-client.ssh.run("docker -v");
+//client.ssh.run("sudo apt install docker.io git");
+//client.ssh.run("docker -v");
 
 // Cleanup for convenience of repeated runs 
 // TODO: Remove this, this is only for testing/coding
-client.ssh.run("sudo rm -rf /home/wire/wire*");
-client.ssh.run("ls -l /home/wire/");
+client.ssh.run(`sudo rm -rf ${config.home_folder}/wire*`);
+client.ssh.run(`ls -l ${config.home_folder}`);
 
 // Actual installation process
 
@@ -105,10 +109,15 @@ server.ssh.run("sudo dpkg --configure -a");
 client.ssh.run("sudo apt install docker.io");
 client.ssh.run("docker -v");
 
+// Step: Git install
+client.ssh.run("sudo apt install git");
+client.ssh.run("git --version");
+
 // Step: Git
-client.ssh.run('git clone --branch master https://github.com/wireapp/wire-server-deploy.git');
+client.ssh.run(`cd ${config.home_folder}`)
+client.ssh.run(`git clone --branch master https://github.com/wireapp/wire-server-deploy.git ${config.home_folder}/wire-server-deploy`);
 client.ssh.run("ls -l");
-client.ssh.run("cd /wire-server-deploy");
+client.ssh.run(`cd ${config.home_folder}/wire-server-deploy`);
 client.ssh.run("pwd");
 client.ssh.run("ls -l");
 client.ssh.run("git submodule update --init --recursive");
