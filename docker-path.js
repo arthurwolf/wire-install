@@ -58,12 +58,15 @@ console.log(config);
 // TODO: Create the wire user on the server, and ssh-copy-id and visudo
 
 //sh.exec('sleep 20');
+// Exit before we do anything in case we were in the docker bash
+// client.ssh.run(`exit`);
+// server.ssh.run(`exit`);
+
+// TODO: Test if the server answers the way it should after the process is finished. At this point, it shouldn't, and if it does, we didn't reset correctly.
 
 // Before anything else, set the date on both client and server (otherwise APT might break from waking up an out-of-date VM)
 client.ssh.run(`sudo date --set="${new Date()}"`);
 server.ssh.run(`sudo date --set="${new Date()}"`);
-
-console.log("debug a");
 
 // Some debugging info on the client
 client.ssh.run(`cat /proc/cpuinfo | grep processor | wc -l`);
@@ -170,7 +173,7 @@ client.ssh.run("cat spar.yaml >> values.yaml");
 client.ssh.run(`cat values.yaml | grep spar`);
 
 // TODO: Clean up for this step 
-client.ssh.run("cd /wire-server-deploy");
+client.ssh.run(`cd ${config.home_folder}/wire-server-deploy`);
 client.ssh.run("pwd");
 client.ssh.run("ls -l");
 
@@ -267,8 +270,12 @@ client.ssh.run(`helm upgrade --install nginx-ingress-services wire/nginx-ingress
 server.ssh.run(`sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 31773`);
 server.ssh.run(`sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 31772`);
 
+// TODO: Test if the server answers the way it should after the process is finished. At this point, it should.
+
 
 process.exit(0);
+
+
 
 /*
 
