@@ -55,7 +55,7 @@ server.set_ip(config['wire-server']);
 
 console.log(config);
 
-// TODO: Create the wire user on the server, and ssh-copy-id and visudo
+// TODO: Create the wire user on the server if it does not exist (and client?), and ssh-copy-id and visudo
 
 //sh.exec('sleep 20');
 // Exit before we do anything in case we were in the docker bash
